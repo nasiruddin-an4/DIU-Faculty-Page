@@ -1,0 +1,76 @@
+{
+  "facultyMembers": [
+    {
+      "id": "faculty-001",
+      "name": "Professor Dr. Mohammed Masum Iqbal",
+      "title": "Dean",
+      "role": "Professor",
+      "employeeId": "DIU-CSE-001",
+      "departmentId": "cse",
+      "imageUrl": "/images/faculty/masum-iqbal.jpg",
+      "email": "masum.iqbal@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/masum-iqbal",
+        "youtube": "https://youtube.com/@masumiqbal",
+        "website": "https://masumiqbal.com",
+        "twitter": "https://twitter.com/masumiqbal"
+      },
+      "bio": "Dr. Mohammed Masum Iqbal is a distinguished professor with over 20 years of experience in Computer Science education and research.",
+      "education": [
+        {
+          "degree": "PhD in Computer Science",
+          "institution": "University of XYZ",
+          "year": "2005",
+          "country": "USA"
+        },
+        {
+          "degree": "MSc in Computer Science",
+          "institution": "ABC University",
+          "year": "2000",
+          "country": "UK"
+        }
+      ],
+      "expertise": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Data Science",
+        "Computer Vision"
+      ],
+      "courses": {
+        "current": [
+          "CSE101: Introduction to Programming",
+          "CSE303: Artificial Intelligence"
+        ],
+        "previous": ["CSE201: Data Structures", "CSE405: Machine Learning"]
+      },
+      "research": {
+        "interests": "AI, Machine Learning, Computer Vision",
+        "projects": [
+          {
+            "title": "AI-based Medical Image Analysis",
+            "duration": "2020-2023",
+            "funding": "Research Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "XYZ University",
+            "project": "Deep Learning Research",
+            "year": "2022"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Advanced Machine Learning Algorithms",
+          "journal": "International Journal of Computer Science",
+          "year": "2023",
+          "doi": "10.1234/ijcs.2023.001"
+        }
+      ]
+    }
+  ]
+}

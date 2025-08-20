@@ -1,0 +1,34 @@
+{
+  "faculties": [
+    {
+      "id": "fsit",
+      "name": "Faculty of Science & Information Technology",
+      "description": "The Faculty of Science and Information Technology offers cutting-edge programs in Computer Science, Software Engineering, and Information Technology.",
+      "imageUrl": "/images/faculties/fsit.jpg"
+    },
+    {
+      "id": "fbe",
+      "name": "Faculty of Business & Entrepreneurship",
+      "description": "Focusing on modern business education and entrepreneurial skills development.",
+      "imageUrl": "/images/faculties/fbe.jpg"
+    },
+    {
+      "id": "fe",
+      "name": "Faculty of Engineering",
+      "description": "Providing quality education in various engineering disciplines.",
+      "imageUrl": "/images/faculties/fe.jpg"
+    },
+    {
+      "id": "fhls",
+      "name": "Faculty of Health and Life Sciences",
+      "description": "Dedicated to healthcare education and research.",
+      "imageUrl": "/images/faculties/fhls.jpg"
+    },
+    {
+      "id": "fhss",
+      "name": "Faculty of Humanities & Social Sciences",
+      "description": "Exploring human society, culture, and behavior.",
+      "imageUrl": "/images/faculties/fhss.jpg"
+    }
+  ]
+}

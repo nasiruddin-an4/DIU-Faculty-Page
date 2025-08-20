@@ -1,0 +1,34 @@
+{
+  "departments": [
+    {
+      "id": "cse",
+      "name": "Computer Science & Engineering",
+      "facultyId": "fsit",
+      "description": "Offering comprehensive education in computer science and engineering fundamentals.",
+      "imageUrl": "/images/departments/cse.jpg",
+      "programs": ["BSc in CSE", "MSc in CSE"],
+      "totalFaculty": 45,
+      "established": "1992"
+    },
+    {
+      "id": "swe",
+      "name": "Software Engineering",
+      "facultyId": "fsit",
+      "description": "Focusing on software development and engineering principles.",
+      "imageUrl": "/images/departments/swe.jpg",
+      "programs": ["BSc in SWE"],
+      "totalFaculty": 25,
+      "established": "2002"
+    },
+    {
+      "id": "bba",
+      "name": "Business Administration",
+      "facultyId": "fbe",
+      "description": "Providing comprehensive business education and management skills.",
+      "imageUrl": "/images/departments/bba.jpg",
+      "programs": ["BBA", "MBA"],
+      "totalFaculty": 35,
+      "established": "1995"
+    }
+  ]
+}
