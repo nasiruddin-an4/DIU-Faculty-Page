@@ -82,7 +82,7 @@ const FacultyProfilePage = () => {
   }
 
   return (
-    <div className="pt-16">
+    <div className="pt-20">
       <div className="container-custom mx-auto py-6">
         <Link
           to={`/department/${faculty?.departmentData?.id}`}

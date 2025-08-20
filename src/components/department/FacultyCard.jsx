@@ -98,7 +98,7 @@ const FacultyCard = ({ faculty }) => {
       {/* Faculty Card */}
       <div
         ref={cardRef}
-        className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer"
+        className="group bg-white rounded-xl shadow-sm  hover:shadow-md transition-all duration-300 overflow-hidden cursor-pointer"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         role="button"
@@ -113,8 +113,8 @@ const FacultyCard = ({ faculty }) => {
           }
         }}
       >
-        <div className="flex flex-col sm:flex-row p-3 gap-4 sm:items-start">
-          <div className="w-full sm:w-2/5 flex-shrink-0">
+        <div className="flex flex-row p-3 gap-4 items-start">
+          <div className="w-2/5 flex-shrink-0">
             <div className="h-28 rounded-md overflow-hidden">
               <img
                 src={faculty.imageUrl}

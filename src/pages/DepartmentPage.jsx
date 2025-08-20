@@ -91,7 +91,7 @@ const DepartmentPage = () => {
         <div className="animate-pulse space-y-8">
           <div className="h-8 bg-neutral-200 rounded w-1/3"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div key={i} className="bg-white rounded-xl shadow-sm p-4">
                 <div className="aspect-[4/3] bg-neutral-200 rounded-lg mb-4"></div>
@@ -131,10 +131,10 @@ const DepartmentPage = () => {
     <div className="pt-16">
       <div className="bg-blue-50 text-white py-16">
         <div className="container-custom mx-auto text-center justify-content-center items-center">
-          <p className="text-xl text-gray-600 mb-2">
+          <p className="text-sm md:text-xl text-gray-600 mb-2">
             {department.facultyFullName}
           </p>
-          <h1 className="text-4xl font-bold text-blue-800">
+          <h1 className="text-3xl md:text-4xl font-bold text-blue-800">
             {department.name}
           </h1>
 
@@ -147,7 +147,7 @@ const DepartmentPage = () => {
       <div className="container mx-auto py-12">
         {/* <SearchBar onSearch={handleSearch} /> */}
 
-        <div className="flex flex-col lg:flex-row gap-8 ">
+        <div className="flex flex-col lg:flex-row gap-4 md:gap-8 px-4 md:px-0">
           <div className="w-full md:w-1/5">
             <div className="sticky top-24">
               <RoleFilterSidebar
@@ -168,7 +168,7 @@ const DepartmentPage = () => {
             </h2> */}
 
             {filteredFaculty.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6 w-full">
                 {filteredFaculty.map((faculty) => (
                   <FacultyCard key={faculty.id} faculty={faculty} />
                 ))}

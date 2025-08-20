@@ -11,7 +11,7 @@ import {
 const ProfileHeader = ({ faculty }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden animate-fade-in">
-      <div className="bg-gradient-to-r from-primary-600 to-primary-700 h-32 md:h-48"></div>
+      <div className=" h-32 md:h-48"></div>
 
       <div className="container-custom mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-24 mb-6">
