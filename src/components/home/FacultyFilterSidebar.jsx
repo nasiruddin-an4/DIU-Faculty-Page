@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
-
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-
 import { ListFilter } from "lucide-react";
-
 import { motion, AnimatePresence } from "framer-motion";
 
 const FacultyFilterSidebar = ({
@@ -12,7 +9,6 @@ const FacultyFilterSidebar = ({
   onFacultyChange,
 }) => {
   const [isExpanded, setIsExpanded] = useState(true);
-
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -37,10 +33,9 @@ const FacultyFilterSidebar = ({
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 border border-gray-100
-
-
-                  ${isSticky ? "sticky top-20" : ""}`}
+      className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 border border-gray-100 ${
+        isSticky ? "sticky top-20" : ""
+      }`}
     >
       <div
         className="flex justify-between items-center mb-6 cursor-pointer group border-b pb-2"
@@ -79,20 +74,9 @@ const FacultyFilterSidebar = ({
 
               <label
                 htmlFor="all-faculties"
-                className="flex items-center w-full py-2 px-2 rounded-xl cursor-pointer transition-all duration-200
-
-
-                         text-gray-700 hover:text-primary-600 hover:bg-primary-50
-
-
-                         peer-checked:bg-primary-100 peer-checked:text-primary-600 peer-checked:font-medium"
+                className="flex items-center w-full py-2 px-2 rounded-xl cursor-pointer transition-all duration-200 text-gray-700 hover:text-primary-600 hover:bg-primary-50 peer-checked:bg-primary-100 peer-checked:text-primary-600 peer-checked:font-medium"
               >
-                <div
-                  className="w-4 h-4 rounded-full border-2 border-gray-300 peer-checked:border-primary-600 mr-3
-
-
-                              flex items-center justify-center"
-                >
+                <div className="w-4 h-4 rounded-full border-2 border-gray-300 peer-checked:border-primary-600 mr-3 flex items-center justify-center">
                   <div
                     className={`w-2 h-2 rounded-full bg-primary-600 ${
                       selectedFaculty === "" ? "opacity-100" : "opacity-0"
@@ -117,20 +101,9 @@ const FacultyFilterSidebar = ({
 
                 <label
                   htmlFor={faculty.id}
-                  className="flex items-center w-full py-2 px-2 rounded-xl cursor-pointer transition-all duration-200
-
-
-                           text-gray-700 hover:text-primary-600 hover:bg-primary-50
-
-
-                           peer-checked:bg-primary-100 peer-checked:text-primary-600 peer-checked:font-medium"
+                  className="flex items-center w-full py-2 px-2 rounded-xl cursor-pointer transition-all duration-200 text-gray-700 hover:text-primary-600 hover:bg-primary-50 peer-checked:bg-primary-100 peer-checked:text-primary-600 peer-checked:font-medium"
                 >
-                  <div
-                    className="w-4 h-4 rounded-full border-2 border-gray-300 peer-checked:border-primary-600 mr-3
-
-
-                                flex items-center justify-center"
-                  >
+                  <div className="w-4 h-4 rounded-full border-2 border-gray-300 peer-checked:border-primary-600 mr-3 flex items-center justify-center">
                     <div
                       className={`w-2 h-2 rounded-full bg-primary-600 ${
                         selectedFaculty === faculty.id

@@ -128,22 +128,15 @@ const DepartmentPage = () => {
   }
 
   return (
-    <div className="pt-20">
-      <div className="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-16">
-        <div className="container-custom mx-auto">
-          <Link
-            to="/"
-            className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors"
-          >
-            <FaArrowLeft className="mr-2" />
-            Back to Departments
-          </Link>
-
-          <h1 className="text-4xl font-bold mb-3">{department.name}</h1>
-
-          <p className="text-xl text-white/90 mb-4">
-            {department.faculty.name}
+    <div className="pt-16">
+      <div className="bg-blue-50 text-white py-20">
+        <div className="container-custom mx-auto text-center justify-content-center items-center">
+          <p className="text-xl text-gray-600 mb-2">
+            {department.facultyFullName}
           </p>
+          <h1 className="text-4xl font-bold text-blue-800">
+            {department.name}
+          </h1>
 
           <p className="text-white/80 max-w-3xl text-lg">
             {department.description}
@@ -151,11 +144,11 @@ const DepartmentPage = () => {
         </div>
       </div>
 
-      <div className="container-custom mx-auto py-12">
-        <SearchBar onSearch={handleSearch} />
+      <div className="container mx-auto py-12">
+        {/* <SearchBar onSearch={handleSearch} /> */}
 
-        <div className="flex flex-col lg:flex-row gap-8">
-          <div className="w-full lg:w-1/4">
+        <div className="flex flex-col lg:flex-row gap-8 ">
+          <div className="w-full md:w-1/5">
             <div className="sticky top-24">
               <RoleFilterSidebar
                 roles={facultyRoles}
@@ -165,17 +158,17 @@ const DepartmentPage = () => {
             </div>
           </div>
 
-          <div className="w-full lg:w-3/4">
-            <h2 className="text-3xl font-bold text-neutral-800 mb-8">
+          <div className="w-full md:w-4/5">
+            {/* <h2 className="text-3xl font-bold text-neutral-800 mb-8">
               {selectedRole ? `${selectedRole}s` : "Faculty Members"}
 
               <span className="text-neutral-500 ml-3 text-xl font-normal">
                 ({filteredFaculty.length})
               </span>
-            </h2>
+            </h2> */}
 
             {filteredFaculty.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
                 {filteredFaculty.map((faculty) => (
                   <FacultyCard key={faculty.id} faculty={faculty} />
                 ))}
