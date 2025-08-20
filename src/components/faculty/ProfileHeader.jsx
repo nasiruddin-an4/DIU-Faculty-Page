@@ -33,7 +33,8 @@ const ProfileHeader = ({ faculty }) => {
             </p>
 
             <p className="text-neutral-600 mt-1">
-              {faculty.department.name}, {faculty.department.faculty.name}
+              {faculty?.departmentData?.name},{" "}
+              {faculty?.departmentData?.faculty}
             </p>
 
             <p className="text-neutral-500 text-sm">

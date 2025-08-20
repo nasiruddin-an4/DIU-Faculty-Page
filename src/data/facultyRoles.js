@@ -1,29 +1,17 @@
-
 export const facultyRoles = [
+  "Dean",
 
+  "Professor",
 
-    'Dean',
+  "Associate Professor",
 
+  "Assistant Professor",
 
-    'Professor',
+  "Senior Lecturer",
 
+  "Lecturer",
 
-    'Associate Professor',
+  "Visiting Faculty",
 
-
-    'Assistant Professor',
-
-
-    'Senior Lecturer',
-
-
-    'Lecturer',
-
-
-    'Visiting Faculty',
-
-
-    'Adjunct Faculty'
-
-
-]
+  "Adjunct Faculty",
+];

@@ -1,24 +1,26 @@
-import { faculties } from '../faculties/faculties'
+export const faculties = [
+  {
+    id: "fsit",
+    name: "Faculty of Science & Information Technology",
+  },
 
+  {
+    id: "fbe",
+    name: "Faculty of Business & Entrepreneurship",
+  },
 
+  {
+    id: "fe",
+    name: "Faculty of Engineering",
+  },
 
+  {
+    id: "fhls",
+    name: "Faculty of Health and Life Sciences",
+  },
 
-
-
-export const departments = [
-
-
-    {
-
-        id: 'cse',
-        name: 'Computer Science & Engineering',
-        faculty: faculties[0],
-        imageUrl: 'https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-        description: 'The Department of CSE offers undergraduate and graduate programs focusing on computer science, programming, and software engineering.'
-    },
-
-
-    // ...other departments
-
-
-]
+  {
+    id: "fhss",
+    name: "Faculty of Humanities & Social Sciences",
+  },
+];

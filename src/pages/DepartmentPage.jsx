@@ -10,10 +10,13 @@ import RoleFilterSidebar from "../components/department/RoleFilterSidebar";
 
 import FacultyCard from "../components/department/FacultyCard";
 
-import { departments, facultyMembers, facultyRoles } from "../data/mockData";
+import { facultyRoles } from "../data/facultyRoles";
+import { departments } from "../data/department";
+import { facultyMembers } from "../data/facultyMembers";
 
 const DepartmentPage = () => {
   const { deptId } = useParams();
+  console.log("facultyRoles", facultyRoles);
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -39,7 +42,7 @@ const DepartmentPage = () => {
     if (dept) {
       setDepartment(dept);
 
-      const faculty = facultyMembers.filter((f) => f.department.id === deptId);
+      const faculty = facultyMembers.filter((f) => f.department === deptId);
 
       setFacultyList(faculty);
 

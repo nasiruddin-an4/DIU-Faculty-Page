@@ -8,7 +8,8 @@ import ProfileHeader from "../components/faculty/ProfileHeader";
 
 import ProfileTabs from "../components/faculty/ProfileTabs";
 
-import { facultyMembers } from "../data/mockData";
+import { facultyMembers } from "../data/facultyMembers";
+import { departments } from "../data/department";
 
 const FacultyProfilePage = () => {
   const { facultyId } = useParams();
@@ -16,13 +17,22 @@ const FacultyProfilePage = () => {
   const [faculty, setFaculty] = useState(null);
 
   const [loading, setLoading] = useState(true);
+  // console.log("facultyMembersf", facultyMembers);
 
   useEffect(() => {
     // Find the faculty member
 
-    const facultyMember = facultyMembers.find((f) => f.id === facultyId);
+    const facultyMember = facultyMembers.find((f) => f.id == facultyId);
+
+    const department = departments.find(
+      (d) => d.id == facultyMember.department
+    );
+    console.log("facultyMemberdsad", facultyMember);
+
+    console.log("facultyMember with Department", facultyMember);
 
     if (facultyMember) {
+      facultyMember.departmentData = department;
       setFaculty(facultyMember);
     }
 
@@ -55,7 +65,7 @@ const FacultyProfilePage = () => {
     );
   }
 
-  if (!faculty) {
+  if (!faculty.id) {
     return (
       <div className="container-custom mx-auto py-20 text-center">
         <h2 className="text-2xl font-bold mb-4">Faculty Member Not Found</h2>
@@ -75,11 +85,11 @@ const FacultyProfilePage = () => {
     <div className="pt-16">
       <div className="container-custom mx-auto py-6">
         <Link
-          to={`/department/${faculty.department.id}`}
+          to={`/department/${faculty?.departmentData?.id}`}
           className="inline-flex items-center text-neutral-600 mb-6 hover:text-primary-600 transition-colors"
         >
           <FaArrowLeft className="mr-2" />
-          Back to {faculty.department.name}
+          Back to {faculty?.departmentData?.name}
         </Link>
       </div>
 

@@ -10,11 +10,12 @@ import FacultyFilterSidebar from "../components/home/FacultyFilterSidebar";
 
 import DepartmentCard from "../components/home/DepartmentCard";
 
-import { departments, faculties } from "../data/mockData";
+// import { faculties } from "../data/mockData";
+import { faculties } from "../data/faculties";
+import { departments } from "../data/department";
 
 const HomePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-
   const [selectedFaculty, setSelectedFaculty] = useState(
     searchParams.get("faculty") || ""
   );
@@ -30,7 +31,7 @@ const HomePage = () => {
 
     const filtered = departments.filter((dept) => {
       const matchesFaculty = selectedFaculty
-        ? dept.faculty.id === selectedFaculty
+        ? dept.faculty === selectedFaculty
         : true;
 
       const matchesSearch = searchTerm
