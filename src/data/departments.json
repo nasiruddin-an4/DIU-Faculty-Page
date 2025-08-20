@@ -1,8 +1,88 @@
 {
   "departments": [
     {
+      "id": "ba",
+      "name": "Business Administration",
+      "facultyId": "fbe",
+      "description": "Providing comprehensive business education and management skills.",
+      "imageUrl": "/images/departments/ba.jpg",
+      "programs": ["BBA", "MBA"],
+      "totalFaculty": 35,
+      "established": "1995"
+    },
+    {
+      "id": "mgt",
+      "name": "Management",
+      "facultyId": "fbe",
+      "description": "Focusing on management principles and organizational leadership.",
+      "imageUrl": "/images/departments/mgt.jpg",
+      "programs": ["BBA in Management", "MBA"],
+      "totalFaculty": 30,
+      "established": "1998"
+    },
+    {
+      "id": "re",
+      "name": "Real Estate",
+      "facultyId": "fbe",
+      "description": "Specializing in real estate management and property development.",
+      "imageUrl": "/images/departments/re.jpg",
+      "programs": ["BSc in Real Estate"],
+      "totalFaculty": 20,
+      "established": "2005"
+    },
+    {
+      "id": "thm",
+      "name": "Tourism & Hospitality Management",
+      "facultyId": "fbe",
+      "description": "Training in tourism and hospitality industry management.",
+      "imageUrl": "/images/departments/thm.jpg",
+      "programs": ["BBA in Tourism & Hospitality"],
+      "totalFaculty": 18,
+      "established": "2008"
+    },
+    {
+      "id": "ie",
+      "name": "Innovation & Entrepreneurship",
+      "facultyId": "fbe",
+      "description": "Fostering entrepreneurial skills and innovative business solutions.",
+      "imageUrl": "/images/departments/ie.jpg",
+      "programs": ["BBA in Entrepreneurship"],
+      "totalFaculty": 15,
+      "established": "2010"
+    },
+    {
+      "id": "acc",
+      "name": "Accounting",
+      "facultyId": "fbe",
+      "description": "Providing expertise in financial accounting and auditing.",
+      "imageUrl": "/images/departments/acc.jpg",
+      "programs": ["BBA in Accounting", "MSc in Accounting"],
+      "totalFaculty": 28,
+      "established": "1996"
+    },
+    {
+      "id": "fb",
+      "name": "Finance & Banking",
+      "facultyId": "fbe",
+      "description": "Focusing on financial management and banking operations.",
+      "imageUrl": "/images/departments/fb.jpg",
+      "programs": ["BBA in Finance", "MBA in Finance"],
+      "totalFaculty": 27,
+      "established": "1997"
+    },
+    {
+      "id": "mkt",
+      "name": "Marketing",
+      "facultyId": "fbe",
+      "description": "Specializing in marketing strategies and consumer behavior.",
+      "imageUrl": "/images/departments/mkt.jpg",
+      "programs": ["BBA in Marketing", "MBA in Marketing"],
+      "totalFaculty": 26,
+      "established": "1999"
+    },
+    {
       "id": "cse",
-      "name": "Computer Science & Engineering",
+      "name": "Computer Science and Engineering",
       "facultyId": "fsit",
       "description": "Offering comprehensive education in computer science and engineering fundamentals.",
       "imageUrl": "/images/departments/cse.jpg",
@@ -21,14 +101,194 @@
       "established": "2002"
     },
     {
-      "id": "bba",
-      "name": "Business Administration",
-      "facultyId": "fbe",
-      "description": "Providing comprehensive business education and management skills.",
-      "imageUrl": "/images/departments/bba.jpg",
-      "programs": ["BBA", "MBA"],
+      "id": "mct",
+      "name": "Multimedia & Creative Technology",
+      "facultyId": "fsit",
+      "description": "Exploring multimedia design and creative technology applications.",
+      "imageUrl": "/images/departments/mct.jpg",
+      "programs": ["BSc in MCT"],
+      "totalFaculty": 22,
+      "established": "2006"
+    },
+    {
+      "id": "cis",
+      "name": "Computing and Information System",
+      "facultyId": "fsit",
+      "description": "Focusing on information systems and computing technologies.",
+      "imageUrl": "/images/departments/cis.jpg",
+      "programs": ["BSc in CIS"],
+      "totalFaculty": 20,
+      "established": "2004"
+    },
+    {
+      "id": "itm",
+      "name": "Information Technology & Management",
+      "facultyId": "fsit",
+      "description": "Integrating IT solutions with management practices.",
+      "imageUrl": "/images/departments/itm.jpg",
+      "programs": ["BSc in ITM"],
+      "totalFaculty": 18,
+      "established": "2007"
+    },
+    {
+      "id": "ice",
+      "name": "Information and Communication Engineering",
+      "facultyId": "fe",
+      "description": "Specializing in communication systems and information engineering.",
+      "imageUrl": "/images/departments/ice.jpg",
+      "programs": ["BSc in ICE"],
+      "totalFaculty": 24,
+      "established": "2003"
+    },
+    {
+      "id": "te",
+      "name": "Textile Engineering",
+      "facultyId": "fe",
+      "description": "Focusing on textile manufacturing and technology.",
+      "imageUrl": "/images/departments/te.jpg",
+      "programs": ["BSc in Textile Engineering"],
+      "totalFaculty": 22,
+      "established": "2005"
+    },
+    {
+      "id": "eee",
+      "name": "Electrical and Electronic Engineering",
+      "facultyId": "fe",
+      "description": "Providing education in electrical and electronic systems.",
+      "imageUrl": "/images/departments/eee.jpg",
+      "programs": ["BSc in EEE", "MSc in EEE"],
+      "totalFaculty": 40,
+      "established": "1994"
+    },
+    {
+      "id": "arch",
+      "name": "Architecture",
+      "facultyId": "fe",
+      "description": "Training in architectural design and urban planning.",
+      "imageUrl": "/images/departments/arch.jpg",
+      "programs": ["B.Arch"],
+      "totalFaculty": 25,
+      "established": "2000"
+    },
+    {
+      "id": "ce",
+      "name": "Civil Engineering",
+      "facultyId": "fe",
+      "description": "Focusing on infrastructure design and construction.",
+      "imageUrl": "/images/departments/ce.jpg",
+      "programs": ["BSc in Civil Engineering", "MSc in Civil Engineering"],
       "totalFaculty": 35,
-      "established": "1995"
+      "established": "1993"
+    },
+    {
+      "id": "esdm",
+      "name": "Environmental Science and Disaster Management",
+      "facultyId": "fhls",
+      "description": "Addressing environmental challenges and disaster preparedness.",
+      "imageUrl": "/images/departments/esdm.jpg",
+      "programs": ["BSc in ESDM"],
+      "totalFaculty": 20,
+      "established": "2008"
+    },
+    {
+      "id": "pharm",
+      "name": "Pharmacy",
+      "facultyId": "fhls",
+      "description": "Training in pharmaceutical sciences and drug development.",
+      "imageUrl": "/images/departments/pharm.jpg",
+      "programs": ["BPharm", "MPharm"],
+      "totalFaculty": 30,
+      "established": "2001"
+    },
+    {
+      "id": "nfe",
+      "name": "Nutrition and Food Engineering",
+      "facultyId": "fhls",
+      "description": "Focusing on nutrition science and food technology.",
+      "imageUrl": "/images/departments/nfe.jpg",
+      "programs": ["BSc in NFE"],
+      "totalFaculty": 18,
+      "established": "2009"
+    },
+    {
+      "id": "ph",
+      "name": "Public Health",
+      "facultyId": "fhls",
+      "description": "Promoting community health and disease prevention.",
+      "imageUrl": "/images/departments/ph.jpg",
+      "programs": ["BSc in Public Health", "MPH"],
+      "totalFaculty": 22,
+      "established": "2007"
+    },
+    {
+      "id": "pess",
+      "name": "Physical Education & Sports Science",
+      "facultyId": "fhls",
+      "description": "Training in sports science and physical fitness.",
+      "imageUrl": "/images/departments/pess.jpg",
+      "programs": ["BSc in PESS"],
+      "totalFaculty": 15,
+      "established": "2010"
+    },
+    {
+      "id": "agri",
+      "name": "Agricultural Science",
+      "facultyId": "fhls",
+      "description": "Focusing on sustainable agriculture and crop production.",
+      "imageUrl": "/images/departments/agri.jpg",
+      "programs": ["BSc in Agricultural Science"],
+      "totalFaculty": 20,
+      "established": "2006"
+    },
+    {
+      "id": "geb",
+      "name": "Genetic Engineering and Biotechnology",
+      "facultyId": "fhls",
+      "description": "Exploring genetic engineering and biotechnological innovations.",
+      "imageUrl": "/images/departments/geb.jpg",
+      "programs": ["BSc in GEB", "MSc in GEB"],
+      "totalFaculty": 25,
+      "established": "2004"
+    },
+    {
+      "id": "eng",
+      "name": "English",
+      "facultyId": "fhss",
+      "description": "Offering education in literature, linguistics, and communication.",
+      "imageUrl": "/images/departments/eng.jpg",
+      "programs": ["BA in English", "MA in English"],
+      "totalFaculty": 28,
+      "established": "1996"
+    },
+    {
+      "id": "law",
+      "name": "Law",
+      "facultyId": "fhss",
+      "description": "Providing comprehensive legal education and training.",
+      "imageUrl": "/images/departments/law.jpg",
+      "programs": ["LLB", "LLM"],
+      "totalFaculty": 22,
+      "established": "2000"
+    },
+    {
+      "id": "jmc",
+      "name": "Journalism, Media and Communication",
+      "facultyId": "fhss",
+      "description": "Focusing on media studies and journalism practices.",
+      "imageUrl": "/images/departments/jmc.jpg",
+      "programs": ["BA in JMC"],
+      "totalFaculty": 18,
+      "established": "2008"
+    },
+    {
+      "id": "ds",
+      "name": "Development Studies",
+      "facultyId": "fhss",
+      "description": "Addressing global development and socio-economic issues.",
+      "imageUrl": "/images/departments/ds.jpg",
+      "programs": ["BA in Development Studies", "MA in Development Studies"],
+      "totalFaculty": 20,
+      "established": "2005"
     }
   ]
 }

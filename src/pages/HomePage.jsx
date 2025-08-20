@@ -1,44 +1,56 @@
 import { useState, useEffect } from "react";
+
 import { useSearchParams } from "react-router-dom";
+
 import Hero from "../components/home/Hero";
+
 import SearchBar from "../components/home/SearchBar";
+
 import FacultyFilterSidebar from "../components/home/FacultyFilterSidebar";
+
 import DepartmentCard from "../components/home/DepartmentCard";
-import { getFaculties, getDepartments } from "../utils/dataUtils";
+
+import { departments, faculties } from "../data/mockData";
 
 const HomePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+
   const [selectedFaculty, setSelectedFaculty] = useState(
     searchParams.get("faculty") || ""
   );
+
   const [searchTerm, setSearchTerm] = useState(
     searchParams.get("search") || ""
   );
-  const [filteredDepartments, setFilteredDepartments] = useState([]);
-  const [faculties, setFaculties] = useState([]);
+
+  const [filteredDepartments, setFilteredDepartments] = useState(departments);
 
   useEffect(() => {
-    setFaculties(getFaculties());
-  }, []);
+    // Filter departments based on selected faculty and search term
 
-  useEffect(() => {
-    // Get departments based on selected faculty
-    const allDepartments = getDepartments(selectedFaculty || null);
-
-    // Filter by search term
-    const filtered = allDepartments.filter((dept) => {
-      const matchesSearch = searchTerm
-        ? dept.name.toLowerCase().includes(searchTerm.toLowerCase())
+    const filtered = departments.filter((dept) => {
+      const matchesFaculty = selectedFaculty
+        ? dept.faculty.id === selectedFaculty
         : true;
-      return matchesSearch;
+
+      const matchesSearch = searchTerm
+        ? dept.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          dept.faculty.name.toLowerCase().includes(searchTerm.toLowerCase())
+        : true;
+
+      return matchesFaculty && matchesSearch;
     });
 
     setFilteredDepartments(filtered);
 
     // Update URL params
+
     const params = {};
+
     if (selectedFaculty) params.faculty = selectedFaculty;
+
     if (searchTerm) params.search = searchTerm;
+
     setSearchParams(params, { replace: true });
   }, [selectedFaculty, searchTerm, setSearchParams]);
 
@@ -86,9 +98,11 @@ const HomePage = () => {
                 <p className="text-lg text-neutral-600">
                   No departments found matching your criteria.
                 </p>
+
                 <button
                   onClick={() => {
                     setSelectedFaculty("");
+
                     setSearchTerm("");
                   }}
                   className="mt-4 text-primary-600 hover:text-primary-700 font-medium"

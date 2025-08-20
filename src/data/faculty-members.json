@@ -71,6 +71,2159 @@
           "doi": "10.1234/ijcs.2023.001"
         }
       ]
+    },
+    {
+      "id": "faculty-002",
+      "name": "Dr. Ayesha Khan",
+      "title": "Associate Professor",
+      "role": "Associate Professor",
+      "employeeId": "DIU-CSE-002",
+      "departmentId": "cse",
+      "imageUrl": "/images/faculty/ayesha-khan.jpg",
+      "email": "ayesha.khan@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/ayesha-khan",
+        "website": "https://ayeshakhan.com"
+      },
+      "bio": "Dr. Ayesha Khan specializes in software engineering and cybersecurity with 15 years of academic experience.",
+      "education": [
+        {
+          "degree": "PhD in Software Engineering",
+          "institution": "University of DEF",
+          "year": "2010",
+          "country": "Canada"
+        },
+        {
+          "degree": "MSc in Computer Science",
+          "institution": "GHI University",
+          "year": "2005",
+          "country": "Australia"
+        }
+      ],
+      "expertise": ["Software Engineering", "Cybersecurity", "Cloud Computing"],
+      "courses": {
+        "current": [
+          "CSE202: Software Design",
+          "CSE404: Cybersecurity Fundamentals"
+        ],
+        "previous": ["CSE301: Database Systems", "CSE406: Cloud Computing"]
+      },
+      "research": {
+        "interests": "Software Security, Cloud Architecture",
+        "projects": [
+          {
+            "title": "Secure Software Development Framework",
+            "duration": "2021-2024",
+            "funding": "Government Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "DEF University",
+            "project": "Cloud Security Research",
+            "year": "2023"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Secure Software Development Lifecycle",
+          "journal": "Journal of Cybersecurity",
+          "year": "2022",
+          "doi": "10.5678/jcs.2022.002"
+        }
+      ]
+    },
+    {
+      "id": "faculty-003",
+      "name": "Dr. Md. Rahim Uddin",
+      "title": "Professor",
+      "role": "Professor",
+      "employeeId": "DIU-SWE-001",
+      "departmentId": "swe",
+      "imageUrl": "/images/faculty/rahim-uddin.jpg",
+      "email": "rahim.uddin@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/rahim-uddin",
+        "website": "https://rahimuddin.com"
+      },
+      "bio": "Dr. Md. Rahim Uddin is an expert in software development methodologies with 18 years of teaching experience.",
+      "education": [
+        {
+          "degree": "PhD in Software Engineering",
+          "institution": "University of JKL",
+          "year": "2008",
+          "country": "USA"
+        },
+        {
+          "degree": "MSc in Computer Science",
+          "institution": "MNO University",
+          "year": "2003",
+          "country": "UK"
+        }
+      ],
+      "expertise": ["Agile Methodologies", "Software Testing", "DevOps"],
+      "courses": {
+        "current": [
+          "SWE101: Software Engineering Principles",
+          "SWE302: Software Testing"
+        ],
+        "previous": ["SWE201: Agile Development", "SWE403: DevOps Practices"]
+      },
+      "research": {
+        "interests": "Software Quality Assurance, DevOps",
+        "projects": [
+          {
+            "title": "Automated Software Testing Framework",
+            "duration": "2019-2022",
+            "funding": "Industry Grant",
+            "status": "Completed"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "JKL University",
+            "project": "DevOps Automation",
+            "year": "2021"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Advances in Software Testing Automation",
+          "journal": "Journal of Software Engineering",
+          "year": "2021",
+          "doi": "10.9012/jse.2021.003"
+        }
+      ]
+    },
+    {
+      "id": "faculty-004",
+      "name": "Dr. Fatima Begum",
+      "title": "Associate Professor",
+      "role": "Associate Professor",
+      "employeeId": "DIU-SWE-002",
+      "departmentId": "swe",
+      "imageUrl": "/images/faculty/fatima-begum.jpg",
+      "email": "fatima.begum@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/fatima-begum",
+        "website": "https://fatimabegum.com"
+      },
+      "bio": "Dr. Fatima Begum has extensive experience in software architecture and system design.",
+      "education": [
+        {
+          "degree": "PhD in Software Engineering",
+          "institution": "University of PQR",
+          "year": "2012",
+          "country": "Germany"
+        },
+        {
+          "degree": "MSc in Software Engineering",
+          "institution": "STU University",
+          "year": "2007",
+          "country": "Canada"
+        }
+      ],
+      "expertise": [
+        "Software Architecture",
+        "System Design",
+        "Distributed Systems"
+      ],
+      "courses": {
+        "current": [
+          "SWE202: Software Architecture",
+          "SWE401: Distributed Systems"
+        ],
+        "previous": ["SWE301: System Analysis", "SWE402: Cloud-Based Systems"]
+      },
+      "research": {
+        "interests": "Distributed Computing, Software Scalability",
+        "projects": [
+          {
+            "title": "Scalable Software Architectures",
+            "duration": "2020-2023",
+            "funding": "Research Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "PQR University",
+            "project": "Distributed Systems Research",
+            "year": "2022"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Scalability in Distributed Systems",
+          "journal": "Journal of Distributed Computing",
+          "year": "2022",
+          "doi": "10.3456/jdc.2022.004"
+        }
+      ]
+    },
+    {
+      "id": "faculty-005",
+      "name": "Dr. Hasan Mahmud",
+      "title": "Professor",
+      "role": "Professor",
+      "employeeId": "DIU-BA-001",
+      "departmentId": "ba",
+      "imageUrl": "/images/faculty/hasan-mahmud.jpg",
+      "email": "hasan.mahmud@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/hasan-mahmud",
+        "website": "https://hasanmahmud.com"
+      },
+      "bio": "Dr. Hasan Mahmud is a seasoned academic with expertise in business strategy and management.",
+      "education": [
+        {
+          "degree": "PhD in Business Administration",
+          "institution": "University of VWX",
+          "year": "2006",
+          "country": "USA"
+        },
+        {
+          "degree": "MBA",
+          "institution": "YZA University",
+          "year": "2001",
+          "country": "UK"
+        }
+      ],
+      "expertise": [
+        "Business Strategy",
+        "Organizational Behavior",
+        "Strategic Management"
+      ],
+      "courses": {
+        "current": [
+          "BBA101: Principles of Management",
+          "BBA303: Strategic Management"
+        ],
+        "previous": [
+          "BBA201: Organizational Behavior",
+          "MBA401: Business Strategy"
+        ]
+      },
+      "research": {
+        "interests": "Corporate Strategy, Leadership",
+        "projects": [
+          {
+            "title": "Strategic Leadership in SMEs",
+            "duration": "2021-2024",
+            "funding": "Industry Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "VWX University",
+            "project": "Leadership Strategies",
+            "year": "2023"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Strategic Management in Small Businesses",
+          "journal": "Journal of Business Strategy",
+          "year": "2023",
+          "doi": "10.7890/jbs.2023.005"
+        }
+      ]
+    },
+    {
+      "id": "faculty-006",
+      "name": "Dr. Nusrat Jahan",
+      "title": "Associate Professor",
+      "role": "Associate Professor",
+      "employeeId": "DIU-BA-002",
+      "departmentId": "ba",
+      "imageUrl": "/images/faculty/nusrat-jahan.jpg",
+      "email": "nusrat.jahan@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/nusrat-jahan",
+        "website": "https://nusratjahan.com"
+      },
+      "bio": "Dr. Nusrat Jahan specializes in human resource management and organizational development.",
+      "education": [
+        {
+          "degree": "PhD in Business Administration",
+          "institution": "University of BCD",
+          "year": "2011",
+          "country": "Australia"
+        },
+        {
+          "degree": "MBA",
+          "institution": "EFG University",
+          "year": "2006",
+          "country": "Canada"
+        }
+      ],
+      "expertise": [
+        "Human Resource Management",
+        "Organizational Development",
+        "Leadership"
+      ],
+      "courses": {
+        "current": [
+          "BBA202: Human Resource Management",
+          "BBA404: Organizational Development"
+        ],
+        "previous": ["BBA302: Leadership Studies", "MBA402: HR Strategy"]
+      },
+      "research": {
+        "interests": "HR Practices, Organizational Change",
+        "projects": [
+          {
+            "title": "HR Strategies for Organizational Change",
+            "duration": "2020-2023",
+            "funding": "Research Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "BCD University",
+            "project": "HR Innovation",
+            "year": "2022"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Innovative HR Practices",
+          "journal": "Journal of Human Resource Management",
+          "year": "2022",
+          "doi": "10.2345/jhrm.2022.006"
+        }
+      ]
+    },
+    {
+      "id": "faculty-007",
+      "name": "Dr. Rezaul Karim",
+      "title": "Professor",
+      "role": "Professor",
+      "employeeId": "DIU-MGT-001",
+      "departmentId": "mgt",
+      "imageUrl": "/images/faculty/rezaul-karim.jpg",
+      "email": "rezaul.karim@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/rezaul-karim",
+        "website": "https://rezaulkarim.com"
+      },
+      "bio": "Dr. Rezaul Karim is an expert in organizational leadership and management theories.",
+      "education": [
+        {
+          "degree": "PhD in Management",
+          "institution": "University of HIJ",
+          "year": "2007",
+          "country": "USA"
+        },
+        {
+          "degree": "MBA",
+          "institution": "KLM University",
+          "year": "2002",
+          "country": "UK"
+        }
+      ],
+      "expertise": [
+        "Organizational Leadership",
+        "Management Theories",
+        "Corporate Governance"
+      ],
+      "courses": {
+        "current": [
+          "MGT101: Introduction to Management",
+          "MGT303: Leadership Theories"
+        ],
+        "previous": [
+          "MGT201: Corporate Governance",
+          "MBA403: Advanced Management"
+        ]
+      },
+      "research": {
+        "interests": "Leadership, Corporate Governance",
+        "projects": [
+          {
+            "title": "Leadership in Corporate Governance",
+            "duration": "2019-2022",
+            "funding": "Industry Grant",
+            "status": "Completed"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "HIJ University",
+            "project": "Governance Models",
+            "year": "2021"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Corporate Governance Models",
+          "journal": "Journal of Management Studies",
+          "year": "2021",
+          "doi": "10.6789/jms.2021.007"
+        }
+      ]
+    },
+    {
+      "id": "faculty-008",
+      "name": "Dr. Shaila Ahmed",
+      "title": "Associate Professor",
+      "role": "Associate Professor",
+      "employeeId": "DIU-MGT-002",
+      "departmentId": "mgt",
+      "imageUrl": "/images/faculty/shaila-ahmed.jpg",
+      "email": "shaila.ahmed@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/shaila-ahmed",
+        "website": "https://shailaahmed.com"
+      },
+      "bio": "Dr. Shaila Ahmed focuses on organizational behavior and change management.",
+      "education": [
+        {
+          "degree": "PhD in Management",
+          "institution": "University of NOP",
+          "year": "2010",
+          "country": "Canada"
+        },
+        {
+          "degree": "MBA",
+          "institution": "QRS University",
+          "year": "2005",
+          "country": "Australia"
+        }
+      ],
+      "expertise": [
+        "Organizational Behavior",
+        "Change Management",
+        "Team Dynamics"
+      ],
+      "courses": {
+        "current": [
+          "MGT202: Organizational Behavior",
+          "MGT404: Change Management"
+        ],
+        "previous": ["MGT301: Team Dynamics", "MBA404: Organizational Change"]
+      },
+      "research": {
+        "interests": "Change Management, Organizational Culture",
+        "projects": [
+          {
+            "title": "Organizational Culture and Change",
+            "duration": "2021-2024",
+            "funding": "Research Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "NOP University",
+            "project": "Change Management Strategies",
+            "year": "2023"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Change Management in Organizations",
+          "journal": "Journal of Organizational Behavior",
+          "year": "2023",
+          "doi": "10.1234/job.2023.008"
+        }
+      ]
+    },
+    {
+      "id": "faculty-009",
+      "name": "Dr. Kamrul Hasan",
+      "title": "Professor",
+      "role": "Professor",
+      "employeeId": "DIU-RE-001",
+      "departmentId": "re",
+      "imageUrl": "/images/faculty/kamrul-hasan.jpg",
+      "email": "kamrul.hasan@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/kamrul-hasan",
+        "website": "https://kamrulhasan.com"
+      },
+      "bio": "Dr. Kamrul Hasan is an expert in real estate development and urban planning.",
+      "education": [
+        {
+          "degree": "PhD in Real Estate",
+          "institution": "University of TUV",
+          "year": "2009",
+          "country": "USA"
+        },
+        {
+          "degree": "MSc in Real Estate Management",
+          "institution": "WXY University",
+          "year": "2004",
+          "country": "UK"
+        }
+      ],
+      "expertise": [
+        "Real Estate Development",
+        "Urban Planning",
+        "Property Management"
+      ],
+      "courses": {
+        "current": ["RE101: Real Estate Principles", "RE303: Urban Planning"],
+        "previous": ["RE201: Property Management", "RE401: Real Estate Finance"]
+      },
+      "research": {
+        "interests": "Urban Development, Real Estate Investment",
+        "projects": [
+          {
+            "title": "Sustainable Urban Development",
+            "duration": "2020-2023",
+            "funding": "Government Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "TUV University",
+            "project": "Urban Planning Research",
+            "year": "2022"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Sustainable Real Estate Development",
+          "journal": "Journal of Urban Studies",
+          "year": "2022",
+          "doi": "10.5678/jus.2022.009"
+        }
+      ]
+    },
+    {
+      "id": "faculty-010",
+      "name": "Dr. Farzana Akter",
+      "title": "Associate Professor",
+      "role": "Associate Professor",
+      "employeeId": "DIU-RE-002",
+      "departmentId": "re",
+      "imageUrl": "/images/faculty/farzana-akter.jpg",
+      "email": "farzana.akter@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/farzana-akter",
+        "website": "https://farzanaakter.com"
+      },
+      "bio": "Dr. Farzana Akter specializes in real estate finance and market analysis.",
+      "education": [
+        {
+          "degree": "PhD in Real Estate",
+          "institution": "University of ZAB",
+          "year": "2013",
+          "country": "Australia"
+        },
+        {
+          "degree": "MSc in Real Estate Finance",
+          "institution": "CDE University",
+          "year": "2008",
+          "country": "Canada"
+        }
+      ],
+      "expertise": [
+        "Real Estate Finance",
+        "Market Analysis",
+        "Property Valuation"
+      ],
+      "courses": {
+        "current": ["RE202: Real Estate Finance", "RE404: Market Analysis"],
+        "previous": ["RE302: Property Valuation", "RE402: Investment Analysis"]
+      },
+      "research": {
+        "interests": "Real Estate Markets, Property Investment",
+        "projects": [
+          {
+            "title": "Real Estate Market Trends",
+            "duration": "2021-2024",
+            "funding": "Industry Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "ZAB University",
+            "project": "Market Analysis Research",
+            "year": "2023"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Trends in Real Estate Markets",
+          "journal": "Journal of Real Estate Finance",
+          "year": "2023",
+          "doi": "10.9012/jref.2023.010"
+        }
+      ]
+    },
+    {
+      "id": "faculty-011",
+      "name": "Dr. Tariqul Islam",
+      "title": "Professor",
+      "role": "Professor",
+      "employeeId": "DIU-THM-001",
+      "departmentId": "thm",
+      "imageUrl": "/images/faculty/tariqul-islam.jpg",
+      "email": "tariqul.islam@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/tariqul-islam",
+        "website": "https://tariqulislam.com"
+      },
+      "bio": "Dr. Tariqul Islam is an expert in tourism management and hospitality operations.",
+      "education": [
+        {
+          "degree": "PhD in Tourism Management",
+          "institution": "University of FGH",
+          "year": "2010",
+          "country": "USA"
+        },
+        {
+          "degree": "MSc in Hospitality Management",
+          "institution": "IJK University",
+          "year": "2005",
+          "country": "UK"
+        }
+      ],
+      "expertise": [
+        "Tourism Management",
+        "Hospitality Operations",
+        "Sustainable Tourism"
+      ],
+      "courses": {
+        "current": [
+          "THM101: Introduction to Tourism",
+          "THM303: Hospitality Management"
+        ],
+        "previous": ["THM201: Sustainable Tourism", "THM401: Tourism Marketing"]
+      },
+      "research": {
+        "interests": "Sustainable Tourism, Hospitality Management",
+        "projects": [
+          {
+            "title": "Sustainable Tourism Development",
+            "duration": "2020-2023",
+            "funding": "Government Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "FGH University",
+            "project": "Tourism Sustainability",
+            "year": "2022"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Sustainable Tourism Practices",
+          "journal": "Journal of Tourism Management",
+          "year": "2022",
+          "doi": "10.3456/jtm.2022.011"
+        }
+      ]
+    },
+    {
+      "id": "faculty-012",
+      "name": "Dr. Salma Begum",
+      "title": "Associate Professor",
+      "role": "Associate Professor",
+      "employeeId": "DIU-THM-002",
+      "departmentId": "thm",
+      "imageUrl": "/images/faculty/salma-begum.jpg",
+      "email": "salma.begum@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/salma-begum",
+        "website": "https://salmabegum.com"
+      },
+      "bio": "Dr. Salma Begum specializes in hospitality marketing and customer service.",
+      "education": [
+        {
+          "degree": "PhD in Hospitality Management",
+          "institution": "University of LMN",
+          "year": "2012",
+          "country": "Australia"
+        },
+        {
+          "degree": "MSc in Tourism Management",
+          "institution": "OPQ University",
+          "year": "2007",
+          "country": "Canada"
+        }
+      ],
+      "expertise": [
+        "Hospitality Marketing",
+        "Customer Service",
+        "Event Management"
+      ],
+      "courses": {
+        "current": [
+          "THM202: Hospitality Marketing",
+          "THM404: Customer Service Management"
+        ],
+        "previous": ["THM302: Event Management", "THM402: Tourism Operations"]
+      },
+      "research": {
+        "interests": "Hospitality Marketing, Customer Experience",
+        "projects": [
+          {
+            "title": "Customer Experience in Hospitality",
+            "duration": "2021-2024",
+            "funding": "Industry Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "LMN University",
+            "project": "Customer Service Research",
+            "year": "2023"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Enhancing Customer Experience in Hospitality",
+          "journal": "Journal of Hospitality Marketing",
+          "year": "2023",
+          "doi": "10.7890/jhm.2023.012"
+        }
+      ]
+    },
+    {
+      "id": "faculty-013",
+      "name": "Dr. Anwar Hossain",
+      "title": "Professor",
+      "role": "Professor",
+      "employeeId": "DIU-IE-001",
+      "departmentId": "ie",
+      "imageUrl": "/images/faculty/anwar-hossain.jpg",
+      "email": "anwar.hossain@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/anwar-hossain",
+        "website": "https://anwarhossain.com"
+      },
+      "bio": "Dr. Anwar Hossain is an expert in entrepreneurship and innovation management.",
+      "education": [
+        {
+          "degree": "PhD in Entrepreneurship",
+          "institution": "University of RST",
+          "year": "2011",
+          "country": "USA"
+        },
+        {
+          "degree": "MBA",
+          "institution": "UVW University",
+          "year": "2006",
+          "country": "UK"
+        }
+      ],
+      "expertise": [
+        "Entrepreneurship",
+        "Innovation Management",
+        "Startup Development"
+      ],
+      "courses": {
+        "current": [
+          "IE101: Introduction to Entrepreneurship",
+          "IE303: Innovation Management"
+        ],
+        "previous": [
+          "IE201: Startup Development",
+          "IE401: Entrepreneurial Finance"
+        ]
+      },
+      "research": {
+        "interests": "Startup Ecosystems, Innovation Strategies",
+        "projects": [
+          {
+            "title": "Building Sustainable Startups",
+            "duration": "2020-2023",
+            "funding": "Industry Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "RST University",
+            "project": "Startup Ecosystem Research",
+            "year": "2022"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Sustainable Startup Ecosystems",
+          "journal": "Journal of Entrepreneurship",
+          "year": "2022",
+          "doi": "10.2345/je.2022.013"
+        }
+      ]
+    },
+    {
+      "id": "faculty-014",
+      "name": "Dr. Maimuna Khatun",
+      "title": "Associate Professor",
+      "role": "Associate Professor",
+      "employeeId": "DIU-IE-002",
+      "departmentId": "ie",
+      "imageUrl": "/images/faculty/maimuna-khatun.jpg",
+      "email": "maimuna.khatun@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/maimuna-khatun",
+        "website": "https://maimunakhatun.com"
+      },
+      "bio": "Dr. Maimuna Khatun specializes in social entrepreneurship and innovation.",
+      "education": [
+        {
+          "degree": "PhD in Entrepreneurship",
+          "institution": "University of XYZ",
+          "year": "2013",
+          "country": "Canada"
+        },
+        {
+          "degree": "MBA",
+          "institution": "ABC University",
+          "year": "2008",
+          "country": "Australia"
+        }
+      ],
+      "expertise": [
+        "Social Entrepreneurship",
+        "Innovation",
+        "Business Incubation"
+      ],
+      "courses": {
+        "current": [
+          "IE202: Social Entrepreneurship",
+          "IE404: Business Incubation"
+        ],
+        "previous": [
+          "IE302: Innovation Strategies",
+          "IE402: Entrepreneurial Leadership"
+        ]
+      },
+      "research": {
+        "interests": "Social Innovation, Business Incubation",
+        "projects": [
+          {
+            "title": "Social Entrepreneurship Models",
+            "duration": "2021-2024",
+            "funding": "Research Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "XYZ University",
+            "project": "Social Innovation Research",
+            "year": "2023"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Models of Social Entrepreneurship",
+          "journal": "Journal of Social Innovation",
+          "year": "2023",
+          "doi": "10.5678/jsi.2023.014"
+        }
+      ]
+    },
+    {
+      "id": "faculty-015",
+      "name": "Dr. Saiful Islam",
+      "title": "Professor",
+      "role": "Professor",
+      "employeeId": "DIU-ACC-001",
+      "departmentId": "acc",
+      "imageUrl": "/images/faculty/saiful-islam.jpg",
+      "email": "saiful.islam@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/saiful-islam",
+        "website": "https://saifulislam.com"
+      },
+      "bio": "Dr. Saiful Islam is an expert in financial accounting and auditing.",
+      "education": [
+        {
+          "degree": "PhD in Accounting",
+          "institution": "University of DEF",
+          "year": "2008",
+          "country": "USA"
+        },
+        {
+          "degree": "MSc in Accounting",
+          "institution": "GHI University",
+          "year": "2003",
+          "country": "UK"
+        }
+      ],
+      "expertise": ["Financial Accounting", "Auditing", "Taxation"],
+      "courses": {
+        "current": ["ACC101: Financial Accounting", "ACC303: Auditing"],
+        "previous": ["ACC201: Cost Accounting", "ACC401: Taxation"]
+      },
+      "research": {
+        "interests": "Accounting Standards, Audit Practices",
+        "projects": [
+          {
+            "title": "Modern Auditing Techniques",
+            "duration": "2020-2023",
+            "funding": "Industry Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "DEF University",
+            "project": "Accounting Standards Research",
+            "year": "2022"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Advancements in Auditing Techniques",
+          "journal": "Journal of Accounting Research",
+          "year": "2022",
+          "doi": "10.9012/jar.2022.015"
+        }
+      ]
+    },
+    {
+      "id": "faculty-016",
+      "name": "Dr. Rabeya Sultana",
+      "title": "Associate Professor",
+      "role": "Associate Professor",
+      "employeeId": "DIU-ACC-002",
+      "departmentId": "acc",
+      "imageUrl": "/images/faculty/rabeya-sultana.jpg",
+      "email": "rabeya.sultana@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/rabeya-sultana",
+        "website": "https://rabeyasultana.com"
+      },
+      "bio": "Dr. Rabeya Sultana specializes in management accounting and financial reporting.",
+      "education": [
+        {
+          "degree": "PhD in Accounting",
+          "institution": "University of JKL",
+          "year": "2011",
+          "country": "Canada"
+        },
+        {
+          "degree": "MSc in Accounting",
+          "institution": "MNO University",
+          "year": "2006",
+          "country": "Australia"
+        }
+      ],
+      "expertise": [
+        "Management Accounting",
+        "Financial Reporting",
+        "Cost Analysis"
+      ],
+      "courses": {
+        "current": [
+          "ACC202: Management Accounting",
+          "ACC404: Financial Reporting"
+        ],
+        "previous": ["ACC302: Cost Analysis", "ACC402: Advanced Accounting"]
+      },
+      "research": {
+        "interests": "Financial Reporting, Cost Management",
+        "projects": [
+          {
+            "title": "Cost Management Strategies",
+            "duration": "2021-2024",
+            "funding": "Research Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "JKL University",
+            "project": "Financial Reporting Standards",
+            "year": "2023"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Innovations in Financial Reporting",
+          "journal": "Journal of Financial Accounting",
+          "year": "2023",
+          "doi": "10.3456/jfa.2023.016"
+        }
+      ]
+    },
+    {
+      "id": "faculty-017",
+      "name": "Dr. Monir Hossain",
+      "title": "Professor",
+      "role": "Professor",
+      "employeeId": "DIU-FB-001",
+      "departmentId": "fb",
+      "imageUrl": "/images/faculty/monir-hossain.jpg",
+      "email": "monir.hossain@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/monir-hossain",
+        "website": "https://monirhossain.com"
+      },
+      "bio": "Dr. Monir Hossain is an expert in financial management and banking operations.",
+      "education": [
+        {
+          "degree": "PhD in Finance",
+          "institution": "University of PQR",
+          "year": "2009",
+          "country": "USA"
+        },
+        {
+          "degree": "MBA in Finance",
+          "institution": "STU University",
+          "year": "2004",
+          "country": "UK"
+        }
+      ],
+      "expertise": [
+        "Financial Management",
+        "Banking Operations",
+        "Investment Analysis"
+      ],
+      "courses": {
+        "current": ["FB101: Financial Management", "FB303: Banking Operations"],
+        "previous": ["FB201: Investment Analysis", "FB401: Corporate Finance"]
+      },
+      "research": {
+        "interests": "Banking Systems, Financial Markets",
+        "projects": [
+          {
+            "title": "Digital Banking Innovations",
+            "duration": "2020-2023",
+            "funding": "Industry Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "PQR University",
+            "project": "Financial Markets Research",
+            "year": "2022"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Innovations in Digital Banking",
+          "journal": "Journal of Finance",
+          "year": "2022",
+          "doi": "10.7890/jf.2022.017"
+        }
+      ]
+    },
+    {
+      "id": "faculty-018",
+      "name": "Dr. Nasima Begum",
+      "title": "Associate Professor",
+      "role": "Associate Professor",
+      "employeeId": "DIU-FB-002",
+      "departmentId": "fb",
+      "imageUrl": "/images/faculty/nasima-begum.jpg",
+      "email": "nasima.begum@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/nasima-begum",
+        "website": "https://nasimabegum.com"
+      },
+      "bio": "Dr. Nasima Begum specializes in corporate finance and risk management.",
+      "education": [
+        {
+          "degree": "PhD in Finance",
+          "institution": "University of VWX",
+          "year": "2012",
+          "country": "Canada"
+        },
+        {
+          "degree": "MBA in Finance",
+          "institution": "YZA University",
+          "year": "2007",
+          "country": "Australia"
+        }
+      ],
+      "expertise": [
+        "Corporate Finance",
+        "Risk Management",
+        "Financial Modeling"
+      ],
+      "courses": {
+        "current": ["FB202: Corporate Finance", "FB404: Risk Management"],
+        "previous": ["FB302: Financial Modeling", "FB402: Investment Banking"]
+      },
+      "research": {
+        "interests": "Risk Management, Financial Modeling",
+        "projects": [
+          {
+            "title": "Risk Management in Financial Institutions",
+            "duration": "2021-2024",
+            "funding": "Research Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "VWX University",
+            "project": "Financial Risk Analysis",
+            "year": "2023"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Financial Risk Management Strategies",
+          "journal": "Journal of Risk and Finance",
+          "year": "2023",
+          "doi": "10.2345/jrf.2023.018"
+        }
+      ]
+    },
+    {
+      "id": "faculty-019",
+      "name": "Dr. Zakir Hossain",
+      "title": "Professor",
+      "role": "Professor",
+      "employeeId": "DIU-MKT-001",
+      "departmentId": "mkt",
+      "imageUrl": "/images/faculty/zakir-hossain.jpg",
+      "email": "zakir.hossain@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/zakir-hossain",
+        "website": "https://zakirhossain.com"
+      },
+      "bio": "Dr. Zakir Hossain is an expert in marketing strategies and consumer behavior.",
+      "education": [
+        {
+          "degree": "PhD in Marketing",
+          "institution": "University of BCD",
+          "year": "2010",
+          "country": "USA"
+        },
+        {
+          "degree": "MBA in Marketing",
+          "institution": "EFG University",
+          "year": "2005",
+          "country": "UK"
+        }
+      ],
+      "expertise": [
+        "Marketing Strategies",
+        "Consumer Behavior",
+        "Brand Management"
+      ],
+      "courses": {
+        "current": [
+          "MKT101: Principles of Marketing",
+          "MKT303: Consumer Behavior"
+        ],
+        "previous": ["MKT201: Brand Management", "MKT401: Digital Marketing"]
+      },
+      "research": {
+        "interests": "Consumer Behavior, Digital Marketing",
+        "projects": [
+          {
+            "title": "Digital Marketing Trends",
+            "duration": "2020-2023",
+            "funding": "Industry Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "BCD University",
+            "project": "Consumer Behavior Research",
+            "year": "2022"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Trends in Digital Marketing",
+          "journal": "Journal of Marketing Research",
+          "year": "2022",
+          "doi": "10.5678/jmr.2022.019"
+        }
+      ]
+    },
+    {
+      "id": "faculty-020",
+      "name": "Dr. Farida Yasmin",
+      "title": "Associate Professor",
+      "role": "Associate Professor",
+      "employeeId": "DIU-MKT-002",
+      "departmentId": "mkt",
+      "imageUrl": "/images/faculty/farida-yasmin.jpg",
+      "email": "farida.yasmin@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/farida-yasmin",
+        "website": "https://faridayasmin.com"
+      },
+      "bio": "Dr. Farida Yasmin specializes in digital marketing and market research.",
+      "education": [
+        {
+          "degree": "PhD in Marketing",
+          "institution": "University of HIJ",
+          "year": "2013",
+          "country": "Canada"
+        },
+        {
+          "degree": "MBA in Marketing",
+          "institution": "KLM University",
+          "year": "2008",
+          "country": "Australia"
+        }
+      ],
+      "expertise": ["Digital Marketing", "Market Research", "Advertising"],
+      "courses": {
+        "current": ["MKT202: Digital Marketing", "MKT404: Market Research"],
+        "previous": ["MKT302: Advertising", "MKT402: Marketing Analytics"]
+      },
+      "research": {
+        "interests": "Digital Advertising, Market Analytics",
+        "projects": [
+          {
+            "title": "Digital Advertising Strategies",
+            "duration": "2021-2024",
+            "funding": "Research Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "HIJ University",
+            "project": "Market Research Innovations",
+            "year": "2023"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Innovations in Digital Advertising",
+          "journal": "Journal of Digital Marketing",
+          "year": "2023",
+          "doi": "10.9012/jdm.2023.020"
+        }
+      ]
+    },
+    {
+      "id": "faculty-021",
+      "name": "Dr. Asif Iqbal",
+      "title": "Professor",
+      "role": "Professor",
+      "employeeId": "DIU-MCT-001",
+      "departmentId": "mct",
+      "imageUrl": "/images/faculty/asif-iqbal.jpg",
+      "email": "asif.iqbal@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/asif-iqbal",
+        "website": "https://asifiqbal.com"
+      },
+      "bio": "Dr. Asif Iqbal is an expert in multimedia design and creative technology.",
+      "education": [
+        {
+          "degree": "PhD in Multimedia Technology",
+          "institution": "University of NOP",
+          "year": "2011",
+          "country": "USA"
+        },
+        {
+          "degree": "MSc in Creative Technology",
+          "institution": "QRS University",
+          "year": "2006",
+          "country": "UK"
+        }
+      ],
+      "expertise": ["Multimedia Design", "Creative Technology", "Animation"],
+      "courses": {
+        "current": ["MCT101: Multimedia Design", "MCT303: Creative Technology"],
+        "previous": [
+          "MCT201: Animation Techniques",
+          "MCT401: Interactive Media"
+        ]
+      },
+      "research": {
+        "interests": "Multimedia Systems, Creative Design",
+        "projects": [
+          {
+            "title": "Interactive Multimedia Systems",
+            "duration": "2020-2023",
+            "funding": "Research Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "NOP University",
+            "project": "Creative Technology Research",
+            "year": "2022"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Advances in Multimedia Design",
+          "journal": "Journal of Creative Technology",
+          "year": "2022",
+          "doi": "10.3456/jct.2022.021"
+        }
+      ]
+    },
+    {
+      "id": "faculty-022",
+      "name": "Dr. Shabnam Akhter",
+      "title": "Associate Professor",
+      "role": "Associate Professor",
+      "employeeId": "DIU-MCT-002",
+      "departmentId": "mct",
+      "imageUrl": "/images/faculty/shabnam-akhter.jpg",
+      "email": "shabnam.akhter@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/shabnam-akhter",
+        "website": "https://shabnamakhter.com"
+      },
+      "bio": "Dr. Shabnam Akhter specializes in digital media and interactive design.",
+      "education": [
+        {
+          "degree": "PhD in Creative Technology",
+          "institution": "University of TUV",
+          "year": "2013",
+          "country": "Canada"
+        },
+        {
+          "degree": "MSc in Multimedia Design",
+          "institution": "WXY University",
+          "year": "2008",
+          "country": "Australia"
+        }
+      ],
+      "expertise": ["Digital Media", "Interactive Design", "User Experience"],
+      "courses": {
+        "current": ["MCT202: Digital Media", "MCT404: Interactive Design"],
+        "previous": [
+          "MCT302: User Experience Design",
+          "MCT402: Multimedia Production"
+        ]
+      },
+      "research": {
+        "interests": "Interactive Media, User Experience",
+        "projects": [
+          {
+            "title": "User-Centric Interactive Design",
+            "duration": "2021-2024",
+            "funding": "Industry Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "TUV University",
+            "project": "Interactive Media Research",
+            "year": "2023"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "User-Centric Design in Multimedia",
+          "journal": "Journal of Interactive Media",
+          "year": "2023",
+          "doi": "10.7890/jim.2023.022"
+        }
+      ]
+    },
+    {
+      "id": "faculty-023",
+      "name": "Dr. Mehedi Hasan",
+      "title": "Professor",
+      "role": "Professor",
+      "employeeId": "DIU-CIS-001",
+      "departmentId": "cis",
+      "imageUrl": "/images/faculty/mehedi-hasan.jpg",
+      "email": "mehedi.hasan@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/mehedi-hasan",
+        "website": "https://mehedihasan.com"
+      },
+      "bio": "Dr. Mehedi Hasan is an expert in information systems and data management.",
+      "education": [
+        {
+          "degree": "PhD in Information Systems",
+          "institution": "University of ZAB",
+          "year": "2010",
+          "country": "USA"
+        },
+        {
+          "degree": "MSc in Information Systems",
+          "institution": "CDE University",
+          "year": "2005",
+          "country": "UK"
+        }
+      ],
+      "expertise": [
+        "Information Systems",
+        "Data Management",
+        "Database Systems"
+      ],
+      "courses": {
+        "current": [
+          "CIS101: Information Systems",
+          "CIS303: Database Management"
+        ],
+        "previous": ["CIS201: Data Analytics", "CIS401: Enterprise Systems"]
+      },
+      "research": {
+        "interests": "Data Management, Enterprise Systems",
+        "projects": [
+          {
+            "title": "Enterprise Data Management Systems",
+            "duration": "2020-2023",
+            "funding": "Research Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "ZAB University",
+            "project": "Data Management Research",
+            "year": "2022"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Advances in Enterprise Data Management",
+          "journal": "Journal of Information Systems",
+          "year": "2022",
+          "doi": "10.2345/jis.2022.023"
+        }
+      ]
+    },
+    {
+      "id": "faculty-024",
+      "name": "Dr. Runa Laila",
+      "title": "Associate Professor",
+      "role": "Associate Professor",
+      "employeeId": "DIU-CIS-002",
+      "departmentId": "cis",
+      "imageUrl": "/images/faculty/runa-laila.jpg",
+      "email": "runa.laila@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/runa-laila",
+        "website": "https://runalaila.com"
+      },
+      "bio": "Dr. Runa Laila specializes in business intelligence and data analytics.",
+      "education": [
+        {
+          "degree": "PhD in Information Systems",
+          "institution": "University of FGH",
+          "year": "2012",
+          "country": "Canada"
+        },
+        {
+          "degree": "MSc in Data Analytics",
+          "institution": "IJK University",
+          "year": "2007",
+          "country": "Australia"
+        }
+      ],
+      "expertise": [
+        "Business Intelligence",
+        "Data Analytics",
+        "Information Management"
+      ],
+      "courses": {
+        "current": ["CIS202: Business Intelligence", "CIS404: Data Analytics"],
+        "previous": [
+          "CIS302: Information Management",
+          "CIS402: Big Data Systems"
+        ]
+      },
+      "research": {
+        "interests": "Business Intelligence, Big Data",
+        "projects": [
+          {
+            "title": "Big Data Analytics for Business",
+            "duration": "2021-2024",
+            "funding": "Industry Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "FGH University",
+            "project": "Business Intelligence Research",
+            "year": "2023"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Big Data in Business Intelligence",
+          "journal": "Journal of Data Analytics",
+          "year": "2023",
+          "doi": "10.5678/jda.2023.024"
+        }
+      ]
+    },
+    {
+      "id": "faculty-025",
+      "name": "Dr. Shafiqul Islam",
+      "title": "Professor",
+      "role": "Professor",
+      "employeeId": "DIU-ITM-001",
+      "departmentId": "itm",
+      "imageUrl": "/images/faculty/shafiqul-islam.jpg",
+      "email": "shafiqul.islam@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/shafiqul-islam",
+        "website": "https://shafiqulislam.com"
+      },
+      "bio": "Dr. Shafiqul Islam is an expert in IT management and enterprise systems.",
+      "education": [
+        {
+          "degree": "PhD in Information Technology",
+          "institution": "University of LMN",
+          "year": "2011",
+          "country": "USA"
+        },
+        {
+          "degree": "MSc in IT Management",
+          "institution": "OPQ University",
+          "year": "2006",
+          "country": "UK"
+        }
+      ],
+      "expertise": ["IT Management", "Enterprise Systems", "IT Strategy"],
+      "courses": {
+        "current": ["ITM101: IT Management", "ITM303: Enterprise Systems"],
+        "previous": ["ITM201: IT Strategy", "ITM401: IT Governance"]
+      },
+      "research": {
+        "interests": "IT Governance, Enterprise IT",
+        "projects": [
+          {
+            "title": "IT Governance Frameworks",
+            "duration": "2020-2023",
+            "funding": "Research Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "LMN University",
+            "project": "IT Governance Research",
+            "year": "2022"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Advances in IT Governance",
+          "journal": "Journal of IT Management",
+          "year": "2022",
+          "doi": "10.9012/jitm.2022.025"
+        }
+      ]
+    },
+    {
+      "id": "faculty-026",
+      "name": "Dr. Amina Khatun",
+      "title": "Associate Professor",
+      "role": "Associate Professor",
+      "employeeId": "DIU-ITM-002",
+      "departmentId": "itm",
+      "imageUrl": "/images/faculty/amina-khatun.jpg",
+      "email": "amina.khatun@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/amina-khatun",
+        "website": "https://aminakhatun.com"
+      },
+      "bio": "Dr. Amina Khatun specializes in IT project management and cybersecurity.",
+      "education": [
+        {
+          "degree": "PhD in Information Technology",
+          "institution": "University of RST",
+          "year": "2013",
+          "country": "Canada"
+        },
+        {
+          "degree": "MSc in IT Management",
+          "institution": "UVW University",
+          "year": "2008",
+          "country": "Australia"
+        }
+      ],
+      "expertise": ["IT Project Management", "Cybersecurity", "IT Operations"],
+      "courses": {
+        "current": [
+          "ITM202: IT Project Management",
+          "ITM404: Cybersecurity Management"
+        ],
+        "previous": ["ITM302: IT Operations", "ITM402: IT Risk Management"]
+      },
+      "research": {
+        "interests": "Cybersecurity, IT Project Management",
+        "projects": [
+          {
+            "title": "Cybersecurity in IT Projects",
+            "duration": "2021-2024",
+            "funding": "Industry Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "RST University",
+            "project": "Cybersecurity Research",
+            "year": "2023"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Cybersecurity in IT Project Management",
+          "journal": "Journal of Cybersecurity Management",
+          "year": "2023",
+          "doi": "10.3456/jcm.2023.026"
+        }
+      ]
+    },
+    {
+      "id": "faculty-027",
+      "name": "Dr. Rafiqul Islam",
+      "title": "Professor",
+      "role": "Professor",
+      "employeeId": "DIU-ICE-001",
+      "departmentId": "ice",
+      "imageUrl": "/images/faculty/rafiqul-islam.jpg",
+      "email": "rafiqul.islam@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/rafiqul-islam",
+        "website": "https://rafiqulislam.com"
+      },
+      "bio": "Dr. Rafiqul Islam is an expert in communication engineering and signal processing.",
+      "education": [
+        {
+          "degree": "PhD in Communication Engineering",
+          "institution": "University of XYZ",
+          "year": "2010",
+          "country": "USA"
+        },
+        {
+          "degree": "MSc in Electrical Engineering",
+          "institution": "ABC University",
+          "year": "2005",
+          "country": "UK"
+        }
+      ],
+      "expertise": [
+        "Communication Engineering",
+        "Signal Processing",
+        "Wireless Networks"
+      ],
+      "courses": {
+        "current": [
+          "ICE101: Communication Systems",
+          "ICE303: Signal Processing"
+        ],
+        "previous": [
+          "ICE201: Wireless Networks",
+          "ICE401: Advanced Communications"
+        ]
+      },
+      "research": {
+        "interests": "Wireless Communications, Signal Processing",
+        "projects": [
+          {
+            "title": "Next-Generation Wireless Networks",
+            "duration": "2020-2023",
+            "funding": "Research Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "XYZ University",
+            "project": "Wireless Communication Research",
+            "year": "2022"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Advances in Wireless Communications",
+          "journal": "Journal of Communication Engineering",
+          "year": "2022",
+          "doi": "10.7890/jce.2022.027"
+        }
+      ]
+    },
+    {
+      "id": "faculty-028",
+      "name": "Dr. Farzana Rahman",
+      "title": "Associate Professor",
+      "role": "Associate Professor",
+      "employeeId": "DIU-ICE-002",
+      "departmentId": "ice",
+      "imageUrl": "/images/faculty/farzana-rahman.jpg",
+      "email": "farzana.rahman@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/farzana-rahman",
+        "website": "https://farzanarahman.com"
+      },
+      "bio": "Dr. Farzana Rahman specializes in network security and telecommunications.",
+      "education": [
+        {
+          "degree": "PhD in Communication Engineering",
+          "institution": "University of DEF",
+          "year": "2012",
+          "country": "Canada"
+        },
+        {
+          "degree": "MSc in Telecommunications",
+          "institution": "GHI University",
+          "year": "2007",
+          "country": "Australia"
+        }
+      ],
+      "expertise": [
+        "Network Security",
+        "Telecommunications",
+        "Data Communications"
+      ],
+      "courses": {
+        "current": ["ICE202: Network Security", "ICE404: Telecommunications"],
+        "previous": [
+          "ICE302: Data Communications",
+          "ICE402: Network Management"
+        ]
+      },
+      "research": {
+        "interests": "Network Security, Telecommunications",
+        "projects": [
+          {
+            "title": "Secure Telecommunication Systems",
+            "duration": "2021-2024",
+            "funding": "Industry Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "DEF University",
+            "project": "Network Security Research",
+            "year": "2023"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Secure Telecommunication Networks",
+          "journal": "Journal of Network Security",
+          "year": "2023",
+          "doi": "10.2345/jns.2023.028"
+        }
+      ]
+    },
+    {
+      "id": "faculty-029",
+      "name": "Dr. Mahbubur Rahman",
+      "title": "Professor",
+      "role": "Professor",
+      "employeeId": "DIU-TE-001",
+      "departmentId": "te",
+      "imageUrl": "/images/faculty/mahbubur-rahman.jpg",
+      "email": "mahbubur.rahman@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/mahbubur-rahman",
+        "website": "https://mahbuburrahman.com"
+      },
+      "bio": "Dr. Mahbubur Rahman is an expert in textile manufacturing and material science.",
+      "education": [
+        {
+          "degree": "PhD in Textile Engineering",
+          "institution": "University of JKL",
+          "year": "2010",
+          "country": "USA"
+        },
+        {
+          "degree": "MSc in Textile Engineering",
+          "institution": "MNO University",
+          "year": "2005",
+          "country": "UK"
+        }
+      ],
+      "expertise": [
+        "Textile Manufacturing",
+        "Material Science",
+        "Textile Technology"
+      ],
+      "courses": {
+        "current": ["TE101: Textile Manufacturing", "TE303: Material Science"],
+        "previous": ["TE201: Textile Technology", "TE401: Advanced Textiles"]
+      },
+      "research": {
+        "interests": "Sustainable Textiles, Material Science",
+        "projects": [
+          {
+            "title": "Sustainable Textile Production",
+            "duration": "2020-2023",
+            "funding": "Research Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "JKL University",
+            "project": "Textile Sustainability Research",
+            "year": "2022"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Sustainable Textile Manufacturing",
+          "journal": "Journal of Textile Engineering",
+          "year": "2022",
+          "doi": "10.5678/jte.2022.029"
+        }
+      ]
+    },
+    {
+      "id": "faculty-030",
+      "name": "Dr. Nazma Begum",
+      "title": "Associate Professor",
+      "role": "Associate Professor",
+      "employeeId": "DIU-TE-002",
+      "departmentId": "te",
+      "imageUrl": "/images/faculty/nazma-begum.jpg",
+      "email": "nazma.begum@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/nazma-begum",
+        "website": "https://nazmabegum.com"
+      },
+      "bio": "Dr. Nazma Begum specializes in textile chemistry and fabric design.",
+      "education": [
+        {
+          "degree": "PhD in Textile Engineering",
+          "institution": "University of PQR",
+          "year": "2012",
+          "country": "Canada"
+        },
+        {
+          "degree": "MSc in Textile Chemistry",
+          "institution": "STU University",
+          "year": "2007",
+          "country": "Australia"
+        }
+      ],
+      "expertise": ["Textile Chemistry", "Fabric Design", "Textile Processing"],
+      "courses": {
+        "current": ["TE202: Textile Chemistry", "TE404: Fabric Design"],
+        "previous": [
+          "TE302: Textile Processing",
+          "TE402: Advanced Fabric Design"
+        ]
+      },
+      "research": {
+        "interests": "Textile Chemistry, Sustainable Fabrics",
+        "projects": [
+          {
+            "title": "Eco-Friendly Textile Processing",
+            "duration": "2021-2024",
+            "funding": "Industry Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "PQR University",
+            "project": "Textile Chemistry Research",
+            "year": "2023"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Eco-Friendly Textile Processing",
+          "journal": "Journal of Textile Chemistry",
+          "year": "2023",
+          "doi": "10.9012/jtc.2023.030"
+        }
+      ]
+    },
+    {
+      "id": "faculty-031",
+      "name": "Dr. Enamul Haque",
+      "title": "Professor",
+      "role": "Professor",
+      "employeeId": "DIU-EEE-001",
+      "departmentId": "eee",
+      "imageUrl": "/images/faculty/enamul-haque.jpg",
+      "email": "enamul.haque@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/enamul-haque",
+        "website": "https://enamulhaque.com"
+      },
+      "bio": "Dr. Enamul Haque is an expert in power systems and electrical engineering.",
+      "education": [
+        {
+          "degree": "PhD in Electrical Engineering",
+          "institution": "University of VWX",
+          "year": "2009",
+          "country": "USA"
+        },
+        {
+          "degree": "MSc in Electrical Engineering",
+          "institution": "YZA University",
+          "year": "2004",
+          "country": "UK"
+        }
+      ],
+      "expertise": [
+        "Power Systems",
+        "Electrical Engineering",
+        "Renewable Energy"
+      ],
+      "courses": {
+        "current": ["EEE101: Power Systems", "EEE303: Electrical Circuits"],
+        "previous": ["EEE201: Renewable Energy", "EEE401: Power Electronics"]
+      },
+      "research": {
+        "interests": "Renewable Energy, Power Systems",
+        "projects": [
+          {
+            "title": "Renewable Energy Integration",
+            "duration": "2020-2023",
+            "funding": "Research Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "VWX University",
+            "project": "Power Systems Research",
+            "year": "2022"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Renewable Energy in Power Systems",
+          "journal": "Journal of Electrical Engineering",
+          "year": "2022",
+          "doi": "10.3456/jee.2022.031"
+        }
+      ]
+    },
+    {
+      "id": "faculty-032",
+      "name": "Dr. Salina Akter",
+      "title": "Associate Professor",
+      "role": "Associate Professor",
+      "employeeId": "DIU-EEE-002",
+      "departmentId": "eee",
+      "imageUrl": "/images/faculty/salina-akter.jpg",
+      "email": "salina.akter@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/salina-akter",
+        "website": "https://salinaakter.com"
+      },
+      "bio": "Dr. Salina Akter specializes in electronics and control systems.",
+      "education": [
+        {
+          "degree": "PhD in Electrical Engineering",
+          "institution": "University of BCD",
+          "year": "2012",
+          "country": "Canada"
+        },
+        {
+          "degree": "MSc in Electronics",
+          "institution": "EFG University",
+          "year": "2007",
+          "country": "Australia"
+        }
+      ],
+      "expertise": ["Electronics", "Control Systems", "Embedded Systems"],
+      "courses": {
+        "current": ["EEE202: Electronics", "EEE404: Control Systems"],
+        "previous": ["EEE302: Embedded Systems", "EEE402: Advanced Electronics"]
+      },
+      "research": {
+        "interests": "Control Systems, Embedded Systems",
+        "projects": [
+          {
+            "title": "Advanced Control Systems",
+            "duration": "2021-2024",
+            "funding": "Industry Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "BCD University",
+            "project": "Control Systems Research",
+            "year": "2023"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Innovations in Control Systems",
+          "journal": "Journal of Control Engineering",
+          "year": "2023",
+          "doi": "10.7890/jce.2023.032"
+        }
+      ]
+    },
+    {
+      "id": "faculty-033",
+      "name": "Dr. Arifuzzaman Khan",
+      "title": "Professor",
+      "role": "Professor",
+      "employeeId": "DIU-ARCH-001",
+      "departmentId": "arch",
+      "imageUrl": "/images/faculty/arifuzzaman-khan.jpg",
+      "email": "arifuzzaman.khan@diu.edu.bd",
+      "phone": "+880-XX-XXXXXXX",
+      "cellPhone": "+880-1XXX-XXXXXX",
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/arifuzzaman-khan",
+        "website": "https://arifuzzamankhan.com"
+      },
+      "bio": "Dr. Arifuzzaman Khan is an expert in architectural design and urban planning.",
+      "education": [
+        {
+          "degree": "PhD in Architecture",
+          "institution": "University of HIJ",
+          "year": "2010",
+          "country": "USA"
+        },
+        {
+          "degree": "M.Arch",
+          "institution": "KLM University",
+          "year": "2005",
+          "country": "UK"
+        }
+      ],
+      "expertise": [
+        "Architectural Design",
+        "Urban Planning",
+        "Sustainable Architecture"
+      ],
+      "courses": {
+        "current": ["ARCH101: Architectural Design", "ARCH303: Urban Planning"],
+        "previous": [
+          "ARCH201: Sustainable Architecture",
+          "ARCH401: Advanced Design"
+        ]
+      },
+      "research": {
+        "interests": "Sustainable Architecture, Urban Design",
+        "projects": [
+          {
+            "title": "Sustainable Urban Design",
+            "duration": "2020-2023",
+            "funding": "Research Grant",
+            "status": "Ongoing"
+          }
+        ],
+        "collaborations": [
+          {
+            "institution": "HIJ University",
+            "project": "Urban Design Research",
+            "year": "2022"
+          }
+        ]
+      },
+      "publications": [
+        {
+          "title": "Sustainable Urban Architecture",
+          "journal": "Journal of Architecture",
+          "year": "2022",
+          "doi": "10.2345/ja.2022.033"
+        }
+      ]
     }
   ]
 }
