@@ -1,6 +1,5 @@
 export const departments = [
   // Faculty of Business & Entrepreneurship ("fbe")
-
   {
     id: "bba",
     name: "Department of Business Administration",
@@ -10,239 +9,235 @@ export const departments = [
       "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
-
   {
     id: "management",
     name: "Management",
     faculty: "fbe",
+    facultyFullName: "Faculty of Business & Entrepreneurship",
     imageUrl:
       "https://images.pexels.com/photos/159108/light-lamp-electricity-power-159108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
-
   {
     id: "real-estate",
     name: "Real Estate",
     faculty: "fbe",
+    facultyFullName: "Faculty of Business & Entrepreneurship",
     imageUrl:
       "https://images.pexels.com/photos/159108/light-lamp-electricity-power-159108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
-
   {
     id: "tourism",
     name: "Tourism & Hospitality Management",
     faculty: "fbe",
+    facultyFullName: "Faculty of Business & Entrepreneurship",
     imageUrl:
       "https://images.pexels.com/photos/327540/pexels-photo-327540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
-
   {
     id: "innovation",
     name: "Innovation & Entrepreneurship",
     faculty: "fbe",
+    facultyFullName: "Faculty of Business & Entrepreneurship",
     imageUrl:
       "https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
-
   {
     id: "accounting",
     name: "Accounting",
     faculty: "fbe",
+    facultyFullName: "Faculty of Business & Entrepreneurship",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "finance",
     name: "Finance & Banking",
     faculty: "fbe",
+    facultyFullName: "Faculty of Business & Entrepreneurship",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "marketing",
     name: "Marketing",
     faculty: "fbe",
+    facultyFullName: "Faculty of Business & Entrepreneurship",
     imageUrl: "",
     description: "",
   },
-
   // Faculty of Science & Information Technology ("fsit")
-
   {
     id: "cse",
     name: "Computer Science and Engineering",
     faculty: "fsit",
+    facultyFullName: "Faculty of Science & Information Technology",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "swe",
     name: "Software Engineering",
     faculty: "fsit",
+    facultyFullName: "Faculty of Science & Information Technology",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "mct",
     name: "Multimedia & Creative Technology (MCT)",
     faculty: "fsit",
+    facultyFullName: "Faculty of Science & Information Technology",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "cis",
     name: "Computing and Information System",
     faculty: "fsit",
+    facultyFullName: "Faculty of Science & Information Technology",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "itm",
     name: "Information Technology & Management (ITM)",
     faculty: "fsit",
+    facultyFullName: "Faculty of Science & Information Technology",
     imageUrl: "",
     description: "",
   },
-
   // Faculty of Engineering ("fe")
-
   {
     id: "ice",
     name: "Information and Communication Engineering",
     faculty: "fe",
+    facultyFullName: "Faculty of Engineering",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "textile",
     name: "Textile Engineering",
     faculty: "fe",
+    facultyFullName: "Faculty of Engineering",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "eee",
     name: "Electrical and Electronic Engineering",
     faculty: "fe",
+    facultyFullName: "Faculty of Engineering",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "architecture",
     name: "Architecture",
     faculty: "fe",
+    facultyFullName: "Faculty of Engineering",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "civil",
     name: "Civil Engineering",
     faculty: "fe",
+    facultyFullName: "Faculty of Engineering",
     imageUrl: "",
     description: "",
   },
-
   // Faculty of Health and Life Sciences ("fhls")
-
   {
     id: "esdm",
     name: "Environmental Science and Disaster Management",
     faculty: "fhls",
+    facultyFullName: "Faculty of Health and Life Sciences",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "pharmacy",
     name: "Pharmacy",
     faculty: "fhls",
+    facultyFullName: "Faculty of Health and Life Sciences",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "nutrition",
     name: "Nutrition and Food Engineering",
     faculty: "fhls",
+    facultyFullName: "Faculty of Health and Life Sciences",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "public-health",
     name: "Public Health",
     faculty: "fhls",
+    facultyFullName: "Faculty of Health and Life Sciences",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "sports",
     name: "Physical Education & Sports Science",
     faculty: "fhls",
+    facultyFullName: "Faculty of Health and Life Sciences",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "agriculture",
     name: "Agricultural Science",
     faculty: "fhls",
+    facultyFullName: "Faculty of Health and Life Sciences",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "genetics",
     name: "Genetic Engineering and Biotechnology",
     faculty: "fhls",
+    facultyFullName: "Faculty of Health and Life Sciences",
     imageUrl: "",
     description: "",
   },
-
   // Faculty of Humanities & Social Sciences ("fhss")
-
   {
     id: "english",
     name: "English",
     faculty: "fhss",
+    facultyFullName: "Faculty of Humanities & Social Sciences",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "law",
     name: "Law",
     faculty: "fhss",
+    facultyFullName: "Faculty of Humanities & Social Sciences",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "journalism",
     name: "Journalism, Media and Communication",
     faculty: "fhss",
+    facultyFullName: "Faculty of Humanities & Social Sciences",
     imageUrl: "",
     description: "",
   },
-
   {
     id: "development",
     name: "Development Studies",
     faculty: "fhss",
+    facultyFullName: "Faculty of Humanities & Social Sciences",
     imageUrl: "",
     description: "",
   },

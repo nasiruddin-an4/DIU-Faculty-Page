@@ -2,12 +2,12 @@ export const facultyMembers = [
 
   {
     id: "faculty-001",
-    name: "Dr. Md. Sabur Khan",
-    title: "Professor & Chairman",
-    role: "Professor",
+    name: "Professor Dr. Mohammed Masum Iqbal",
+    title: "Dean",
+    role: "Dean",
     employeeId: "DIU-BA-001",
     department: "bba",
-    imageUrl: "https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    imageUrl: "https://faculty.daffodilvarsity.edu.bd/images/teacher/60e7e73d94d7b36a417108bd8f7cab14.jpg",
     email: "chairman.ba@diu.edu.bd",
     phone: "(880) 2-9138234",
     cellPhone: "(880) 1713-493029",
@@ -106,12 +106,12 @@ export const facultyMembers = [
   },
   {
     id: "faculty-002",
-    name: "Dr. Amena Akter",
-    title: "Associate Professor",
-    role: "Associate Professor",
+    name: "Professor Dr. Syed Mizanur Rahman",
+    title: "Associate Dean",
+    role: "Associate Dean",
     employeeId: "DIU-BA-002",
     department: "bba",
-    imageUrl: "https://images.pexels.com/photos/5212339/pexels-photo-5212339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    imageUrl: "https://faculty.daffodilvarsity.edu.bd/images/teacher/2262a1eb2ef0ed6efc5d8eb3288040d9.JPG",
     email: "amena.akter@diu.edu.bd",
     phone: "(880) 2-9138235",
     cellPhone: "(880) 1713-493030",
@@ -121,7 +121,7 @@ export const facultyMembers = [
       website: "https://www.example.com/",
       twitter: "https://twitter.com/"
     },
-    bio: "Dr. Amena Akter is an Associate Professor in the Business Administration department. Her research focuses on human resource management and organizational development.",
+    bio: "Professor Dr. Syed Mizanur Rahman is an Associate Dean in the Business Administration department. Her research focuses on human resource management and organizational development.",
     education: [
       {
         degree: "PhD in Human Resource Management",
@@ -211,12 +211,12 @@ export const facultyMembers = [
   // Management Department
   {
     id: "faculty-003",
-    name: "Dr. Akram Hossain",
-    title: "Dean & Professor",
-    role: "Dean",
+    name: "Dr. Md. Azizur Rahman",
+    title: "Associate Professor and Head",
+    role: "Associate Professor",
     employeeId: "DIU-MGT-001",
     department: "bba",
-    imageUrl: "https://images.pexels.com/photos/5384445/pexels-photo-5384445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    imageUrl: "https://faculty.daffodilvarsity.edu.bd/images/teacher/7980d314d12a52601118979a10defbee.jpg",
     email: "dean.mgt@diu.edu.bd",
     phone: "(880) 2-9138236",
     cellPhone: "(880) 1713-493031",
@@ -226,7 +226,7 @@ export const facultyMembers = [
       website: "https://www.example.com/",
       twitter: null
     },
-    bio: "Dr. Akram Hossain serves as the Dean of the Management department. With over 15 years of industry experience, he brings practical insights to management education.",
+    bio: "Dr. Md. Azizur Rahma serves as the Associate Professor and Head of the Management department. With over 15 years of industry experience, he brings practical insights to management education.",
     education: [
       {
         degree: "PhD in Management",
@@ -315,12 +315,12 @@ export const facultyMembers = [
   },
   {
     id: "faculty-004",
-    name: "Farida Rahman",
-    title: "Senior Lecturer",
-    role: "Senior Lecturer",
+    name: "Professor Rafiqul Islam",
+    title: "Professor",
+    role: "Professor",
     employeeId: "DIU-MGT-002",
     department: "bba",
-    imageUrl: "https://images.pexels.com/photos/5905497/pexels-photo-5905497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    imageUrl: "https://faculty.daffodilvarsity.edu.bd/images/teacher/2dbe4b522b8e1f1eb07a17c8f8a7dd38.JPG",
     email: "farida.rahman@diu.edu.bd",
     phone: "(880) 2-9138240",
     cellPhone: "(880) 1713-493035",

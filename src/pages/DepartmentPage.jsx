@@ -148,7 +148,7 @@ const DepartmentPage = () => {
         {/* <SearchBar onSearch={handleSearch} /> */}
 
         <div className="flex flex-col lg:flex-row gap-4 md:gap-8 px-4 md:px-0">
-          <div className="w-full md:w-1/5">
+          <div className="w-full lg:w-1/5">
             <div className="sticky top-24">
               <RoleFilterSidebar
                 roles={facultyRoles}
@@ -158,7 +158,7 @@ const DepartmentPage = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-4/5">
+          <div className="w-full lg:w-4/5">
             {/* <h2 className="text-3xl font-bold text-neutral-800 mb-8">
               {selectedRole ? `${selectedRole}s` : "Faculty Members"}
 

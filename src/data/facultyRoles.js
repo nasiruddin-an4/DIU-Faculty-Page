@@ -1,5 +1,6 @@
 export const facultyRoles = [
   "Dean",
+  "Associate Dean",
   "Professor",
   "Associate Professor",
   "Assistant Professor",

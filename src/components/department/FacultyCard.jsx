@@ -114,7 +114,7 @@ const FacultyCard = ({ faculty }) => {
         }}
       >
         <div className="flex flex-row p-3 gap-4 items-start">
-          <div className="w-2/5 flex-shrink-0">
+          <div className="w-1/4 flex-shrink-0">
             <div className="h-28 rounded-md overflow-hidden">
               <img
                 src={faculty.imageUrl}
@@ -175,13 +175,13 @@ const FacultyCard = ({ faculty }) => {
                 className="w-20 h-20 rounded-md object-cover"
               />
               <div className="pt-1">
-                <h4 className="font-bold text-lg text-primary-600">
+                <h4 className="font-bold text-md text-primary-600">
                   {faculty.name}
                 </h4>
                 <p className="text-neutral-700 text-sm">{faculty.title}</p>
-                <p className="text-neutral-700 text-sm uppercase">
+                {/* <p className="text-neutral-700 text-sm uppercase">
                   {faculty.department}
-                </p>
+                </p> */}
               </div>
             </div>
             <div className="py-1 border-b">
