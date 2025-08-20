@@ -1,63 +1,64 @@
-import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { FaBars, FaTimes } from 'react-icons/fa'
-import Logo from '../../assets/diulogo.png'
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
+import Logo from "../../assets/diulogo.png";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const location = useLocation()
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
-  const closeMenu = () => setIsMenuOpen(false)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
+      setIsScrolled(window.scrollY > 10);
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
-    closeMenu()
-  }, [location])
+    closeMenu();
+  }, [location]);
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg py-2' : 'bg-white py-4'
-        }`}
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white shadow-lg py-2" : "bg-white py-4"
+      }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3">
-          <img
-            src={Logo}
-            alt="DIU Logo"
-            className="w-64  object-contain"
-          />
+          <img src={Logo} alt="DIU Logo" className="w-64  object-contain" />
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-10">
           <Link
             to="/"
-            className={`font-semibold text-sm ${isScrolled ? 'text-neutral-700' : 'text-neutral-800'
-              } hover:text-primary-600 transition-colors duration-200`}
+            className={`font-semibold text-sm ${
+              isScrolled ? "text-neutral-700" : "text-neutral-800"
+            } hover:text-primary-600 transition-colors duration-200`}
           >
             Home
           </Link>
           <a
-            href="https://forum.daffodilvarsity.edu.bd/" target='_blank'
-            className={`font-semibold text-sm ${isScrolled ? 'text-neutral-700' : 'text-neutral-800'
-              } hover:text-primary-600 transition-colors duration-200`}
+            href="https://forum.daffodilvarsity.edu.bd/"
+            target="_blank"
+            className={`font-semibold text-sm ${
+              isScrolled ? "text-neutral-700" : "text-neutral-800"
+            } hover:text-primary-600 transition-colors duration-200`}
           >
             Forum
           </a>
           <a
             href="#"
-            className={`font-semibold text-sm ${isScrolled ? 'text-neutral-700' : 'text-neutral-800'
-              } hover:text-primary-600 transition-colors duration-200`}
+            className={`font-semibold text-sm ${
+              isScrolled ? "text-neutral-700" : "text-neutral-800"
+            } hover:text-primary-600 transition-colors duration-200`}
           >
             Contact Us
           </a>
@@ -81,8 +82,11 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute w-full bg-white shadow-lg transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10 pointer-events-none'
-          }`}
+        className={`md:hidden absolute w-full bg-white shadow-lg transition-all duration-300 ease-in-out ${
+          isMenuOpen
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-10 pointer-events-none"
+        }`}
       >
         <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
           <Link
@@ -92,7 +96,8 @@ const Header = () => {
             Home
           </Link>
           <a
-            href="https://forum.daffodilvarsity.edu.bd/" target='_blank'
+            href="https://forum.daffodilvarsity.edu.bd/"
+            target="_blank"
             className="font-semibold text-sm text-neutral-800 py-2 hover:text-primary-600 transition-colors duration-200"
           >
             Forum
@@ -112,7 +117,7 @@ const Header = () => {
         </nav>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

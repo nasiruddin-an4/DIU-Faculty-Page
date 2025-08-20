@@ -129,7 +129,7 @@ const DepartmentPage = () => {
 
   return (
     <div className="pt-16">
-      <div className="bg-blue-50 text-white py-20">
+      <div className="bg-blue-50 text-white py-16">
         <div className="container-custom mx-auto text-center justify-content-center items-center">
           <p className="text-xl text-gray-600 mb-2">
             {department.facultyFullName}

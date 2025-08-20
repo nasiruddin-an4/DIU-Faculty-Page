@@ -6,7 +6,7 @@ const FacultyCard = ({ faculty }) => {
   const [showPopup, setShowPopup] = useState(false);
   const [popupPosition, setPopupPosition] = useState({
     horizontal: "right",
-    vertical: "middle",
+    offsetX: 0,
   });
   const popupRef = useRef(null);
   const cardRef = useRef(null);
@@ -17,25 +17,27 @@ const FacultyCard = ({ faculty }) => {
       if (cardRef.current && showPopup) {
         const cardRect = cardRef.current.getBoundingClientRect();
         const viewportWidth = window.innerWidth;
-        const viewportHeight = window.innerHeight;
-        const popupWidth = 320; // Approximate width of popup (w-80)
-        const popupHeight = 400; // Approximate height of popup
+        const popupWidth = 320; // Base width of popup (w-80)
         const spaceOnRight = viewportWidth - cardRect.right;
-        const spaceBelow = viewportHeight - cardRect.bottom;
-        const spaceAbove = cardRect.top;
+        const spaceOnLeft = cardRect.left;
 
         // Determine horizontal position
-        const horizontal = spaceOnRight < popupWidth ? "left" : "right";
-
-        // Determine vertical position
-        let vertical = "middle";
-        if (spaceBelow < popupHeight / 2 + 20) {
-          vertical = "above";
-        } else if (spaceAbove < popupHeight / 2 + 20) {
-          vertical = "below";
+        let horizontal = "right";
+        let offsetX = 0;
+        if (spaceOnRight < popupWidth) {
+          if (spaceOnLeft >= popupWidth) {
+            horizontal = "left";
+          } else {
+            // Adjust offset to fit within viewport
+            horizontal = spaceOnLeft > spaceOnRight ? "left" : "right";
+            offsetX =
+              horizontal === "right"
+                ? -Math.max(0, popupWidth - spaceOnRight)
+                : Math.max(0, popupWidth - spaceOnLeft);
+          }
         }
 
-        setPopupPosition({ horizontal, vertical });
+        setPopupPosition({ horizontal, offsetX });
       }
     };
 
@@ -145,23 +147,20 @@ const FacultyCard = ({ faculty }) => {
       {showPopup && (
         <div
           ref={popupRef}
-          className={`absolute z-50 ${
+          className={`absolute z-40 top-1/2 -translate-y-1/2 ${
             popupPosition.horizontal === "right"
               ? "left-full ml-4"
               : "right-full mr-4"
-          } ${
-            popupPosition.vertical === "middle"
-              ? "top-1/2 -translate-y-1/2"
-              : popupPosition.vertical === "above"
-              ? "bottom-full mb-4"
-              : "top-full mt-4"
           }`}
+          style={{
+            transform: `translate(${popupPosition.offsetX}px, -50%)`,
+          }}
           onMouseEnter={handlePopupMouseEnter}
           onMouseLeave={handlePopupMouseLeave}
           role="dialog"
           aria-label={`Details for ${faculty.name}`}
         >
-          <div className="bg-white rounded-xl shadow-2xl p-6 w-80 animate-fade-in">
+          <div className="bg-white rounded-xl shadow-2xl p-6 w-full md:w-80 animate-fade-in">
             <button
               onClick={() => setShowPopup(false)}
               className="absolute top-2 right-2 text-neutral-400 hover:text-neutral-600 p-2 rounded-full hover:bg-neutral-100 transition-colors"
@@ -173,51 +172,44 @@ const FacultyCard = ({ faculty }) => {
               <img
                 src={faculty.imageUrl}
                 alt={faculty.name}
-                className="w-20 h-20 rounded-full object-cover"
+                className="w-20 h-20 rounded-md object-cover"
               />
-              <div>
-                <h4 className="font-bold text-lg text-neutral-800">
+              <div className="pt-1">
+                <h4 className="font-bold text-lg text-primary-600">
                   {faculty.name}
                 </h4>
-                <p className="text-primary-600 font-medium">{faculty.title}</p>
-                <p className="text-sm text-neutral-600 mt-1">
-                  {faculty.department.name}
+                <p className="text-neutral-700 text-sm">{faculty.title}</p>
+                <p className="text-neutral-700 text-sm uppercase">
+                  {faculty.department}
                 </p>
               </div>
             </div>
-            <div className="mt-4 space-y-3">
+            <div className="py-1 border-b">
+              <p>Personal Information</p>
+            </div>
+            <div className="mt-1 space-y-3">
               <div className="text-sm">
-                <p className="font-medium text-neutral-700">Education</p>
-                <p className="text-neutral-600">
+                <p className="font-medium text-neutral-900">Education:</p>
+                <p className="text-neutral-800">
                   {faculty.education[0].degree}
                 </p>
-                <p className="text-neutral-500 text-xs">
+                <p className="text-neutral-700 text-xs">
                   {faculty.education[0].institution}
                 </p>
               </div>
               <div className="text-sm">
-                <p className="font-medium text-neutral-700">Expertise</p>
-                <div className="flex flex-wrap gap-1 mt-1">
-                  {faculty.expertise.slice(0, 3).map((area, index) => (
-                    <span
-                      key={index}
-                      className="bg-primary-50 text-primary-700 text-xs px-2 py-1 rounded-full"
-                    >
-                      {area}
-                    </span>
-                  ))}
+                <div className="flex-wrap gap-1 mt-1">
+                  <p className="font-medium">Contact:</p>
+                  <p className="flex items-center text-neutral-800 ">
+                    Employee ID: {faculty.employeeId}
+                  </p>
+                  <p className="flex items-center text-neutral-800">
+                    Cell-Phone: {faculty.cellPhone}
+                  </p>
+                  <p className="flex items-center text-neutral-800 ">
+                    E-mail: {faculty.email}
+                  </p>
                 </div>
-              </div>
-              <div className="text-sm">
-                <p className="font-medium text-neutral-700">Contact</p>
-                <p className="flex items-center text-neutral-600 mt-1">
-                  <FaEnvelope className="mr-2 text-neutral-400" />
-                  {faculty.email}
-                </p>
-                <p className="flex items-center text-neutral-600">
-                  <FaPhone className="mr-2 text-neutral-400" />
-                  {faculty.phone}
-                </p>
               </div>
             </div>
             <Link
