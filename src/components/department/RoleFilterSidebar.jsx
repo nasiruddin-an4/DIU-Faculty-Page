@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { FaChevronDown, FaChevronUp, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { ListFilter } from "lucide-react";
@@ -38,81 +39,87 @@ const RoleFilterSidebar = ({ roles, selectedRole, onRoleChange }) => {
   };
 
   // Mobile overlay when sidebar is open
-  const Overlay = () => (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 0.5 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-100 md:hidden"
-      onClick={() => setIsExpanded(false)}
-    />
-  );
+  const Overlay = () =>
+    createPortal(
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.5 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-490 md:hidden"
+        onClick={() => setIsExpanded(false)}
+      />,
+      document.body
+    );
 
   // Mobile sidebar content
-  const MobileSidebar = () => (
-    <motion.div
-      initial={{ x: "-100%" }}
-      animate={{ x: 0 }}
-      exit={{ x: "-100%" }}
-      transition={{ type: "spring", damping: 20, stiffness: 100 }}
-      className="fixed left-0 top-0 h-full w-80 bg-white shadow-2xl z-200 md:hidden"
-    >
-      <div className="p-4">
-        <div className="flex justify-between items-center mb-4 border-b pb-4">
-          <h3 className="font-bold text-lg text-neutral-800">Faculty Roles</h3>
-          <button
-            onClick={() => setIsExpanded(false)}
-            className="p-2 hover:bg-neutral-100 rounded-full transition-colors"
-          >
-            <FaTimes size={18} className="text-neutral-500" />
-          </button>
-        </div>
-
-        <div className="space-y-2 max-h-[calc(100vh-120px)] overflow-y-auto">
-          <div className="flex items-center mb-2">
-            <input
-              type="radio"
-              id="all-roles-mobile"
-              name="role-mobile"
-              value=""
-              checked={selectedRole === ""}
-              onChange={() => handleRoleChange("")}
-              classClass="w-4 h-4 text-primary-600 focus:ring-primary-500"
-            />
-            <label
-              htmlFor="all-roles-mobile"
-              className="ml-2 text-neutral-700 cursor-pointer hover:text-primary-600 transition-colors"
+  const MobileSidebar = () =>
+    createPortal(
+      <motion.div
+        initial={{ x: "-100%" }}
+        animate={{ x: 0 }}
+        exit={{ x: "-100%" }}
+        transition={{ type: "spring", damping: 20, stiffness: 100 }}
+        className="fixed left-0 top-0 h-full w-80 bg-white shadow-2xl z-500 md:hidden"
+      >
+        <div className="p-4">
+          <div className="flex justify-between items-center mb-4 border-b pb-4">
+            <h3 className="font-bold text-lg text-neutral-800">
+              Faculty Roles
+            </h3>
+            <button
+              onClick={() => setIsExpanded(false)}
+              className="p-2 hover:bg-neutral-100 rounded-full transition-colors"
             >
-              All Roles
-            </label>
+              <FaTimes size={18} className="text-neutral-500" />
+            </button>
           </div>
 
-          {roles.map((role) => (
-            <div key={role} className="flex items-center">
+          <div className="space-y-2 max-h-[calc(100vh-120px)] overflow-y-auto">
+            <div className="flex items-center mb-2">
               <input
                 type="radio"
-                id={`${role}-mobile`}
+                id="all-roles-mobile"
                 name="role-mobile"
-                value={role}
-                checked={selectedRole === role}
-                onChange={() => handleRoleChange(role)}
+                value=""
+                checked={selectedRole === ""}
+                onChange={() => handleRoleChange("")}
                 className="w-4 h-4 text-primary-600 focus:ring-primary-500"
               />
               <label
-                htmlFor={`${role}-mobile`}
+                htmlFor="all-roles-mobile"
                 className="ml-2 text-neutral-700 cursor-pointer hover:text-primary-600 transition-colors"
               >
-                {role}
+                All Faculty
               </label>
             </div>
-          ))}
+
+            {roles.map((role) => (
+              <div key={role} className="flex items-center">
+                <input
+                  type="radio"
+                  id={`${role}-mobile`}
+                  name="role-mobile"
+                  value={role}
+                  checked={selectedRole === role}
+                  onChange={() => handleRoleChange(role)}
+                  className="w-4 h-4 text-primary-600 focus:ring-primary-500"
+                />
+                <label
+                  htmlFor={`${role}-mobile`}
+                  className="ml-2 text-neutral-700 cursor-pointer hover:text-primary-600 transition-colors"
+                >
+                  {role}
+                </label>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </motion.div>
-  );
+      </motion.div>,
+      document.body
+    );
 
   return (
-    <>
+    <div className={isMobile ? "" : "sticky top-24"}>
       {/* Mobile: Filter Card Button */}
       {isMobile ? (
         <motion.div
@@ -121,7 +128,7 @@ const RoleFilterSidebar = ({ roles, selectedRole, onRoleChange }) => {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           onClick={toggleExpand}
-          className="bg-white rounded-lg shadow-md p-4 cursor-pointer w-full z-90"
+          className="bg-white rounded-lg shadow-md p-4 cursor-pointer w-full z-480"
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -133,11 +140,11 @@ const RoleFilterSidebar = ({ roles, selectedRole, onRoleChange }) => {
               </div>
               <div>
                 <h3 className="font-bold text-lg text-neutral-800">
-                  Faculty Roles
+                  {selectedRole ? selectedRole : "All Faculty"}
                 </h3>
-                <p className="text-sm text-neutral-500">
+                {/* <p className="text-sm text-neutral-500">
                   {selectedRole ? selectedRole : "All Roles"}
-                </p>
+                </p> */}
               </div>
             </div>
             <motion.div
@@ -209,7 +216,7 @@ const RoleFilterSidebar = ({ roles, selectedRole, onRoleChange }) => {
           </>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 };
 

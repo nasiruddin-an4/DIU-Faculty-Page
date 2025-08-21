@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaEnvelope, FaPhone, FaTimes, FaArrowRight } from "react-icons/fa";
+import { FaTimes, FaArrowRight } from "react-icons/fa";
 
 const FacultyCard = ({ faculty }) => {
   const [showPopup, setShowPopup] = useState(false);
@@ -21,14 +21,12 @@ const FacultyCard = ({ faculty }) => {
         const spaceOnRight = viewportWidth - cardRect.right;
         const spaceOnLeft = cardRect.left;
 
-        // Determine horizontal position
         let horizontal = "right";
         let offsetX = 0;
         if (spaceOnRight < popupWidth) {
           if (spaceOnLeft >= popupWidth) {
             horizontal = "left";
           } else {
-            // Adjust offset to fit within viewport
             horizontal = spaceOnLeft > spaceOnRight ? "left" : "right";
             offsetX =
               horizontal === "right"
@@ -96,58 +94,61 @@ const FacultyCard = ({ faculty }) => {
   return (
     <div className="relative">
       {/* Faculty Card */}
-      <div
-        ref={cardRef}
-        className="group bg-white rounded-xl shadow-sm  hover:shadow-md transition-all duration-300 overflow-hidden cursor-pointer"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        role="button"
-        tabIndex={0}
-        aria-expanded={showPopup}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            setShowPopup(!showPopup);
-          }
-          if (e.key === "Escape") {
-            setShowPopup(false);
-          }
-        }}
-      >
-        <div className="flex flex-row p-3 gap-4 items-start">
-          <div className="w-1/3 flex-shrink-0">
-            <div className="h-28 rounded-md overflow-hidden">
-              <img
-                src={faculty.imageUrl}
-                alt={faculty.name}
-                className="w-full h-full object-cover"
-              />
+      <Link to={`/faculty/${faculty.id}`}>
+        <div
+          ref={cardRef}
+          className="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden cursor-pointer"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          role="button"
+          tabIndex={0}
+          aria-expanded={showPopup}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              setShowPopup(!showPopup);
+            }
+            if (e.key === "Escape") {
+              setShowPopup(false);
+            }
+          }}
+        >
+          <div className="flex flex-row p-3 gap-4 items-start">
+            <div className="w-1/3 flex-shrink-0">
+              <div className="h-28 rounded-md overflow-hidden">
+                <img
+                  src={faculty.imageUrl}
+                  alt={faculty.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
-          </div>
-          <div className="w-full flex flex-col justify-between min-h-[7rem]">
-            <div>
-              <h3 className="font-bold text-lg text-neutral-800 group-hover:text-primary-600 transition-colors line-clamp-2 leading-[1.4]">
-                {faculty.name}
-              </h3>
-              <p className="text-sm text-gray-500 font-medium mt-1">
-                {faculty.title}
-              </p>
+            <div className="w-full flex flex-col justify-between min-h-[7rem]">
+              <div>
+                <h3 className="font-bold text-lg text-neutral-800 group-hover:text-primary-600 transition-colors line-clamp-2 leading-[1.4]">
+                  {faculty.name}
+                </h3>
+                <p className="text-sm text-neutral-500 font-medium mt-1">
+                  {faculty.title}
+                </p>
+              </div>
+              <Link
+                to={`/faculty/${faculty.id}`}
+                className="text-sm text-neutral-600 hover:text-primary-600 transition-colors flex items-center justify-end gap-2 mr-2"
+                onClick={(e) => e.stopPropagation()}
+              >
+                View Profile
+                <FaArrowRight className="text-sm text-neutral-500 group-hover:translate-x-1 transition-transform duration-200" />
+              </Link>
             </div>
-            <Link
-              to={`/faculty/${faculty.id}`}
-              className="text-sm text-gray-600 hover:text-primary-600 transition-colors flex items-center justify-end gap-2 mr-2"
-            >
-              View Profile
-              <FaArrowRight className="text-sm text-gray-500 group-hover:translate-x-1 transition-transform duration-200" />
-            </Link>
           </div>
         </div>
-      </div>
+      </Link>
 
       {/* Popup */}
       {showPopup && (
         <div
           ref={popupRef}
-          className={`absolute z-10 top-1/2 -translate-y-1/2 ${
+          className={`absolute z-10 top-1/2 -translate-y-1/2 hidden md:flex ${
             popupPosition.horizontal === "right"
               ? "left-full ml-4"
               : "right-full mr-4"
@@ -179,9 +180,6 @@ const FacultyCard = ({ faculty }) => {
                   {faculty.name}
                 </h4>
                 <p className="text-neutral-700 text-sm">{faculty.title}</p>
-                {/* <p className="text-neutral-700 text-sm uppercase">
-                  {faculty.department}
-                </p> */}
               </div>
             </div>
             <div className="py-1 border-b">
@@ -200,13 +198,13 @@ const FacultyCard = ({ faculty }) => {
               <div className="text-sm">
                 <div className="flex-wrap gap-1 mt-1">
                   <p className="font-medium">Contact:</p>
-                  <p className="flex items-center text-neutral-800 ">
+                  <p className="flex items-center text-neutral-800">
                     Employee ID: {faculty.employeeId}
                   </p>
                   <p className="flex items-center text-neutral-800">
                     Cell-Phone: {faculty.cellPhone}
                   </p>
-                  <p className="flex items-center text-neutral-800 ">
+                  <p className="flex items-center text-neutral-800">
                     E-mail: {faculty.email}
                   </p>
                 </div>
