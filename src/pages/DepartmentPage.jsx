@@ -168,7 +168,7 @@ const DepartmentPage = () => {
             </h2> */}
 
             {filteredFaculty.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6 w-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 w-full">
                 {filteredFaculty.map((faculty) => (
                   <FacultyCard key={faculty.id} faculty={faculty} />
                 ))}
@@ -176,7 +176,7 @@ const DepartmentPage = () => {
             ) : (
               <div className="bg-white rounded-xl shadow-sm p-12 text-center">
                 <p className="text-xl text-neutral-600 mb-4">
-                  No faculty members found matching your criteria.
+                  No faculty members found.
                 </p>
 
                 <button

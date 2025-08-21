@@ -114,7 +114,7 @@ const FacultyCard = ({ faculty }) => {
         }}
       >
         <div className="flex flex-row p-3 gap-4 items-start">
-          <div className="w-1/4 flex-shrink-0">
+          <div className="w-1/3 flex-shrink-0">
             <div className="h-28 rounded-md overflow-hidden">
               <img
                 src={faculty.imageUrl}
@@ -125,10 +125,10 @@ const FacultyCard = ({ faculty }) => {
           </div>
           <div className="w-full flex flex-col justify-between min-h-[7rem]">
             <div>
-              <h3 className="font-bold text-lg text-neutral-800 group-hover:text-primary-600 transition-colors line-clamp-2">
+              <h3 className="font-bold text-lg text-neutral-800 group-hover:text-primary-600 transition-colors line-clamp-2 leading-[1.4]">
                 {faculty.name}
               </h3>
-              <p className="text-sm text-gray-500 font-medium mt-1 mb-3">
+              <p className="text-sm text-gray-500 font-medium mt-1">
                 {faculty.title}
               </p>
             </div>
@@ -147,7 +147,7 @@ const FacultyCard = ({ faculty }) => {
       {showPopup && (
         <div
           ref={popupRef}
-          className={`absolute z-40 top-1/2 -translate-y-1/2 ${
+          className={`absolute z-10 top-1/2 -translate-y-1/2 ${
             popupPosition.horizontal === "right"
               ? "left-full ml-4"
               : "right-full mr-4"

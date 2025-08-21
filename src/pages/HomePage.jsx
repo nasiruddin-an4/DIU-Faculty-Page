@@ -97,7 +97,7 @@ const HomePage = () => {
             ) : (
               <div className="bg-neutral-100 rounded-lg p-8 text-center">
                 <p className="text-lg text-neutral-600">
-                  No departments found matching your criteria.
+                  No departments found.
                 </p>
 
                 <button

@@ -14,10 +14,10 @@ const ProfileTabs = ({ faculty }) => {
       const container = scrollContainerRef.current;
       const scrollAmount = 200; // Adjust scroll amount as needed
 
-      if (direction === 'left') {
-        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      if (direction === "left") {
+        container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
       } else {
-        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        container.scrollBy({ left: scrollAmount, behavior: "smooth" });
       }
     }
   };
@@ -27,26 +27,26 @@ const ProfileTabs = ({ faculty }) => {
       id: "overview",
       label: "Overview",
       icon: "👤",
-      description: "Biography & Education"
+      description: "Biography & Education",
     },
     {
       id: "courses",
       label: "Courses",
       icon: "📚",
-      description: "Teaching & Curriculum"
+      description: "Teaching & Curriculum",
     },
     {
       id: "research",
       label: "Research",
       icon: "🔬",
-      description: "Projects & Interests"
+      description: "Projects & Interests",
     },
     {
       id: "publications",
       label: "Publications",
       icon: "📄",
-      description: "Papers & Articles"
-    }
+      description: "Papers & Articles",
+    },
   ];
 
   return (
@@ -55,7 +55,7 @@ const ProfileTabs = ({ faculty }) => {
       <div className="bg-gradient-to-r from-gray-50 to-gray-100 border-b border-gray-200 relative">
         {/* Left Arrow - Mobile Only */}
         <button
-          onClick={() => scrollTabs('left')}
+          onClick={() => scrollTabs("left")}
           className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-white/80 hover:bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-gray-800 transition-all duration-300 md:hidden backdrop-blur-sm"
         >
           <FaChevronLeft className="text-sm" />
@@ -63,28 +63,35 @@ const ProfileTabs = ({ faculty }) => {
 
         {/* Right Arrow - Mobile Only */}
         <button
-          onClick={() => scrollTabs('right')}
+          onClick={() => scrollTabs("right")}
           className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 bg-white/80 hover:bg-white rounded-full shadow-md flex items-center justify-center text-gray-600 hover:text-gray-800 transition-all duration-300 md:hidden backdrop-blur-sm"
         >
           <FaChevronRight className="text-sm" />
         </button>
 
         {/* Tab Container with Padding for Arrows */}
-        <div className="flex overflow-x-auto scrollbar-hide px-12 md:px-0" ref={scrollContainerRef}>
+        <div
+          className="flex overflow-x-auto scrollbar-hide px-12 md:px-0"
+          ref={scrollContainerRef}
+        >
           {tabConfig.map((tab) => (
             <button
               key={tab.id}
-              className={`flex flex-col items-center px-4 py-4 min-w-[120px] md:min-w-[140px] focus:outline-none transition-all duration-300 ease-in-out relative group ${activeTab === tab.id
-                ? "bg-white shadow-sm border-b-2 border-primary-500"
-                : "hover:bg-white/50"
-                }`}
+              className={`flex flex-col items-center px-4 py-4 min-w-[120px] md:min-w-[140px] focus:outline-none transition-all duration-300 ease-in-out relative group ${
+                activeTab === tab.id
+                  ? "bg-white shadow-sm border-b-2 border-primary-500"
+                  : "hover:bg-white/50"
+              }`}
               onClick={() => handleTabChange(tab.id)}
             >
               <span className="text-lg md:text-xl mb-1">{tab.icon}</span>
-              <span className={`font-semibold text-xs md:text-sm transition-colors ${activeTab === tab.id
-                ? "text-primary-600"
-                : "text-gray-600 group-hover:text-primary-500"
-                }`}>
+              <span
+                className={`font-semibold text-xs md:text-sm transition-colors ${
+                  activeTab === tab.id
+                    ? "text-primary-600"
+                    : "text-gray-600 group-hover:text-primary-500"
+                }`}
+              >
                 {tab.label}
               </span>
               <span className="text-xs text-gray-400 hidden md:block mt-1">
@@ -107,7 +114,9 @@ const ProfileTabs = ({ faculty }) => {
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100 mb-4">
                 <div className="flex items-center mb-2">
                   <span className="text-2xl mr-3">📖</span>
-                  <h2 className="text-xl md:text-2xl font-bold text-gray-800">Biography</h2>
+                  <h2 className="text-xl md:text-2xl font-bold text-gray-800">
+                    Biography
+                  </h2>
                 </div>
                 <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                   {faculty.bio}
@@ -117,36 +126,47 @@ const ProfileTabs = ({ faculty }) => {
               {/* Education Section */}
               <div className="flex items-center mb-2">
                 <span className="text-2xl mr-3">🎓</span>
-                <h3 className="text-lg md:text-xl font-bold text-gray-800">Education</h3>
+                <h3 className="text-lg md:text-xl font-bold text-gray-800">
+                  Education
+                </h3>
               </div>
 
               <div className="">
                 <div className="space-y-4">
-                  {Array.from({ length: Math.ceil(faculty.education.length / 2) }).map((_, rowIndex) => (
-                    <div className="grid grid-cols-2 gap-8" key={rowIndex}>
-                      {faculty.education.slice(rowIndex * 2, rowIndex * 2 + 2).map((edu, index) => (
-                        <div
-                          className="bg-white rounded-lg p-4 border-l-4 border-primary-500 shadow-sm hover:shadow-md transition-shadow duration-300"
-                          key={index}
-                        >
-                          <div className="flex items-start justify-between">
-                            <div className="flex-1">
-                              <p className="font-semibold text-gray-800 text-sm">
-                                {edu.degree}
-                              </p>
-                              <p className="text-gray-600 text-sm mt-1">
-                                {edu.institution}
-                              </p>
+                  {Array.from({
+                    length: Math.ceil(faculty.education.length / 2),
+                  }).map((_, rowIndex) => (
+                    <div
+                      className="grid grid-cols-1 md:grid-cols-2 gap-8"
+                      key={rowIndex}
+                    >
+                      {faculty.education
+                        .slice(rowIndex * 2, rowIndex * 2 + 2)
+                        .map((edu, index) => (
+                          <div
+                            className="bg-white rounded-lg p-4 border-l-4 border-primary-500 shadow-sm hover:shadow-md transition-shadow duration-300"
+                            key={index}
+                          >
+                            <div className="flex items-start justify-between">
+                              <div className="flex-1">
+                                <p className="font-semibold text-gray-800 text-sm">
+                                  {edu.degree}
+                                </p>
+                                <p className="text-gray-600 text-sm mt-1">
+                                  {edu.institution}
+                                </p>
+                              </div>
+                              <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-xs font-medium">
+                                {edu.year}
+                              </span>
                             </div>
-                            <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-xs font-medium">
-                              {edu.year}
-                            </span>
                           </div>
-                        </div>
-                      ))}
-                      {faculty.education.length % 2 !== 0 && rowIndex === Math.floor(faculty.education.length / 2) && (
-                        <div className="bg-transparent"></div>
-                      )}
+                        ))}
+                      {faculty.education.length % 2 !== 0 &&
+                        rowIndex ===
+                          Math.floor(faculty.education.length / 2) && (
+                          <div className="bg-transparent"></div>
+                        )}
                     </div>
                   ))}
                 </div>
@@ -156,7 +176,9 @@ const ProfileTabs = ({ faculty }) => {
               <div className="md:col-span-2 mt-4">
                 <div className="flex items-center mb-2">
                   <span className="text-2xl mr-3">💡</span>
-                  <h3 className="text-lg md:text-xl font-bold text-gray-800">Areas of Expertise</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-800">
+                    Areas of Expertise
+                  </h3>
                 </div>
                 <div className="flex flex-wrap gap-3">
                   {faculty.expertise.map((area, index) => (
@@ -178,7 +200,9 @@ const ProfileTabs = ({ faculty }) => {
               <div>
                 <div className="flex items-center mb-2">
                   <span className="text-2xl mr-3">📚</span>
-                  <h2 className="text-xl md:text-2xl font-bold text-gray-800">Current Courses</h2>
+                  <h2 className="text-xl md:text-2xl font-bold text-gray-800">
+                    Current Courses
+                  </h2>
                 </div>
                 <div className="space-y-4">
                   {faculty.courses.current.map((course, index) => (
@@ -213,9 +237,11 @@ const ProfileTabs = ({ faculty }) => {
 
               {/* Previous Courses */}
               <div>
-                <div className="flex items-center mb-6">
+                <div className="flex items-center mb-2">
                   <span className="text-2xl mr-3">📖</span>
-                  <h2 className="text-xl md:text-2xl font-bold text-gray-800">Previous Courses</h2>
+                  <h2 className="text-xl md:text-2xl font-bold text-gray-800">
+                    Previous Courses
+                  </h2>
                 </div>
                 <div className="space-y-4">
                   {faculty.courses.previous.map((course, index) => (
@@ -256,7 +282,9 @@ const ProfileTabs = ({ faculty }) => {
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100 mb-4">
                 <div className="flex items-center mb-4">
                   <span className="text-2xl mr-3">🔬</span>
-                  <h2 className="text-xl md:text-2xl font-bold text-gray-800">Research Interests</h2>
+                  <h2 className="text-xl md:text-2xl font-bold text-gray-800">
+                    Research Interests
+                  </h2>
                 </div>
                 <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                   {faculty.research.interests}
@@ -267,38 +295,49 @@ const ProfileTabs = ({ faculty }) => {
               <div>
                 <div className="flex items-center mb-2">
                   <span className="text-2xl mr-3">🚀</span>
-                  <h3 className="text-lg font-bold text-gray-800">Current Projects</h3>
+                  <h3 className="text-lg font-bold text-gray-800">
+                    Current Projects
+                  </h3>
                 </div>
                 <div className="space-y-6">
-                  {Array.from({ length: Math.ceil(faculty.research.projects.length / 2) }).map((_, rowIndex) => (
-                    <div className="grid grid-cols-2 gap-8" key={rowIndex}>
-                      {faculty.research.projects.slice(rowIndex * 2, rowIndex * 2 + 2).map((project, index) => (
-                        <div
-                          className="bg-white rounded-xl p-6 border-l-4 border-purple-500 shadow-sm hover:shadow-md transition-all duration-300"
-                          key={index}
-                        >
-                          <div className="flex items-start justify-between mb-3">
-                            <h4 className="font-bold text-gray-800 text-sm">
-                              {project.title}
-                            </h4>
-                            <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">
-                              Active
-                            </span>
+                  {Array.from({
+                    length: Math.ceil(faculty.research.projects.length / 2),
+                  }).map((_, rowIndex) => (
+                    <div
+                      className="grid grid-cols-1 md:grid-cols-2 gap-8"
+                      key={rowIndex}
+                    >
+                      {faculty.research.projects
+                        .slice(rowIndex * 2, rowIndex * 2 + 2)
+                        .map((project, index) => (
+                          <div
+                            className="bg-white rounded-xl p-6 border-l-4 border-purple-500 shadow-sm hover:shadow-md transition-all duration-300"
+                            key={index}
+                          >
+                            <div className="flex items-start justify-between mb-3">
+                              <h4 className="font-bold text-gray-800 text-sm">
+                                {project.title}
+                              </h4>
+                              <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">
+                                Active
+                              </span>
+                            </div>
+                            <p className="text-gray-700 text-sm mb-3">
+                              {project.description}
+                            </p>
+                            <div className="flex items-center text-sm text-gray-500">
+                              <span className="mr-2">💰</span>
+                              {project.funded
+                                ? `Funded by: ${project.funded}`
+                                : "Self-funded project"}
+                            </div>
                           </div>
-                          <p className="text-gray-700 text-sm mb-3">
-                            {project.description}
-                          </p>
-                          <div className="flex items-center text-sm text-gray-500">
-                            <span className="mr-2">💰</span>
-                            {project.funded
-                              ? `Funded by: ${project.funded}`
-                              : "Self-funded project"}
-                          </div>
-                        </div>
-                      ))}
-                      {faculty.research.projects.length % 2 !== 0 && rowIndex === Math.floor(faculty.research.projects.length / 2) && (
-                        <div className="bg-transparent"></div>
-                      )}
+                        ))}
+                      {faculty.research.projects.length % 2 !== 0 &&
+                        rowIndex ===
+                          Math.floor(faculty.research.projects.length / 2) && (
+                          <div className="bg-transparent"></div>
+                        )}
                     </div>
                   ))}
                 </div>
@@ -308,14 +347,18 @@ const ProfileTabs = ({ faculty }) => {
               <div className="md:col-span-2 mt-4">
                 <div className="flex items-center mb-2">
                   <span className="text-2xl mr-3">🤝</span>
-                  <h3 className="text-lg md:text-xl font-bold text-gray-800">Collaborations</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-800">
+                    Collaborations
+                  </h3>
                 </div>
                 <div className="bg-white rounded-xl p-6 border border-gray-200">
                   <ul className="space-y-3">
                     {faculty.research.collaborations.map((collab, index) => (
                       <li key={index} className="flex items-start">
                         <span className="text-primary-500 mr-3 mt-1">•</span>
-                        <span className="text-gray-700 text-sm md:text-base">{collab}</span>
+                        <span className="text-gray-700 text-sm md:text-base">
+                          {collab}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -329,7 +372,9 @@ const ProfileTabs = ({ faculty }) => {
               <div className="md:col-span-2">
                 <div className="flex items-center mb-6">
                   <span className="text-2xl mr-3">📄</span>
-                  <h2 className="text-xl md:text-2xl font-bold text-gray-800">Publications</h2>
+                  <h2 className="text-xl md:text-2xl font-bold text-gray-800">
+                    Publications
+                  </h2>
                 </div>
               </div>
 
