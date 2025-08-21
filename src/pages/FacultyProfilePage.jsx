@@ -83,10 +83,10 @@ const FacultyProfilePage = () => {
 
   return (
     <div className="pt-20">
-      <div className="container-custom mx-auto py-6">
+      <div className="max-w-4xl mx-auto px-0 pt-5 lg:px-12">
         <Link
           to={`/department/${faculty?.departmentData?.id}`}
-          className="inline-flex items-center text-neutral-600 mb-6 hover:text-primary-600 transition-colors"
+          className="inline-flex items-center text-neutral-400 mb-2 hover:text-primary-600 transition-colors"
         >
           <FaArrowLeft className="mr-2" />
           Back to {faculty?.departmentData?.name}

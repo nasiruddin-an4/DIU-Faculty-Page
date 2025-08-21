@@ -1,5 +1,12 @@
 import { useState, useRef } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaUser,
+  FaBook,
+  FaFlask,
+  FaFileAlt,
+} from "react-icons/fa";
 
 const ProfileTabs = ({ faculty }) => {
   const [activeTab, setActiveTab] = useState("overview");
@@ -26,25 +33,25 @@ const ProfileTabs = ({ faculty }) => {
     {
       id: "overview",
       label: "Overview",
-      icon: "👤",
+      icon: <FaUser />,
       description: "Biography & Education",
     },
     {
       id: "courses",
       label: "Courses",
-      icon: "📚",
+      icon: <FaBook />,
       description: "Teaching & Curriculum",
     },
     {
       id: "research",
       label: "Research",
-      icon: "🔬",
+      icon: <FaFlask />,
       description: "Projects & Interests",
     },
     {
       id: "publications",
       label: "Publications",
-      icon: "📄",
+      icon: <FaFileAlt />,
       description: "Papers & Articles",
     },
   ];
@@ -84,16 +91,20 @@ const ProfileTabs = ({ faculty }) => {
               }`}
               onClick={() => handleTabChange(tab.id)}
             >
-              <span className="text-lg md:text-xl mb-1">{tab.icon}</span>
-              <span
-                className={`font-semibold text-xs md:text-sm transition-colors ${
-                  activeTab === tab.id
-                    ? "text-primary-600"
-                    : "text-gray-600 group-hover:text-primary-500"
-                }`}
-              >
-                {tab.label}
-              </span>
+              <div className="flex gap-2">
+                <span className="text-lg md:text-xl mb-1 text-green-700">
+                  {tab.icon}
+                </span>
+                <span
+                  className={`font-semibold text-xs md:text-sm transition-colors ${
+                    activeTab === tab.id
+                      ? "text-primary-600"
+                      : "text-gray-600 group-hover:text-primary-500"
+                  }`}
+                >
+                  {tab.label}
+                </span>
+              </div>
               <span className="text-xs text-gray-400 hidden md:block mt-1">
                 {tab.description}
               </span>
@@ -368,9 +379,9 @@ const ProfileTabs = ({ faculty }) => {
           )}
 
           {activeTab === "publications" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="md:col-span-2">
-                <div className="flex items-center mb-6">
+                <div className="flex items-center mb-2">
                   <span className="text-2xl mr-3">📄</span>
                   <h2 className="text-xl md:text-2xl font-bold text-gray-800">
                     Publications

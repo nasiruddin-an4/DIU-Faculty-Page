@@ -9,7 +9,7 @@ export const facultyMembers = [
     department: "bba",
     imageUrl: "https://faculty.daffodilvarsity.edu.bd/images/teacher/60e7e73d94d7b36a417108bd8f7cab14.jpg",
     email: "chairman.ba@diu.edu.bd",
-    phone: "(880) 2-9138234",
+    phone: "2-9138234",
     cellPhone: "(880) 1713-493029",
     socialLinks: {
       linkedin: "https://www.linkedin.com/",
@@ -422,7 +422,7 @@ export const facultyMembers = [
     department: "re",
     imageUrl: "https://images.pexels.com/photos/5490276/pexels-photo-5490276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     email: "mohammad.rahman@diu.edu.bd",
-    phone: "(880) 2-9138245",
+    phone: "2-9138245",
     cellPhone: "(880) 1713-493040",
     socialLinks: {
       linkedin: "https://www.linkedin.com/",
