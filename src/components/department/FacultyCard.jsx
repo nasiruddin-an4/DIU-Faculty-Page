@@ -128,7 +128,7 @@ const FacultyCard = ({ faculty }) => {
                   {faculty.name}
                 </h3>
                 <p className="text-sm text-neutral-500 font-medium mt-1">
-                  {faculty.title}
+                  {faculty.role}
                 </p>
               </div>
               <Link
@@ -179,6 +179,7 @@ const FacultyCard = ({ faculty }) => {
                 <h4 className="font-bold text-md text-primary-600">
                   {faculty.name}
                 </h4>
+                <p className="text-neutral-700 text-sm">{faculty.role}</p>
                 <p className="text-neutral-700 text-sm">{faculty.title}</p>
               </div>
             </div>

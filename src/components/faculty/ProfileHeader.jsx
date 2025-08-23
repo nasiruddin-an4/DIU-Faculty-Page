@@ -75,18 +75,26 @@ const ProfileHeader = ({ faculty }) => {
                 {/* Name and Title */}
                 <div className="space-y-3">
                   <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text text-transparent leading-tight">
-                    {faculty.name}
+                    {faculty?.name}
                   </h1>
                   <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-gray-600">
                     <div className="flex items-center gap-2">
                       <Award className="w-5 h-5 text-yellow-500" />
                       <p className="text-sm sm:text-base font-medium">
-                        {faculty.title}
+                        {faculty?.title}
                       </p>
                     </div>
                     <div className="flex text-start md:items-center gap-2">
                       <MapPin className="w-5 h-5 text-indigo-500" />
                       <p className="text-sm sm:text-base font-medium">
+                        {faculty?.role}
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex text-start md:items-center gap-2">
+                      <MapPin className="w-5 h-5 text-indigo-500" />
+                      <p className="text-sm sm:text-base font-medium text-gray-600">
                         {faculty?.departmentData?.name}
                       </p>
                     </div>
@@ -100,11 +108,11 @@ const ProfileHeader = ({ faculty }) => {
                     <span className="text-sm sm:text-base">
                       Email:{" "}
                       <a
-                        href={`mailto:${faculty.email}`}
+                        href={`mailto:${faculty?.email}`}
                         onClick={handleEmailClick}
                         className="text-gray-800 font-medium hover:text-blue-700 transition-colors duration-200"
                       >
-                        {faculty.email}
+                        {faculty?.email}
                       </a>
                     </span>
                   </div>

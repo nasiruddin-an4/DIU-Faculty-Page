@@ -1,113 +1,627 @@
 export const facultyMembers = [
 
   {
-    id: "faculty-001",
-    name: "Professor Dr. Mohammed Masum Iqbal",
-    title: "Dean",
-    role: "Dean",
-    employeeId: "DIU-BA-001",
-    department: "bba",
-    imageUrl: "https://faculty.daffodilvarsity.edu.bd/images/teacher/60e7e73d94d7b36a417108bd8f7cab14.jpg",
-    email: "chairman.ba@diu.edu.bd",
-    phone: "2-9138234",
-    cellPhone: "(880) 1713-493029",
-    socialLinks: {
-      linkedin: "https://www.linkedin.com/",
-      youtube: "https://www.youtube.com/",
-      website: "https://www.example.com/",
-      twitter: "https://twitter.com/"
+    "id": "faculty-001",
+    "name": "Professor Dr. Mohammed Masum Iqbal",
+    "title": "Pro Vice Chancellor",
+    "role": "Dean",
+    "employeeId": "DIU-BA-001",
+    "department": "bba",
+    "imageUrl": "https://faculty.daffodilvarsity.edu.bd/images/teacher/60e7e73d94d7b36a417108bd8f7cab14.jpg",
+    "email": "chairman.ba@diu.edu.bd",
+    "phone": "2-9138234",
+    "cellPhone": "(880) 1713-493029",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/",
+      "youtube": "https://www.youtube.com/",
+      "website": "https://www.example.com/",
+      "twitter": "https://twitter.com/"
     },
-    bio: "Dr. Md. Sabur Khan is a Professor and the Chairman of the Business Administration department at DIU. He has over 20 years of experience in academia and research, specializing in business strategy and management.",
-    education: [
+    "bio": "Professor Dr. Mohammed Masum Iqbal is the Dean of the Faculty of Business and Entrepreneurship (FBE) at Daffodil International University (DIU). With more than two decades of academic and administrative leadership, he has served as Head of the Department, Associate Dean, and now Dean, contributing significantly to the advancement of business education in Bangladesh. \n\nHe holds a PhD in Banking and Insurance from the University of Dhaka, along with an MBA and BBS in Marketing from the University of Rajshahi. His academic expertise spans Marketing, Services Marketing, Customer Relationship Management, and Social Business. Dr. Iqbal has established a strong global footprint through his roles as Guest Professor at UCSI University, Malaysia and participation in the Erasmus+ Program at Anadolu University, Turkey. A prolific scholar, he has authored over 50 research publications indexed in Scopus and Web of Science, and recently published a textbook on Services Marketing with Bangladesh Open University. \n\nHe serves as the Director of DIU’s Yunus Social Business Centre and Belt and Road Research Centre, playing a vital role in international collaboration and curriculum development. He frequently speaks at global conferences and is a recognized figure in social business education. Known for his visionary leadership, academic integrity, and commitment to innovation, Dr. Iqbal remains a respected force in shaping the future of business education in Bangladesh and beyond.",
+    "education": [
       {
-        degree: "PhD in Business Administration",
-        institution: "University of Cambridge, UK",
-        year: "2005"
+        "degree": "PhD in Business Administration",
+        "institution": "University of Cambridge, UK",
+        "year": "2005"
       },
       {
-        degree: "MBA",
-        institution: "University of Dhaka, Bangladesh",
-        year: "1998"
+        "degree": "MBA",
+        "institution": "University of Dhaka, Bangladesh",
+        "year": "1998"
       },
       {
-        degree: "BBA",
-        institution: "University of Dhaka, Bangladesh",
-        year: "1996"
+        "degree": "BBA",
+        "institution": "University of Dhaka, Bangladesh",
+        "year": "1996"
       }
     ],
-    expertise: [
+    "expertise": [
       "Business Strategy",
       "Management",
       "Organizational Behavior",
-      "Entrepreneurship"
+      "Entrepreneurship",
+      "Marketing",
+      "Services Marketing",
+      "Customer Relationship Management",
+      "Social Business"
     ],
-    courses: {
-      current: [
+    "courses": {
+      "current": [
         {
-          code: "BBA401",
-          name: "Strategic Management",
-          semester: "Spring 2025"
+          "code": "BBA401",
+          "name": "Strategic Management",
+          "semester": "Spring 2025"
         },
         {
-          code: "BBA505",
-          name: "Advanced Business Strategy",
-          semester: "Spring 2025"
+          "code": "BBA505",
+          "name": "Advanced Business Strategy",
+          "semester": "Spring 2025"
         }
       ],
-      previous: [
+      "previous": [
         {
-          code: "BBA301",
-          name: "Organizational Behavior",
-          semester: "Fall 2024"
+          "code": "BBA301",
+          "name": "Organizational Behavior",
+          "semester": "Fall 2024"
         },
         {
-          code: "BBA405",
-          name: "Entrepreneurship",
-          semester: "Fall 2024"
+          "code": "BBA405",
+          "name": "Entrepreneurship",
+          "semester": "Fall 2024"
         }
       ]
     },
-    research: {
-      interests: "My research focuses on strategic management and organizational behavior in emerging markets.",
-      projects: [
+    "research": {
+      "publications": [
         {
-          title: "Strategic Management in SMEs",
-          description: "Analyzing effective strategies for small and medium enterprises in developing economies.",
-          funded: "Bangladesh Research Council"
-        },
-        {
-          title: "Leadership in Business Organizations",
-          description: "Exploring leadership models for effective business management.",
-          funded: "DIU Research Grant"
+          "title": "Research Monograph: Consumer Attitudes toward Customized Marketing: Prospects and Possibilities in Bangladesh",
+          "publisher": "LAP LAMBERT Academic Publishing",
+          "year": 2011
         }
-      ],
-      collaborations: [
-        "University of Oxford, UK",
-        "Bangladesh University of Business and Technology",
-        "Harvard Business School"
       ]
     },
-    publications: [
+    "publications": [
       {
-        title: "Strategic Management in Emerging Markets",
-        authors: ["Khan, M.S.", "Ahmed, A.", "Rahman, M."],
-        journal: "Journal of Business Strategy",
-        year: "2023",
-        url: "https://example.com/publication1"
+        "title": "Entrepreneurial Intention: the Role of Psychological Factors and Cognitive Process for Entrepreneurship",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Revista de Gestão",
+        "year": "2025",
+        "url": "https://www.emerald.com/insight/2177-8736.htm"
       },
       {
-        title: "Leadership Models in Business",
-        authors: ["Khan, M.S.", "Johnson, R."],
-        journal: "Journal of Management Studies",
-        year: "2022",
-        url: "https://example.com/publication2"
+        "title": "Predicting Eco-friendly Packaging Product Buying Behavior in Bangladeshi Superstores Using S-R Theory",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Daffodil International University Journal of Business and Entrepreneurship",
+        "year": "2024",
+        "volume": "17",
+        "issue": "2",
+        "pages": "1-22",
+        "issn": "2664-3413 (Print), 2664-3421 (Online)"
+      },
+      {
+        "title": "Revisiting the Rana Plaza Collapse Tragedy in Bangladesh: A Study of Aftermath Cases from the Victims’ Perspectives",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Bangladesh Journal of MIS",
+        "year": "2024",
+        "volume": "10",
+        "issue": "2",
+        "url": "https://doi.org/10.61606/BJMIS.V10N2"
+      },
+      {
+        "title": "The role of ESG in enhancing firm resilience to geopolitical risks: An eastern European perspective",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Business Strategy and Development",
+        "year": "2024",
+        "url": "https://doi.org/10.1002/bsd2.70027"
+      },
+      {
+        "title": "Green finance continuance behavior: the role of satisfaction, social supports, environmental consciousness, green bank marketing initiatives and psychological reactance",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Management of Environmental Quality: An International Journal",
+        "year": "2023",
+        "url": "https://www.scopus.com/authid/detail.uri?authorId=57204546463"
+      },
+      {
+        "title": "Mini-review on Blockchain Technology for Social Media",
+        "authors": ["Iqbal, M.M."],
+        "journal": "AIP Conference Proceedings",
+        "year": "2023",
+        "url": "https://doi.org/10.1063/5.0113498"
+      },
+      {
+        "title": "Does FinTech credit scale stimulate financial institutions to increase the proportion of agricultural loans?",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Cogent Economics & Finance",
+        "year": "2022",
+        "url": "https://doi.org/10.1080/23322039.2022.2114176"
+      },
+      {
+        "title": "Green logistics and environment, economic growth in the context of the Belt and Road Initiative",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Heliyon",
+        "year": "2022",
+        "url": "https://doi.org/10.1016/j.heliyon.2022.e09641"
+      },
+      {
+        "title": "Attitude towards Online Buying Behaviors of People in Dhaka City in Bangladesh during Covid-19 Pandemic",
+        "authors": ["Iqbal, M.M."],
+        "journal": "International Journal of Special Education",
+        "year": "2022",
+        "volume": "37",
+        "issue": "1",
+        "index": "Scopus"
+      },
+      {
+        "title": "Opportunities and Barriers to E-Commerce Adoption for Women in Bangladesh: Findings from Covid-19 Shock",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Daffodil International University Journal of Business and Entrepreneurship",
+        "year": "2022",
+        "volume": "15",
+        "issue": "2"
+      },
+      {
+        "title": "Strategic Management in Emerging Markets",
+        "authors": ["Khan, M.S.", "Ahmed, A.", "Rahman, M."],
+        "journal": "Journal of Business Strategy",
+        "year": "2023",
+        "url": "https://example.com/publication1"
+      },
+      {
+        "title": "Leadership Models in Business",
+        "authors": ["Khan, M.S.", "Johnson, R."],
+        "journal": "Journal of Management Studies",
+        "year": "2022",
+        "url": "https://example.com/publication2"
+      },
+      {
+        "title": "Forecasting e-waste recovery scale driven by seasonal data characteristics: A decomposition-ensemble approach",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Waste Management and Research: The Journal for a Sustainable Circular Economy",
+        "year": "2021",
+        "url": "https://doi.org/10.1177%2F0734242X211061443"
+      },
+      {
+        "title": "Differential game model and coordination model for green supply chain based on green technology research and development",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Heliyon",
+        "year": "2021",
+        "url": "https://doi.org/10.1016/j.heliyon.2021.e07811"
+      },
+      {
+        "title": "Strategy of Sustainability: A Reflective Model Validation by AMOS",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Academy of Strategic Management Journal",
+        "year": "2021",
+        "volume": "20",
+        "issue": "6",
+        "index": "Scopus"
+      },
+      {
+        "title": "Impact of Artificial Intelligence and Digital Economy on Industrial Revolution 4: Evidence From Bangladesh",
+        "authors": ["Iqbal, M.M."],
+        "journal": "American Finance and Banking Review",
+        "year": "2021",
+        "volume": "6",
+        "issue": "1",
+        "url": "https://cribfb.com/journal/index.php/amfbr/article/view/1489"
+      },
+      {
+        "title": "Impact of Supply Chain Management on Customer Loyalty to the ‘Aarong’ Fashion House Brand",
+        "authors": ["Iqbal, M.M."],
+        "journal": "International Journal of Supply Chain Management",
+        "year": "2020",
+        "volume": "9",
+        "issue": "2",
+        "issn": "2050-7399 (Online), 2051-3771 (Print)",
+        "index": "Scopus"
+      },
+      {
+        "title": "Customer Relationship Management in Financial Services: A Study on Some Selected Private Commercial Banks in Bangladesh",
+        "authors": ["Iqbal, M.M."],
+        "journal": "International Journal of Psychosocial Rehabilitation",
+        "year": "2020",
+        "volume": "24",
+        "issue": "06",
+        "index": "Scopus"
+      },
+      {
+        "title": "The Strategy of Management System Standards: A Variance-Based Structural Equation modelling (VB-SEM)",
+        "authors": ["Iqbal, M.M."],
+        "journal": "International Journal of Science and Technology",
+        "year": "2020",
+        "volume": "29",
+        "issue": "35",
+        "pages": "1882-1893",
+        "index": "Scopus"
+      },
+      {
+        "title": "Revisiting the Impact of Intrinsic Financial Risks on Firm Value of Banks among ASEAN Countries: A Panel Data Approach",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Banks and Bank Systems",
+        "year": "2019",
+        "volume": "14",
+        "issue": "04",
+        "index": "Scopus"
+      },
+      {
+        "title": "Strategic Thoughts and Expectations of Students on the National Budget, 2019-20 in Bangladesh",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Academy of Strategic Management Journal",
+        "year": "2019",
+        "volume": "18",
+        "issue": "04",
+        "index": "Scopus"
+      },
+      {
+        "title": "Factors Influencing Consumer Buying Behavior: A Case Study on Cosmetic Products in Dhaka City",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Daffodil International University Journal of Business and Entrepreneurship",
+        "year": "2018",
+        "volume": "11",
+        "issue": "2"
+      },
+      {
+        "title": "Measuring Impact of Word-of-Mouth on Travel: A Study Based on Bangladeshi Tourists’ Experience at Cox’s Bazar",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Dhaka University Journal of Business Studies",
+        "year": "2018",
+        "volume": "39",
+        "issue": "1"
+      },
+      {
+        "title": "Key Soft Skills Influencing the Employment Decision of the Employers: A Case Study on Graduates of Business of Dhaka City",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Daffodil International University Journal of Business and Economics",
+        "year": "2017",
+        "volume": "11",
+        "issue": "1"
+      },
+      {
+        "title": "Customer’s Perception of Services Quality of Banking Sectors in Bangladesh",
+        "authors": ["Iqbal, M.M."],
+        "journal": "International Journal of Law and Management",
+        "year": "2017",
+        "index": "Scopus"
+      },
+      {
+        "title": "Investigating the Impacts of Corporate Social Responsibility Initiatives on Customers’ Loyalty: A Study from Selected Private Banks in Bangladesh",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Daffodil International University Journal of Business and Economics",
+        "year": "2016",
+        "volume": "10",
+        "issue": "1"
+      },
+      {
+        "title": "The Depressed Higher Education in Bangladesh: Issues and Prospects",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Journal of Thai Interdisciplinary Research",
+        "year": "2016",
+        "issue": "2559",
+        "issn": "2465-3837"
+      },
+      {
+        "title": "Corporate Social Responsibility Practice in Bangladesh: A Comparative Study on Conventional Banks and Islamic Banks",
+        "authors": ["Iqbal, M.M."],
+        "journal": "The Jahangirnagar Journal of Business Studies",
+        "year": "2015",
+        "volume": "05",
+        "issue": "01"
+      },
+      {
+        "title": "An Analysis of Day-of The-Week Effects in Bangladesh Stock Market: Evidence from Dhaka Stock Exchange",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Daffodil International University Journal of Business and Economics",
+        "year": "2015",
+        "volume": "9",
+        "issue": "1"
+      },
+      {
+        "title": "Developing Linear Programming Model to Reduce Bottleneck Operation: An Approach to Minimize Labor Cost of Ready Made Garments Sector in Bangladesh",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Jahangirnagar University Journal of Science",
+        "year": "2014",
+        "volume": "37",
+        "issue": "1"
+      },
+      {
+        "title": "Patients’ Satisfaction with the Medial Services in Bangladesh: A Case Study on the City Hospital Limited, Dhaka",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Daffodil International University Journal of Business and Economics",
+        "year": "2014",
+        "volume": "8",
+        "issue": "1"
+      },
+      {
+        "title": "Job Satisfaction in Commercial Banks of Bangladesh with different Ownership Structures: A Comparative Study",
+        "authors": ["Iqbal, M.M."],
+        "journal": "The Eastern University Journal",
+        "year": "2013",
+        "volume": "05",
+        "issue": "01",
+        "issn": "1998-7889"
+      },
+      {
+        "title": "Service Quality of Financial Services in Bangladesh: A Distinction between Public and Private Commercial Bank",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Journal of the Institute of Cost and Management Accountants of Bangladesh",
+        "year": "2013",
+        "volume": "XLI",
+        "issue": "6",
+        "issn": "1817-5090"
+      },
+      {
+        "title": "Leadership Patterns in the Private Universities of Bangladesh: An Evaluation",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Daffodil International University Journal of Business and Economics",
+        "year": "2013",
+        "volume": "7",
+        "issue": "1"
+      },
+      {
+        "title": "Service Quality of Financial Services in Bangladesh: A Study on a Private Commercial Bank",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Daffodil International University Journal of Business and Economics",
+        "year": "2013",
+        "volume": "7",
+        "issue": "1"
+      },
+      {
+        "title": "Consumer Attitudes toward Customized Marketing: Prospects and Possibilities in Bangladesh",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Journal of Business Administration, IBA, University of Dhaka",
+        "year": "2006",
+        "volume": "32",
+        "issue": "3&4"
+      },
+      {
+        "title": "The Insight of Customer Retention Management: Bangladesh Perspective",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Dhaka University Journal of Business Studies",
+        "year": "2006",
+        "volume": "XXXII",
+        "issue": "2"
+      },
+      {
+        "title": "Word of Mouth (WOM): A key to Marketing Success",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Journal of Business Studies, Southeast University",
+        "year": "2006",
+        "volume": "2",
+        "issue": "2"
+      },
+      {
+        "title": "Corporate Identity Modeling Through A Local Corporation In Bangladesh",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Dhaka University Journal of Business Studies",
+        "year": "2006",
+        "volume": "XXVII",
+        "issue": "1"
+      },
+      {
+        "title": "Corporate Identity in Service Industry: A Review on American Life Insurance Company Bangladesh",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Journal of Business and Technology, Northern University Bangladesh",
+        "year": "2006",
+        "volume": "1",
+        "issue": "1"
+      },
+      {
+        "title": "Disclosure Practices: A Comparison of Commercial Banks and Insurance Companies in Bangladesh",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Journal of the Institute of Cost and Management Accountants of Bangladesh",
+        "year": "2006",
+        "volume": "XXXIV",
+        "issue": "1"
+      },
+      {
+        "title": "Consumers’ Opinion about Mass Communication in Dhaka City",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Daffodil International University Journal of Business and Economics",
+        "year": "2006",
+        "volume": "1",
+        "issue": "1"
+      },
+      {
+        "title": "Newspaper Marketing in Bangladesh: A Case Study on The Prothom Alo",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Daffodil International University Journal of Business and Economics",
+        "year": "2006",
+        "volume": "1",
+        "issue": "1"
+      },
+      {
+        "title": "Motivation through Self-leadership: An Emerging Trend of The Leaders of Private Universities",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Daffodil International University Journal of Business and Economics",
+        "year": "2006",
+        "volume": "2",
+        "issue": "2"
+      },
+      {
+        "title": "Determinants of Sustainable Competitive Advantages: A Study of Telecommunication industry in Bangladesh",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Journal of Business Studies, Southeast University",
+        "year": "2005",
+        "volume": "1",
+        "issue": "2"
+      },
+      {
+        "title": "Environmental Disclosure- A Bangladesh Perspectives",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Journal of the Institute of Cost and Management Accountants of Bangladesh",
+        "year": "2005",
+        "volume": "XXXIII",
+        "issue": "4"
+      },
+      {
+        "title": "Consumer Attitude toward New Products in Dhaka City: A Case Study of Two Products",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Daffodil International University Journal of Business and Economics",
+        "year": "2007",
+        "volume": "2",
+        "issue": "1"
+      },
+      {
+        "title": "Life Insurance Marketing in Bangladesh",
+        "authors": ["Iqbal, M.M."],
+        "journal": "Daffodil International University Journal of Business and Economics",
+        "year": "2007",
+        "volume": "2",
+        "issue": "2"
+      }
+    ],
+    "books": [
+      {
+        "title": "Services Marketing",
+        "courseCode": "OSBBA 4810",
+        "publisher": "Open School, Bangladesh Open University",
+        "year": "2025",
+        "language": "Bangla",
+        "url": "https://www.ebookbou.edu.bd/wp/OS/osbba8_0.php#osbba4810"
+      },
+      {
+        "title": "Consumer Attitudes toward Customized Marketing: Prospects and Possibilities in Bangladesh",
+        "publisher": "LAP LAMBERT Academic Publishing",
+        "year": "2011"
+      }
+    ],
+    "trainingExperience": [
+      {
+        "title": "ACD Working Committee Meeting of ACD MBA",
+        "date": "15-17 April, 2018",
+        "institution": "Asia e University",
+        "location": "Kuala Lumpur, Malaysia"
+      },
+      {
+        "title": "AACSB Business Accreditation Seminar",
+        "date": "13-14 February, 2017",
+        "location": "Mumbai, India"
+      },
+      {
+        "title": "Leading Globally Engaged Universities (LEGU) Programme",
+        "date": "10-15 April, 2016",
+        "institution": "University College Dublin",
+        "location": "Ireland"
+      },
+      {
+        "title": "Short Course on Supply Chain Management",
+        "date": "6-10 December, 2014",
+        "institution": "Directorate of Continuing Education (DCE), Bangladesh University of Engineering and Technology",
+        "location": "Bangladesh"
+      },
+      {
+        "title": "Developing a Research Framework for Educational Technology under the auspices of the LEADHER Project",
+        "date": "28-29 November, 2012",
+        "institution": "Universiti Sains Malaysia, International Association of Universities, Daffodil International University",
+        "location": "Malaysia"
+      },
+      {
+        "title": "Applied Research Methodology in Business",
+        "date": "October to December, 2008",
+        "institution": "The Bureau of Business Research, University of Dhaka",
+        "location": "Bangladesh"
+      },
+      {
+        "title": "Research Methodology with the Application of SPSS",
+        "date": "23 May to 2 June, 2005",
+        "institution": "Bangladesh Institute of Management, Government of the People’s Republic of Bangladesh",
+        "location": "Bangladesh"
+      },
+      {
+        "title": "SPSS for Professionals, Researchers and Students",
+        "date": "May-June, 2008",
+        "institution": "Department of Statistics, University of Dhaka",
+        "location": "Bangladesh"
+      },
+      {
+        "title": "Workshop on SPSS",
+        "date": "11-12 August, 2006",
+        "institution": "School of Business, Independent University",
+        "location": "Bangladesh"
+      },
+      {
+        "title": "Marketing Communication & PR Conference",
+        "date": "July, 2005",
+        "institution": "Rapport",
+        "location": "Dhaka, Bangladesh"
+      },
+      {
+        "title": "International Conference on Marketing: Marketing is Business and Business is Marketing",
+        "date": "July, 2001",
+        "institution": "Rapport Bangladesh",
+        "location": "Dhaka, Bangladesh"
+      },
+      {
+        "title": "Marketing is Everything",
+        "date": "January, 2001",
+        "institution": "DCCI and GTZ",
+        "location": "Dhaka, Bangladesh"
+      },
+      {
+        "title": "Intensive Course in Basic English",
+        "date": "29 August to 8 November, 1997",
+        "institution": "Department of English, University of Dhaka",
+        "location": "Bangladesh"
+      }
+    ],
+    "awardsAndScholarships": [
+      {
+        "title": "International Education Faculty Achievement Award",
+        "issuer": "International Association of University Presidents",
+        "year": "2012"
+      },
+      {
+        "title": "Rajshahi University Merit Scholarship",
+        "issuer": "University of Rajshahi",
+        "year": null
+      },
+      {
+        "title": "Scholarship for HSC Result",
+        "issuer": null,
+        "year": null
+      },
+      {
+        "title": "Junior Scholarship",
+        "issuer": null,
+        "year": null
+      },
+      {
+        "title": "Primary Scholarship",
+        "issuer": null,
+        "year": null
+      }
+    ],
+    "memberships": [
+      {
+        "title": "Executive Member",
+        "organization": "Human Rights and Environment Development"
+      },
+      {
+        "title": "Member",
+        "organization": "Academic Council, Daffodil International University"
+      },
+      {
+        "title": "Member",
+        "organization": "Finance Committee, Daffodil International University"
+      },
+      {
+        "title": "Member",
+        "organization": "Rajshahi University Alumni Association (RUAA)"
+      },
+      {
+        "title": "Member",
+        "organization": "Social Business Research Centre, Daffodil International University"
+      },
+      {
+        "title": "Member",
+        "organization": "Knowledge Centre, Dhaka Chamber of Commerce & Industries (DCCI)"
       }
     ]
   },
   {
     id: "faculty-002",
     name: "Professor Dr. Syed Mizanur Rahman",
-    title: "Associate Dean",
+    title: "",
     role: "Associate Dean",
     employeeId: "DIU-BA-002",
     department: "bba",
