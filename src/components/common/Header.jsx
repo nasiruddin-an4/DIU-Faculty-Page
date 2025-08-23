@@ -30,7 +30,7 @@ const Header = () => {
         isScrolled ? "bg-white shadow-lg py-2" : "bg-white py-4"
       }`}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="max-w-6xl mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3">
           <img src={Logo} alt="DIU Logo" className="w-64  object-contain" />
         </Link>

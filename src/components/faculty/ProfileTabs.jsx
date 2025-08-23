@@ -58,8 +58,8 @@ const ProfileTabs = ({ faculty }) => {
 
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-      {/* Enhanced Tab Navigation with Mobile Scroll Controls */}
-      <div className="bg-gradient-to-r from-gray-50 to-gray-100 border-b border-gray-200 relative">
+      {/*  Tab Navigation */}
+      <div className="bg-gradient-to-r from-white to-gray-50 border-b border-gray-200 relative">
         {/* Left Arrow - Mobile Only */}
         <button
           onClick={() => scrollTabs("left")}

@@ -82,11 +82,11 @@ const FacultyProfilePage = () => {
   }
 
   return (
-    <div className="pt-20">
-      <div className="max-w-4xl mx-auto px-0 pt-5 lg:px-12">
+    <div className="pt-24">
+      <div className="max-w-6xl mx-auto px-4 pt-5 lg:px-12 bg-white rounded-xl">
         <Link
           to={`/department/${faculty?.departmentData?.id}`}
-          className="inline-flex items-center text-neutral-400 mb-2 hover:text-primary-600 transition-colors"
+          className="inline-flex items-center text-neutral-400 mb-6 hover:text-primary-600 transition-colors"
         >
           <FaArrowLeft className="mr-2" />
           Back to {faculty?.departmentData?.name}
@@ -95,7 +95,7 @@ const FacultyProfilePage = () => {
 
       <ProfileHeader faculty={faculty} />
 
-      <div className="container-custom mx-auto py-8">
+      <div className="max-w-6xl mx-auto py-8">
         <ProfileTabs faculty={faculty} />
       </div>
     </div>
