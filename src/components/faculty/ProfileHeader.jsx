@@ -84,7 +84,7 @@ const ProfileHeader = ({ faculty }) => {
                         {faculty.title}
                       </p>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex text-start md:items-center gap-2">
                       <MapPin className="w-5 h-5 text-indigo-500" />
                       <p className="text-sm sm:text-base font-medium">
                         {faculty?.departmentData?.name}
