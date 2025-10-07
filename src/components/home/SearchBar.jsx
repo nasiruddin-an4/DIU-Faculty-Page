@@ -1,36 +1,42 @@
-import { useState } from 'react'
-import { FaSearch } from 'react-icons/fa'
+import { useState } from "react";
+import { Search } from "lucide-react";
+import EmployeeSearchSystem from "./EmployeeSearchSystem";
 
-const SearchBar = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState('')
+const SearchBar = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    onSearch(searchTerm)
-  }
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSearchTerm("");
+  };
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-4 mb-6">
-      <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3">
-        <div className="relative flex-grow">
+    <>
+      <div className="bg-white shadow-md rounded-lg p-4 mb-6">
+        <div
+          className="relative flex-grow cursor-pointer group"
+          onClick={() => setIsModalOpen(true)}
+        >
           <input
             type="text"
-            placeholder="Search by name, email, or mobile..."
+            placeholder="Search by name, email, phone, designation..."
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full py-3 px-4 pl-12 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+            readOnly
+            className="w-full py-3 px-4 pl-12 border border-neutral-300 rounded-md cursor-pointer group-hover:border-blue-400 transition-colors"
           />
-          <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-neutral-400" />
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-neutral-400 w-5 h-5 group-hover:text-blue-500 transition-colors" />
         </div>
-        <button
-          type="submit"
-          className="btn-primary whitespace-nowrap md:w-auto"
-        >
-          Search
-        </button>
-      </form>
-    </div>
-  )
-}
+      </div>
 
-export default SearchBar
+      <EmployeeSearchSystem
+        isModalOpen={isModalOpen}
+        onClose={handleCloseModal}
+        searchTerm={searchTerm}
+        onSearchChange={setSearchTerm}
+      />
+    </>
+  );
+};
+
+export default SearchBar;
