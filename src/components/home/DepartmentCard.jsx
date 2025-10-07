@@ -16,14 +16,14 @@ const DepartmentCard = ({ department }) => {
       </div>
 
       <div className="p-5 flex-grow flex flex-col">
-        <h3 className="font-bold text-lg mb-4 text-neutral-800 group-hover:text-primary-600 transition-colors">
+        <h3 className="font-bold text-lg mb-4 text-diuBlue transition-all duration-300 ease-out group-hover:text-primary-600 group-hover:-translate-y-1">
           {department.name}
         </h3>
 
-        <div className="mt-auto text-center bg-gray-100 rounded-lg p-2 group-hover:bg-gray-200 transition-colors duration-300">
+        <div className="mt-auto text-center border border-diuBlue rounded-lg p-2 transition-all duration-700 ease-out group-hover:bg-gradient-to-r from-[#034EA2] to-[#002652]">
           <Link
             to={`/department/${department.id}`}
-            className="inline-flex items-center text-primary-600 font-medium text-sm hover:text-primary-700 transition-colors"
+            className="inline-flex items-center text-diuBlue font-bold text-sm group-hover:text-white transition-colors"
           >
             View Department Faculty
             <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />

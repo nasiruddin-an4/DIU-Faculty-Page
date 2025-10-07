@@ -94,7 +94,7 @@ const FacultyCard = ({ faculty }) => {
   return (
     <div className="relative">
       {/* Faculty Card */}
-      <Link to={`/faculty/${faculty.id}`}>
+      <Link to={`/faculty/${faculty?.id}`}>
         <div
           ref={cardRef}
           className="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden cursor-pointer"
@@ -116,28 +116,28 @@ const FacultyCard = ({ faculty }) => {
             <div className="w-1/3 flex-shrink-0">
               <div className="h-28 rounded-md overflow-hidden">
                 <img
-                  src={faculty.imageUrl}
-                  alt={faculty.name}
+                  src={faculty?.imageUrl}
+                  alt={faculty?.name}
                   className="w-full h-full object-cover"
                 />
               </div>
             </div>
             <div className="w-full flex flex-col justify-between min-h-[7rem]">
               <div>
-                <h3 className="font-bold text-lg text-neutral-800 group-hover:text-primary-600 transition-colors line-clamp-2 leading-[1.4]">
-                  {faculty.name}
+                <h3 className="font-bold text-lg text-neutral-800 group-hover:text-primary-600 transition-all duration-300 line-clamp-2 leading-[1.4] group-hover:tracking-wide group-hover:mb-2">
+                  {faculty?.name}
                 </h3>
                 <p className="text-sm text-neutral-500 font-medium mt-1">
-                  {faculty.role}
+                  {faculty?.role}
                 </p>
               </div>
               <Link
-                to={`/faculty/${faculty.id}`}
-                className="text-sm text-neutral-600 hover:text-primary-600 transition-colors flex items-center justify-end gap-2 mr-2"
+                to={`/faculty/${faculty?.id}`}
+                className="text-sm text-neutral-600 hover:text-primary-600 group-hover:text-diuBlue transition-colors flex items-center justify-end gap-2 mr-2 "
                 onClick={(e) => e.stopPropagation()}
               >
                 View Profile
-                <FaArrowRight className="text-sm text-neutral-500 group-hover:translate-x-1 transition-transform duration-200" />
+                <FaArrowRight className="text-sm text-neutral-500 group-hover:translate-x-1 group-hover:text-diuBlue transition-transform duration-200" />
               </Link>
             </div>
           </div>
@@ -159,7 +159,7 @@ const FacultyCard = ({ faculty }) => {
           onMouseEnter={handlePopupMouseEnter}
           onMouseLeave={handlePopupMouseLeave}
           role="dialog"
-          aria-label={`Details for ${faculty.name}`}
+          aria-label={`Details for ${faculty?.name}`}
         >
           <div className="bg-white rounded-xl shadow-2xl p-6 w-full md:w-80 animate-fade-in">
             <button
@@ -171,16 +171,16 @@ const FacultyCard = ({ faculty }) => {
             </button>
             <div className="flex items-start space-x-4">
               <img
-                src={faculty.imageUrl}
-                alt={faculty.name}
+                src={faculty?.imageUrl}
+                alt={faculty?.name}
                 className="w-20 h-20 rounded-md object-cover"
               />
               <div className="pt-1">
                 <h4 className="font-bold text-md text-primary-600">
-                  {faculty.name}
+                  {faculty?.name}
                 </h4>
-                <p className="text-neutral-700 text-sm">{faculty.role}</p>
-                <p className="text-neutral-700 text-sm">{faculty.title}</p>
+                <p className="text-neutral-700 text-sm">{faculty?.role}</p>
+                <p className="text-neutral-700 text-sm">{faculty?.title}</p>
               </div>
             </div>
             <div className="py-1 border-b">
@@ -190,30 +190,30 @@ const FacultyCard = ({ faculty }) => {
               <div className="text-sm">
                 <p className="font-medium text-neutral-900">Education:</p>
                 <p className="text-neutral-800">
-                  {faculty.education[0].degree}
+                  {faculty?.education[0]?.degree}
                 </p>
                 <p className="text-neutral-700 text-xs">
-                  {faculty.education[0].institution}
+                  {faculty?.education[0]?.institution}
                 </p>
               </div>
               <div className="text-sm">
                 <div className="flex-wrap gap-1 mt-1">
                   <p className="font-medium">Contact:</p>
-                  <p className="flex items-center text-neutral-800">
+                  {/* <p className="flex items-center text-neutral-800">
                     Employee ID: {faculty.employeeId}
+                  </p> */}
+                  <p className="flex items-center text-neutral-800">
+                    Cell-Phone:<strong>{faculty?.cellPhone}</strong>
                   </p>
                   <p className="flex items-center text-neutral-800">
-                    Cell-Phone: {faculty.cellPhone}
-                  </p>
-                  <p className="flex items-center text-neutral-800">
-                    E-mail: {faculty.email}
+                    E-mail: <strong> {faculty?.email}</strong>
                   </p>
                 </div>
               </div>
             </div>
             <Link
-              to={`/faculty/${faculty.id}`}
-              className="mt-4 inline-block w-full text-center bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-4 rounded-lg transition duration-200"
+              to={`/faculty/${faculty?.id}`}
+              className="mt-4 inline-block w-full text-center text-diuBlue border border-diuBlue hover:bg-gradient-to-r from-[#034EA2] to-[#011D3C] hover:text-white font-medium py-2 px-4 rounded-lg transition duration-300"
             >
               View Full Profile
             </Link>

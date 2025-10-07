@@ -103,10 +103,10 @@ const DepartmentPage = () => {
       <div className="bg-blue-50 text-white py-16">
         <div className="container-custom mx-auto text-center justify-content-center items-center">
           <p className="text-sm md:text-xl text-gray-600 mb-2">
-            {department.facultyFullName}
+            {department?.facultyFullName}
           </p>
           <h1 className="text-3xl md:text-4xl font-bold text-blue-800">
-            {department.name}
+            {department?.name}
           </h1>
           <p className="text-white/80 max-w-3xl text-lg">
             {department.description}
@@ -124,10 +124,10 @@ const DepartmentPage = () => {
             />
           </div>
           <div className="w-full lg:w-4/5">
-            {filteredFaculty.length > 0 ? (
+            {filteredFaculty?.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 w-full">
-                {filteredFaculty.map((faculty) => (
-                  <FacultyCard key={faculty.id} faculty={faculty} />
+                {filteredFaculty?.map((faculty) => (
+                  <FacultyCard key={faculty?.id} faculty={faculty} />
                 ))}
               </div>
             ) : (

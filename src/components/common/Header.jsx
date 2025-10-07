@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Logo from "../../assets/diulogo.png";
+import Logo from "../../assets/DIU.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,13 +26,13 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full z-30 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-lg py-2" : "bg-white py-4"
+      className={`fixed w-full z-30 transition-all duration-500 ${
+        isScrolled ? "bg-white shadow-lg py-3" : "bg-white py-5 shadow-sm"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3">
-          <img src={Logo} alt="DIU Logo" className="w-64  object-contain" />
+          <img src={Logo} alt="DIU Logo" className="w-40  object-contain" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -64,7 +64,7 @@ const Header = () => {
           </a>
           <a
             href="#"
-            className="bg-primary-600 text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-primary-700 transition-colors duration-200 shadow-sm hover:shadow-md"
+            className="bg-gradient-to-r from-[#034EA2] to-[#011D3C] text-white px-6 py-2 rounded-lg font-medium shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300"
           >
             Apply Now
           </a>

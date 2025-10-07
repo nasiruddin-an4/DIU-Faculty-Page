@@ -1,3 +1,4 @@
+import { div } from "framer-motion/client";
 import { useState, useRef } from "react";
 import {
   FaChevronLeft,
@@ -11,6 +12,7 @@ import {
 
 const ProfileTabs = ({ faculty }) => {
   const [activeTab, setActiveTab] = useState("overview");
+  const [expandedSections, setExpandedSections] = useState({});
   const scrollContainerRef = useRef(null);
 
   const handleTabChange = (tab) => {
@@ -28,6 +30,18 @@ const ProfileTabs = ({ faculty }) => {
         container.scrollBy({ left: scrollAmount, behavior: "smooth" });
       }
     }
+  };
+
+  const toggleSection = (sectionName) => {
+    setExpandedSections((prev) => ({
+      ...prev,
+      [sectionName]: !prev[sectionName],
+    }));
+  };
+
+  const getVisibleItems = (items, sectionName) => {
+    if (!items) return [];
+    return expandedSections[sectionName] ? items : items.slice(0, 6);
   };
 
   const tabConfig = [
@@ -78,7 +92,7 @@ const ProfileTabs = ({ faculty }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
       {/* Sticky Tab Navigation */}
-      <div className="sticky top-0 z-20 bg-gradient-to-r from-white to-gray-50 border-b border-gray-200">
+      <div className="bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
         {/* Left Arrow - Mobile Only */}
         <button
           onClick={() => scrollTabs("left")}
@@ -102,20 +116,20 @@ const ProfileTabs = ({ faculty }) => {
           className="flex overflow-x-auto scrollbar-hide px-12 md:px-0 justify-between"
           ref={scrollContainerRef}
         >
-          {tabConfig.map((tab) => (
+          {tabConfig?.map((tab) => (
             <button
               key={tab.id}
-              className={`relative flex flex-col items-center px-4 py-4 min-w-[120px] md:min-w-[140px] focus:outline-none transition-all duration-300 ease-in-out group ${
+              className={`relative flex flex-col items-center px-4 py-3 min-w-[120px] md:min-w-[140px] focus:outline-none transition-all duration-300 ease-in-out group ${
                 activeTab === tab.id
-                  ? "bg-gray-100 shadow-sm border-b-2 border-primary-500"
-                  : "hover:bg-gray-200"
+                  ? "bg-gray-100/80 shadow-sm border-b-2 border-primary-500"
+                  : "hover:bg-gray-100/60"
               }`}
               onClick={() => handleTabChange(tab.id)}
               aria-label={`Switch to ${tab.label} tab`}
             >
-              <div className="flex gap-2 ">
+              <div className="flex gap-2 py-2">
                 <span className="text-lg md:text-xl text-green-700">
-                  {tab.icon}
+                  {tab?.icon}
                 </span>
                 <span
                   className={`font-semibold text-xs md:text-sm text-start transition-colors ${
@@ -124,7 +138,7 @@ const ProfileTabs = ({ faculty }) => {
                       : "text-gray-600 group-hover:text-primary-500"
                   }`}
                 >
-                  {tab.label}
+                  {tab?.label}
                 </span>
               </div>
               {/* <span className="text-xs text-gray-400 hidden md:block mt-1">
@@ -139,7 +153,7 @@ const ProfileTabs = ({ faculty }) => {
         </div>
       </div>
 
-      {/* Enhanced Tab Content with Better Spacing and Animations */}
+      {/* Modified content sections with See More functionality */}
       <div className="p-4 md:p-6 lg:p-8">
         <div className="animate-fadeIn">
           {activeTab === "overview" && (
@@ -153,7 +167,7 @@ const ProfileTabs = ({ faculty }) => {
                   </h2>
                 </div>
                 <p className="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-line">
-                  {faculty.bio}
+                  {faculty?.bio}
                 </p>
               </div>
 
@@ -167,15 +181,15 @@ const ProfileTabs = ({ faculty }) => {
 
               <div className="space-y-4">
                 {Array.from({
-                  length: Math.ceil(faculty.education.length / 2),
+                  length: Math.ceil(faculty?.education?.length / 2 || 0),
                 }).map((_, rowIndex) => (
                   <div
                     className="grid grid-cols-1 md:grid-cols-2 gap-8"
                     key={rowIndex}
                   >
-                    {faculty.education
-                      .slice(rowIndex * 2, rowIndex * 2 + 2)
-                      .map((edu, index) => (
+                    {faculty?.education
+                      ?.slice(rowIndex * 2, rowIndex * 2 + 2)
+                      ?.map((edu, index) => (
                         <div
                           className="bg-white rounded-lg p-4 border-l-4 border-primary-500 shadow-sm hover:shadow-md transition-shadow duration-300"
                           key={index}
@@ -195,8 +209,9 @@ const ProfileTabs = ({ faculty }) => {
                           </div>
                         </div>
                       ))}
-                    {faculty.education.length % 2 !== 0 &&
-                      rowIndex === Math.floor(faculty.education.length / 2) && (
+                    {faculty?.education?.length % 2 !== 0 &&
+                      rowIndex ===
+                        Math.floor(faculty?.education?.length / 2) && (
                         <div className="bg-transparent"></div>
                       )}
                   </div>
@@ -212,7 +227,7 @@ const ProfileTabs = ({ faculty }) => {
                   </h3>
                 </div>
                 <div className="flex flex-wrap gap-3">
-                  {faculty.expertise.map((area, index) => (
+                  {faculty?.expertise?.map((area, index) => (
                     <span
                       key={index}
                       className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
@@ -236,7 +251,7 @@ const ProfileTabs = ({ faculty }) => {
                   </h2>
                 </div>
                 <div className="space-y-4">
-                  {faculty.courses.current.map((course, index) => (
+                  {faculty?.courses?.current?.map((course, index) => (
                     <div
                       key={index}
                       className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-5 border border-green-200 hover:shadow-md transition-all duration-300"
@@ -275,7 +290,7 @@ const ProfileTabs = ({ faculty }) => {
                   </h2>
                 </div>
                 <div className="space-y-4">
-                  {faculty.courses.previous.map((course, index) => (
+                  {faculty?.courses?.previous?.map((course, index) => (
                     <div
                       key={index}
                       className="bg-gray-50 rounded-xl p-5 border border-gray-200 hover:shadow-md transition-all duration-300"
@@ -319,7 +334,7 @@ const ProfileTabs = ({ faculty }) => {
 
                 {/* Publications */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {faculty.research.publications.map((pub, index) => (
+                  {faculty?.research?.publications?.map((pub, index) => (
                     <div key={index} className=" space-y-2">
                       <p className="text-gray-800 font-semibold text-sm md:text-base">
                         {pub.title}
@@ -338,7 +353,7 @@ const ProfileTabs = ({ faculty }) => {
           {activeTab === "publications" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Books Section */}
-              {faculty.books && faculty.books.length > 0 && (
+              {faculty?.books && faculty?.books?.length > 0 && (
                 <>
                   <div className="md:col-span-2">
                     <div className="flex items-center mb-2">
@@ -348,110 +363,130 @@ const ProfileTabs = ({ faculty }) => {
                       </h3>
                     </div>
                   </div>
-                  {faculty.books.map((book, index) => (
-                    <div
-                      key={`book-${index}`}
-                      className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-all duration-300"
-                    >
-                      <div className="flex items-start justify-between mb-3">
-                        <h3 className="font-bold text-gray-800 text-sm md:text-base leading-relaxed">
-                          {book.title}
-                        </h3>
-                        <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium ml-4">
-                          {book.year}
-                        </span>
-                      </div>
-                      <div className="space-y-2 mb-4">
-                        <p className="text-gray-700 text-sm md:text-base font-medium">
-                          {book.publisher}
-                        </p>
-                        {(book.courseCode || book.language) && (
-                          <p className="text-gray-500 text-sm">
-                            {[
-                              book.courseCode &&
-                                `Course Code: ${book.courseCode}`,
-                              book.language && `Language: ${book.language}`,
-                            ]
-                              .filter(Boolean)
-                              .join(", ")}
+                  {getVisibleItems(faculty?.books, "books")?.map(
+                    (book, index) => (
+                      <div
+                        key={`book-${index}`}
+                        className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-all duration-300"
+                      >
+                        <div className="flex items-start justify-between mb-3">
+                          <h3 className="font-bold text-gray-800 text-sm md:text-base leading-relaxed">
+                            {book.title}
+                          </h3>
+                          <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium ml-4">
+                            {book.year}
+                          </span>
+                        </div>
+                        <div className="space-y-2 mb-4">
+                          <p className="text-gray-700 text-sm md:text-base font-medium">
+                            {book.publisher}
                           </p>
+                          {(book.courseCode || book.language) && (
+                            <p className="text-gray-500 text-sm">
+                              {[
+                                book.courseCode &&
+                                  `Course Code: ${book.courseCode}`,
+                                book.language && `Language: ${book.language}`,
+                              ]
+                                .filter(Boolean)
+                                .join(", ")}
+                            </p>
+                          )}
+                        </div>
+                        {book.url && (
+                          <div className="flex items-center">
+                            <a
+                              href={book.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+                            >
+                              <span className="mr-2">🔗</span>
+                              View Book
+                            </a>
+                          </div>
                         )}
                       </div>
-                      {book.url && (
-                        <div className="flex items-center">
-                          <a
-                            href={book.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
-                          >
-                            <span className="mr-2">🔗</span>
-                            View Book
-                          </a>
-                        </div>
-                      )}
+                    )
+                  )}
+                  {faculty?.books?.length > 6 && (
+                    <div className="md:col-span-2 flex justify-center mt-4">
+                      <button
+                        onClick={() => toggleSection("books")}
+                        className="bg-white hover:bg-gray-50 text-primary-600 font-medium py-2 px-4 rounded-lg border border-primary-200 shadow-sm transition-all duration-300"
+                      >
+                        {expandedSections["books"]
+                          ? "Show Less"
+                          : `Show More (${faculty.books.length - 6} items)`}
+                      </button>
                     </div>
-                  ))}
+                  )}
                 </>
               )}
 
-              {/* Papers and Articles Section */}
-              <div className="md:col-span-2">
-                <div className="flex items-center mb-2">
-                  <span className="text-xl mr-3">📄</span>
-                  <h3 className="text-lg md:text-xl font-bold text-gray-800">
-                    Papers & Articles
-                  </h3>
-                </div>
-              </div>
-              {faculty.publications.map((pub, index) => (
-                <div
-                  key={`pub-${index}`}
-                  className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-all duration-300"
-                >
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="font-bold text-gray-800 text-sm md:text-base leading-relaxed">
-                      {pub.title}
-                    </h3>
-                    <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium ml-4">
-                      {pub.year}
-                    </span>
-                  </div>
-                  <div className="space-y-2 mb-4">
-                    <p className="text-gray-600 italic text-sm md:text-base">
-                      {pub.authors.join(", ")}
-                    </p>
-                    <p className="text-gray-700 text-sm md:text-base font-medium">
-                      {pub.journal}
-                    </p>
-                    {(pub.volume || pub.issue || pub.issn || pub.index) && (
-                      <p className="text-gray-500 text-sm">
-                        {[
-                          pub.volume && `Volume ${pub.volume}`,
-                          pub.issue && `Issue ${pub.issue}`,
-                          pub.issn && `ISSN: ${pub.issn}`,
-                          pub.index && `Indexed in ${pub.index}`,
-                        ]
-                          .filter(Boolean)
-                          .join(", ")}
+              {/* Papers Section */}
+              {getVisibleItems(faculty?.publications, "publications")?.map(
+                (pub, index) => (
+                  <div
+                    key={`pub-${index}`}
+                    className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-all duration-300"
+                  >
+                    <div className="flex items-start justify-between mb-3">
+                      <h3 className="font-bold text-gray-800 text-sm md:text-base leading-relaxed">
+                        {pub.title}
+                      </h3>
+                      <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium ml-4">
+                        {pub.year}
+                      </span>
+                    </div>
+                    <div className="space-y-2 mb-4">
+                      <p className="text-gray-600 italic text-sm md:text-base">
+                        {pub.authors.join(", ")}
                       </p>
+                      <p className="text-gray-700 text-sm md:text-base font-medium">
+                        {pub.journal}
+                      </p>
+                      {(pub.volume || pub.issue || pub.issn || pub.index) && (
+                        <p className="text-gray-500 text-sm">
+                          {[
+                            pub.volume && `Volume ${pub.volume}`,
+                            pub.issue && `Issue ${pub.issue}`,
+                            pub.issn && `ISSN: ${pub.issn}`,
+                            pub.index && `Indexed in ${pub.index}`,
+                          ]
+                            .filter(Boolean)
+                            .join(", ")}
+                        </p>
+                      )}
+                    </div>
+                    {pub.url && (
+                      <div className="flex items-center">
+                        <a
+                          href={pub.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+                        >
+                          <span className="mr-2">🔗</span>
+                          View Publication
+                        </a>
+                      </div>
                     )}
                   </div>
-                  {pub.url && (
-                    <div className="flex items-center">
-                      <a
-                        href={pub.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
-                      >
-                        <span className="mr-2">🔗</span>
-                        View Publication
-                      </a>
-                    </div>
-                  )}
+                )
+              )}
+              {faculty?.publications?.length > 6 && (
+                <div className="md:col-span-2 flex justify-center mt-4">
+                  <button
+                    onClick={() => toggleSection("publications")}
+                    className="bg-white hover:bg-gray-50 text-primary-600 font-medium py-2 px-4 rounded-lg border border-primary-200 shadow-sm transition-all duration-300"
+                  >
+                    {expandedSections["publications"]
+                      ? "Show Less"
+                      : `Show More (${faculty.publications.length - 6} items)`}
+                  </button>
                 </div>
-              ))}
+              )}
             </div>
           )}
 
@@ -466,27 +501,45 @@ const ProfileTabs = ({ faculty }) => {
                 </div>
               </div>
 
-              {faculty.trainingExperience.map((training, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-all duration-300"
-                >
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="font-bold text-gray-800 text-sm md:text-base leading-relaxed">
-                      {training.title}
-                    </h3>
-                    <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium ml-4">
-                      {training.date}
-                    </span>
+              {getVisibleItems(faculty?.trainingExperience, "training")?.map(
+                (training, index) => (
+                  <div
+                    key={index}
+                    className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-all duration-300"
+                  >
+                    <div className="items-start mb-3">
+                      <h3 className="font-bold text-gray-800 text-sm md:text-base leading-relaxed">
+                        {training.title}
+                      </h3>
+                      <span className=" text-blue-700 text-sm font-medium">
+                        {training.date}
+                      </span>
+                    </div>
+                    <div className="space-y-2">
+                      <p className="text-gray-700 text-sm md:text-base font-medium">
+                        {training.institution}
+                      </p>
+                      <p className="text-gray-500 text-sm">
+                        {training.location}
+                      </p>
+                    </div>
                   </div>
-                  <div className="space-y-2 mb-4">
-                    <p className="text-gray-700 text-sm md:text-base font-medium">
-                      {training.institution}
-                    </p>
-                    <p className="text-gray-500 text-sm">{training.location}</p>
-                  </div>
+                )
+              )}
+              {faculty?.trainingExperience?.length > 6 && (
+                <div className="md:col-span-2 flex justify-center mt-4">
+                  <button
+                    onClick={() => toggleSection("training")}
+                    className="bg-white hover:bg-gray-50 text-primary-600 font-medium py-2 px-4 rounded-lg border border-primary-200 shadow-sm transition-all duration-300"
+                  >
+                    {expandedSections["training"]
+                      ? "Show Less"
+                      : `Show More (${
+                          faculty.trainingExperience.length - 6
+                        } items)`}
+                  </button>
                 </div>
-              ))}
+              )}
             </div>
           )}
 
@@ -501,7 +554,7 @@ const ProfileTabs = ({ faculty }) => {
                 </div>
               </div>
 
-              {faculty.awardsAndScholarships.map((award, index) => (
+              {faculty?.awardsAndScholarships?.map((award, index) => (
                 <div
                   key={index}
                   className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-all duration-300"
@@ -537,7 +590,7 @@ const ProfileTabs = ({ faculty }) => {
                 </div>
               </div>
 
-              {faculty.memberships.map((membership, index) => (
+              {faculty?.memberships?.map((membership, index) => (
                 <div
                   key={index}
                   className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-all duration-300"

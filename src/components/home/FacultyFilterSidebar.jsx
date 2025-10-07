@@ -100,7 +100,7 @@ const FacultyFilterSidebar = ({
         />
         <label
           htmlFor="all-faculties"
-          className="flex items-center w-full py-3 px-3 rounded-xl cursor-pointer transition-all duration-200 text-gray-700 hover:text-blue-600 hover:bg-blue-50 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:font-medium"
+          className="flex items-center w-full py-3 px-3 rounded-xl cursor-pointer transition-all duration-200 text-gray-700 hover:text-blue-600 hover:bg-blue-50 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:font-semibold"
         >
           <div className="w-4 h-4 rounded-full border-2 border-gray-300 peer-checked:border-blue-600 mr-3 flex items-center justify-center">
             <div
@@ -126,7 +126,7 @@ const FacultyFilterSidebar = ({
           />
           <label
             htmlFor={faculty.id}
-            className="flex items-center w-full py-3 px-3 rounded-xl cursor-pointer transition-all duration-200 text-gray-700 hover:text-blue-600 hover:bg-blue-50 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:font-medium"
+            className="flex items-center w-full py-3 px-3 rounded-xl cursor-pointer transition-all duration-200 text-gray-700 hover:text-blue-600 hover:bg-blue-50 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:font-semibold"
           >
             <div className="w-4 h-4 rounded-full border-2 border-gray-300 peer-checked:border-blue-600 mr-3 flex items-center justify-center">
               <div
@@ -163,7 +163,7 @@ const FacultyFilterSidebar = ({
                 )}
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 text-base">
+                <h3 className="font-semibold text-diuBlue text-base">
                   Faculty Filter
                 </h3>
                 <p className="text-sm text-gray-500">
@@ -194,7 +194,7 @@ const FacultyFilterSidebar = ({
           }`}
         >
           <div className="flex justify-between items-center mb-6 border-b pb-3">
-            <h3 className="font-bold text-xl text-gray-800 flex items-center gap-2">
+            <h3 className="font-bold text-xl text-diuBlue flex items-center gap-2">
               <ListFilter /> Faculty Filter
             </h3>
           </div>

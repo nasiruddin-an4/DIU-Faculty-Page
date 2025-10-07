@@ -1,6 +1,6 @@
-export const facultyRoles = [
-  "Dean",
-  "Associate Dean",
+export const departmentalManagementRoles = ["Dean", "Associate Dean"];
+
+export const departmentalFacultyMembersRoles = [
   "Professor",
   "Associate Professor",
   "Assistant Professor",
