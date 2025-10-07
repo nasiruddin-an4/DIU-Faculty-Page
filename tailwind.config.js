@@ -90,6 +90,7 @@ export default {
         },
         diuBlue: "#002652",
         diuGreen: "#3FA753",
+        blueText: "#002652",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],

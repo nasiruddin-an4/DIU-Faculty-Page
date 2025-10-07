@@ -16,7 +16,7 @@ const DepartmentCard = ({ department }) => {
       </div>
 
       <div className="p-5 flex-grow flex flex-col">
-        <h3 className="font-bold text-lg mb-4 text-diuBlue transition-all duration-300 ease-out group-hover:text-primary-600 group-hover:-translate-y-1">
+        <h3 className="font-bold text-lg mb-4 text-diuBlue transition-all duration-300 ease-out group-hover:-translate-y-2">
           {department.name}
         </h3>
 

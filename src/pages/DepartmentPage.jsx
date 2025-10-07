@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useSearchParams } from "react-router-dom";
-import { FaArrowLeft } from "react-icons/fa";
 import RoleFilterSidebar from "../components/department/RoleFilterSidebar.jsx";
 import FacultyCard from "../components/department/FacultyCard.jsx";
-import { facultyRoles } from "../data/facultyRoles";
+import {
+  departmentalManagementRoles,
+  departmentalFacultyMembersRoles,
+} from "../data/facultyRoles";
 import { departments } from "../data/department";
 import { facultyMembers } from "../data/facultyMembers";
 
 const DepartmentPage = () => {
   const { deptId } = useParams();
-  console.log("facultyRoles", facultyRoles);
 
   const [searchParams, setSearchParams] = useSearchParams();
   const [selectedRole, setSelectedRole] = useState(
@@ -38,6 +39,9 @@ const DepartmentPage = () => {
   useEffect(() => {
     if (facultyList.length > 0) {
       const filtered = facultyList.filter((faculty) => {
+        if (selectedRole === "all-management") {
+          return departmentalManagementRoles.includes(faculty.role);
+        }
         const matchesRole = selectedRole ? faculty.role === selectedRole : true;
         const matchesSearch = searchTerm
           ? faculty.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -103,10 +107,10 @@ const DepartmentPage = () => {
       <div className="bg-blue-50 text-white py-16">
         <div className="container-custom mx-auto text-center justify-content-center items-center">
           <p className="text-sm md:text-xl text-gray-600 mb-2">
-            {department?.facultyFullName}
+            {department.facultyFullName}
           </p>
-          <h1 className="text-3xl md:text-4xl font-bold text-blue-800">
-            {department?.name}
+          <h1 className="text-3xl md:text-4xl font-bold text-diuBlue">
+            {department.name}
           </h1>
           <p className="text-white/80 max-w-3xl text-lg">
             {department.description}
@@ -118,17 +122,50 @@ const DepartmentPage = () => {
         <div className="flex flex-col lg:flex-row gap-4 md:gap-8 px-4 md:px-0">
           <div className="w-full lg:w-1/5">
             <RoleFilterSidebar
-              roles={facultyRoles}
+              facultyRoles={departmentalFacultyMembersRoles}
+              managementRoles={departmentalManagementRoles}
               selectedRole={selectedRole}
               onRoleChange={handleRoleChange}
             />
           </div>
           <div className="w-full lg:w-4/5">
-            {filteredFaculty?.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 w-full">
-                {filteredFaculty?.map((faculty) => (
-                  <FacultyCard key={faculty?.id} faculty={faculty} />
-                ))}
+            {filteredFaculty.length > 0 ? (
+              <div className="space-y-8">
+                {/* Management Section */}
+                <div>
+                  <h2 className="text-2xl font-bold text-neutral-800 mb-4">
+                    Departmental Management
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 w-full">
+                    {filteredFaculty
+                      .filter((faculty) =>
+                        departmentalManagementRoles.includes(faculty.role)
+                      )
+                      .map((faculty) => (
+                        <FacultyCard key={faculty.id} faculty={faculty} />
+                      ))}
+                  </div>
+                </div>
+
+                {/* Divider */}
+                <div className="border-b border-gray-200 my-8"></div>
+
+                {/* Faculty Members Section */}
+                <div>
+                  <h2 className="text-2xl font-bold text-neutral-800 mb-4">
+                    Departmental Faculty Members
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 w-full">
+                    {filteredFaculty
+                      .filter(
+                        (faculty) =>
+                          !departmentalManagementRoles.includes(faculty.role)
+                      )
+                      .map((faculty) => (
+                        <FacultyCard key={faculty.id} faculty={faculty} />
+                      ))}
+                  </div>
+                </div>
               </div>
             ) : (
               <div className="bg-white rounded-xl shadow-sm p-12 text-center">

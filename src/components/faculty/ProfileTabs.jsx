@@ -128,14 +128,14 @@ const ProfileTabs = ({ faculty }) => {
               aria-label={`Switch to ${tab.label} tab`}
             >
               <div className="flex gap-2 py-2">
-                <span className="text-lg md:text-xl text-green-700">
+                <span className="text-lg md:text-xl text-blueText">
                   {tab?.icon}
                 </span>
                 <span
-                  className={`font-semibold text-xs md:text-sm text-start transition-colors ${
+                  className={`font-bold text-xs md:text-sm text-start transition-colors ${
                     activeTab === tab.id
-                      ? "text-primary-600"
-                      : "text-gray-600 group-hover:text-primary-500"
+                      ? "text-blueText font-bold"
+                      : "text-gray-600 group-hover:blueText"
                   }`}
                 >
                   {tab?.label}
@@ -161,7 +161,6 @@ const ProfileTabs = ({ faculty }) => {
               {/* Biography Section */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100 mb-4">
                 <div className="flex items-center mb-2">
-                  <span className="text-2xl mr-3">📖</span>
                   <h2 className="text-xl md:text-2xl font-bold text-gray-800">
                     Biography
                   </h2>
@@ -173,7 +172,6 @@ const ProfileTabs = ({ faculty }) => {
 
               {/* Education Section */}
               <div className="flex items-center mb-2">
-                <span className="text-2xl mr-3">🎓</span>
                 <h3 className="text-lg md:text-xl font-bold text-gray-800">
                   Education
                 </h3>
@@ -221,7 +219,6 @@ const ProfileTabs = ({ faculty }) => {
               {/* Expertise Section - Full Width */}
               <div className="md:col-span-2 mt-4">
                 <div className="flex items-center mb-2">
-                  <span className="text-2xl mr-3">💡</span>
                   <h3 className="text-lg md:text-xl font-bold text-gray-800">
                     Areas of Expertise
                   </h3>
@@ -245,7 +242,6 @@ const ProfileTabs = ({ faculty }) => {
               {/* Current Courses */}
               <div>
                 <div className="flex items-center mb-2">
-                  <span className="text-2xl mr-3">📚</span>
                   <h2 className="text-xl md:text-2xl font-bold text-gray-800">
                     Current Courses
                   </h2>
@@ -259,7 +255,6 @@ const ProfileTabs = ({ faculty }) => {
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
                           <div className="flex items-center mb-2">
-                            <span className="text-green-600 mr-2">🟢</span>
                             <p className="font-semibold text-gray-800 text-sm md:text-base">
                               {course.code}
                             </p>
@@ -273,7 +268,6 @@ const ProfileTabs = ({ faculty }) => {
                         </span>
                       </div>
                       <p className="text-gray-500 text-sm mt-3 flex items-center">
-                        <span className="mr-2">📅</span>
                         {course.semester}
                       </p>
                     </div>
@@ -284,7 +278,6 @@ const ProfileTabs = ({ faculty }) => {
               {/* Previous Courses */}
               <div>
                 <div className="flex items-center mb-2">
-                  <span className="text-2xl mr-3">📖</span>
                   <h2 className="text-xl md:text-2xl font-bold text-gray-800">
                     Previous Courses
                   </h2>
@@ -298,7 +291,6 @@ const ProfileTabs = ({ faculty }) => {
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
                           <div className="flex items-center mb-2">
-                            <span className="text-gray-500 mr-2">⚪</span>
                             <p className="font-semibold text-gray-700 text-sm md:text-base">
                               {course.code}
                             </p>
@@ -312,7 +304,6 @@ const ProfileTabs = ({ faculty }) => {
                         </span>
                       </div>
                       <p className="text-gray-500 text-sm mt-3 flex items-center">
-                        <span className="mr-2">📅</span>
                         {course.semester}
                       </p>
                     </div>
@@ -326,7 +317,6 @@ const ProfileTabs = ({ faculty }) => {
             <div className="">
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100 mb-4">
                 <div className="flex items-center mb-4">
-                  <span className="text-2xl mr-3">🔬</span>
                   <h2 className="text-xl md:text-2xl font-bold text-gray-800">
                     Research
                   </h2>
@@ -357,7 +347,6 @@ const ProfileTabs = ({ faculty }) => {
                 <>
                   <div className="md:col-span-2">
                     <div className="flex items-center mb-2">
-                      <span className="text-xl mr-3">📚</span>
                       <h3 className="text-lg md:text-xl font-bold text-gray-800">
                         Books
                       </h3>
@@ -494,7 +483,6 @@ const ProfileTabs = ({ faculty }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="md:col-span-2">
                 <div className="flex items-center mb-2">
-                  <span className="text-2xl mr-3">🏋️</span>
                   <h2 className="text-xl md:text-2xl font-bold text-gray-800">
                     Training Experience
                   </h2>
@@ -547,7 +535,6 @@ const ProfileTabs = ({ faculty }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="md:col-span-2">
                 <div className="flex items-center mb-2">
-                  <span className="text-2xl mr-3">🏆</span>
                   <h2 className="text-xl md:text-2xl font-bold text-gray-800">
                     Awards & Scholarships
                   </h2>
@@ -583,7 +570,6 @@ const ProfileTabs = ({ faculty }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="md:col-span-2">
                 <div className="flex items-center mb-2">
-                  <span className="text-2xl mr-3">🤝</span>
                   <h2 className="text-xl md:text-2xl font-bold text-gray-800">
                     Professional Memberships
                   </h2>

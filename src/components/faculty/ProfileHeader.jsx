@@ -24,7 +24,7 @@ import {
 
 const ProfileHeader = ({ faculty }) => {
   const handleEmailClick = () => {
-    window.open(`mailto:${faculty.email}`, "_blank");
+    window.open(`mailto:${faculty?.email}`, "_blank");
   };
 
   const handlePhoneClick = () => {
@@ -32,18 +32,18 @@ const ProfileHeader = ({ faculty }) => {
   };
 
   const handleShare = async () => {
-    if (navigator.share) {
+    if (navigator?.share) {
       try {
-        await navigator.share({
-          title: `${faculty.name} - Faculty Profile`,
-          text: `Check out ${faculty.name}'s profile`,
+        await navigator?.share({
+          title: `${faculty?.name} - Faculty Profile`,
+          text: `Check out ${faculty?.name}'s profile`,
           url: window.location.href,
         });
       } catch (err) {
         console.log("Error sharing:", err);
       }
     } else {
-      navigator.clipboard.writeText(window.location.href);
+      navigator?.clipboard.writeText(window.location.href);
       alert("Profile link copied to clipboard!");
     }
   };
@@ -60,8 +60,8 @@ const ProfileHeader = ({ faculty }) => {
               {/* Profile Image Container */}
               <div className="relative w-40 h-56 lg:w-64 lg:h-72 rounded-md overflow-hidden border-4 border-white  ">
                 <img
-                  src={faculty.imageUrl}
-                  alt={faculty.name}
+                  src={faculty?.imageUrl}
+                  alt={faculty?.name}
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     e.target.src =
@@ -121,7 +121,7 @@ const ProfileHeader = ({ faculty }) => {
                     <span className="text-sm sm:text-base">
                       Office Phone:{" "}
                       <a
-                        href={`tel:${faculty.phone}`}
+                        href={`tel:${faculty?.phone}`}
                         onClick={handlePhoneClick}
                         className="text-gray-800 font-medium hover:text-blue-700 transition-colors duration-200"
                       >
@@ -134,10 +134,10 @@ const ProfileHeader = ({ faculty }) => {
                     <span className="text-sm sm:text-base">
                       Mobile:{" "}
                       <a
-                        href={`tel:${faculty.cellPhone}`}
+                        href={`tel:${faculty?.cellPhone}`}
                         className="text-gray-800 font-medium hover:text-blue-700 transition-colors duration-200"
                       >
-                        {faculty.cellPhone}
+                        {faculty?.cellPhone}
                       </a>
                     </span>
                   </div>
@@ -145,9 +145,9 @@ const ProfileHeader = ({ faculty }) => {
 
                 {/* Social Links */}
                 <div className="flex flex-wrap gap-3 mt-4">
-                  {faculty.socialLinks?.linkedin && (
+                  {faculty?.socialLinks?.linkedin && (
                     <a
-                      href={faculty.socialLinks.linkedin}
+                      href={faculty?.socialLinks?.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-[#0077b5] rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110"
@@ -155,9 +155,9 @@ const ProfileHeader = ({ faculty }) => {
                       <Linkedin className="w-4 h-4 text-white" />
                     </a>
                   )}
-                  {faculty.socialLinks?.youtube && (
+                  {faculty?.socialLinks?.youtube && (
                     <a
-                      href={faculty.socialLinks.youtube}
+                      href={faculty?.socialLinks?.youtube}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-[#ff0000] rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110"
@@ -165,9 +165,9 @@ const ProfileHeader = ({ faculty }) => {
                       <Youtube className="w-4 h-4 text-white" />
                     </a>
                   )}
-                  {faculty.socialLinks?.website && (
+                  {faculty?.socialLinks?.website && (
                     <a
-                      href={faculty.socialLinks.website}
+                      href={faculty?.socialLinks?.website}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110"
@@ -175,9 +175,9 @@ const ProfileHeader = ({ faculty }) => {
                       <Globe className="w-4 h-4 text-white" />
                     </a>
                   )}
-                  {faculty.socialLinks?.twitter && (
+                  {faculty?.socialLinks?.twitter && (
                     <a
-                      href={faculty.socialLinks.twitter}
+                      href={faculty?.socialLinks?.twitter}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-[#1da1f2] rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110"
@@ -185,10 +185,10 @@ const ProfileHeader = ({ faculty }) => {
                       <Twitter className="w-4 h-4 text-white" />
                     </a>
                   )}
-                  {!faculty.socialLinks?.linkedin &&
-                    !faculty.socialLinks?.youtube &&
-                    !faculty.socialLinks?.website &&
-                    !faculty.socialLinks?.twitter && (
+                  {!faculty?.socialLinks?.linkedin &&
+                    !faculty?.socialLinks?.youtube &&
+                    !faculty?.socialLinks?.website &&
+                    !faculty?.socialLinks?.twitter && (
                       <div className="text-center py-2 text-gray-500 bg-gray-50 rounded-lg w-full">
                         <p className="text-sm font-medium">
                           No social links available

@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaTimes, FaArrowRight } from "react-icons/fa";
+import { ArrowRight } from "lucide-react";
 
 const FacultyCard = ({ faculty }) => {
   const [showPopup, setShowPopup] = useState(false);
@@ -124,10 +125,10 @@ const FacultyCard = ({ faculty }) => {
             </div>
             <div className="w-full flex flex-col justify-between min-h-[7rem]">
               <div>
-                <h3 className="font-bold text-lg text-neutral-800 group-hover:text-primary-600 transition-all duration-300 line-clamp-2 leading-[1.4] group-hover:tracking-wide group-hover:mb-2">
+                <h3 className="font-bold text-lg text-blueText transition-all duration-300 line-clamp-2 leading-[1.4] group-hover:tracking-wide group-hover:mb-2">
                   {faculty?.name}
                 </h3>
-                <p className="text-sm text-neutral-500 font-medium mt-1">
+                <p className="text-sm text-neutral-600 font-medium mt-1">
                   {faculty?.role}
                 </p>
               </div>
@@ -176,7 +177,7 @@ const FacultyCard = ({ faculty }) => {
                 className="w-20 h-20 rounded-md object-cover"
               />
               <div className="pt-1">
-                <h4 className="font-bold text-md text-primary-600">
+                <h4 className="font-bold text-md text-blueText leading-tight">
                   {faculty?.name}
                 </h4>
                 <p className="text-neutral-700 text-sm">{faculty?.role}</p>
@@ -213,9 +214,10 @@ const FacultyCard = ({ faculty }) => {
             </div>
             <Link
               to={`/faculty/${faculty?.id}`}
-              className="mt-4 inline-block w-full text-center text-diuBlue border border-diuBlue hover:bg-gradient-to-r from-[#034EA2] to-[#011D3C] hover:text-white font-medium py-2 px-4 rounded-lg transition duration-300"
+              className="group mt-4 inline-block w-full text-center text-diuBlue border border-diuBlue hover:bg-gradient-to-r from-[#034EA2] to-[#011D3C] hover:text-white font-medium py-2 px-4 rounded-lg transition duration-300"
             >
               View Full Profile
+              <ArrowRight className="inline-block ml-2 text-sm group-hover:translate-x-2 transition-transform duration-200" />
             </Link>
           </div>
         </div>

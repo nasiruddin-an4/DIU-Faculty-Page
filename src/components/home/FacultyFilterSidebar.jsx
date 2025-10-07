@@ -100,7 +100,7 @@ const FacultyFilterSidebar = ({
         />
         <label
           htmlFor="all-faculties"
-          className="flex items-center w-full py-3 px-3 rounded-xl cursor-pointer transition-all duration-200 text-gray-700 hover:text-blue-600 hover:bg-blue-50 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:font-semibold"
+          className="flex items-center w-full py-3 px-3 rounded-xl cursor-pointer transition-all duration-200 text-gray-700 hover:text-blueText hover:bg-blue-50 peer-checked:bg-blue-100 peer-checked:text-blueText peer-checked:font-semibold"
         >
           <div className="w-4 h-4 rounded-full border-2 border-gray-300 peer-checked:border-blue-600 mr-3 flex items-center justify-center">
             <div
@@ -126,7 +126,7 @@ const FacultyFilterSidebar = ({
           />
           <label
             htmlFor={faculty.id}
-            className="flex items-center w-full py-3 px-3 rounded-xl cursor-pointer transition-all duration-200 text-gray-700 hover:text-blue-600 hover:bg-blue-50 peer-checked:bg-blue-100 peer-checked:text-blue-600 peer-checked:font-semibold"
+            className="flex items-center w-full py-3 px-3 rounded-xl cursor-pointer transition-all duration-200 text-gray-700 hover:text-blueText hover:bg-blue-50 peer-checked:bg-blue-100 peer-checked:text-blueText peer-checked:font-semibold"
           >
             <div className="w-4 h-4 rounded-full border-2 border-gray-300 peer-checked:border-blue-600 mr-3 flex items-center justify-center">
               <div

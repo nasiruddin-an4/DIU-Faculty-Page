@@ -4,7 +4,12 @@ import { FaChevronDown, FaChevronUp, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { ListFilter } from "lucide-react";
 
-const RoleFilterSidebar = ({ roles, selectedRole, onRoleChange }) => {
+const RoleFilterSidebar = ({
+  facultyRoles,
+  managementRoles,
+  selectedRole,
+  onRoleChange,
+}) => {
   const [isExpanded, setIsExpanded] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -61,30 +66,62 @@ const RoleFilterSidebar = ({ roles, selectedRole, onRoleChange }) => {
         transition={{ type: "spring", damping: 20, stiffness: 100 }}
         className="fixed left-0 top-0 h-full w-80 bg-white shadow-2xl z-500 md:hidden"
       >
-        <div className="p-4">
+        {/* Add this new header section */}
+        <div className="flex items-center justify-between p-4 border-b border-gray-200">
+          <h3 className="font-bold text-lg text-neutral-800">Filter Options</h3>
+          <button
+            onClick={() => setIsExpanded(false)}
+            className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+          >
+            <FaTimes className="w-5 h-5 text-neutral-500" />
+          </button>
+        </div>
+
+        {/* Update the existing content div with padding top removed */}
+        <div className="px-4 pb-4">
           <div className="space-y-2 max-h-[calc(100vh-120px)] overflow-y-auto">
             {/* Management Section */}
             <div className="mb-4">
               <h4 className="font-semibold text-neutral-600 mb-2">
                 Departmental Management
               </h4>
-              <div className="flex items-center mb-3">
+              <div className="flex items-center mb-2">
                 <input
                   type="radio"
-                  id="management-mobile"
+                  id="all-management-roles-mobile"
                   name="role-mobile"
-                  value="Departmental Management"
-                  checked={selectedRole === "Departmental Management"}
-                  onChange={() => handleRoleChange("Departmental Management")}
+                  value="all-management"
+                  checked={selectedRole === "all-management"}
+                  onChange={() => handleRoleChange("all-management")}
                   className="peer w-4 h-4 text-[#00337C] focus:ring-[#00337C] checked:bg-[#00337C] cursor-pointer"
                 />
                 <label
-                  htmlFor="management-mobile"
+                  htmlFor="all-management-roles-mobile"
                   className="ml-2 text-neutral-700 cursor-pointer hover:text-[#00337C] transition-colors peer-checked:text-[#00337C] peer-checked:font-bold"
                 >
-                  Departmental Management
+                  All Management Members
                 </label>
               </div>
+
+              {managementRoles.map((role) => (
+                <div key={role} className="flex items-center mb-3">
+                  <input
+                    type="radio"
+                    id={role}
+                    name="role-mobile"
+                    value={role}
+                    checked={selectedRole === role}
+                    onChange={() => handleRoleChange(role)}
+                    className="peer w-4 h-4 text-[#00337C] focus:ring-[#00337C] checked:bg-[#00337C] cursor-pointer"
+                  />
+                  <label
+                    htmlFor={role}
+                    className="ml-2 text-neutral-700 cursor-pointer hover:text-[#00337C] transition-colors peer-checked:text-[#00337C] peer-checked:font-bold"
+                  >
+                    {role}
+                  </label>
+                </div>
+              ))}
             </div>
 
             {/* Border */}
@@ -95,7 +132,7 @@ const RoleFilterSidebar = ({ roles, selectedRole, onRoleChange }) => {
               <h4 className="font-semibold text-neutral-600 mb-2">
                 Departmental Faculty Members
               </h4>
-              <div className="flex items-center mb-3">
+              <div className="flex items-center mb-2">
                 <input
                   type="radio"
                   id="all-roles-mobile"
@@ -113,27 +150,25 @@ const RoleFilterSidebar = ({ roles, selectedRole, onRoleChange }) => {
                 </label>
               </div>
 
-              {roles
-                .filter((role) => role !== "Departmental Management")
-                .map((role) => (
-                  <div key={role} className="flex items-center mb-3">
-                    <input
-                      type="radio"
-                      id={`${role}-mobile`}
-                      name="role-mobile"
-                      value={role}
-                      checked={selectedRole === role}
-                      onChange={() => handleRoleChange(role)}
-                      className="peer w-4 h-4 text-[#00337C] focus:ring-[#00337C] checked:bg-[#00337C] cursor-pointer"
-                    />
-                    <label
-                      htmlFor={`${role}-mobile`}
-                      className="ml-2 text-neutral-700 cursor-pointer hover:text-[#00337C] transition-colors peer-checked:text-[#00337C] peer-checked:font-bold"
-                    >
-                      {role}
-                    </label>
-                  </div>
-                ))}
+              {facultyRoles.map((role) => (
+                <div key={role} className="flex items-center mb-3">
+                  <input
+                    type="radio"
+                    id={role}
+                    name="role-mobile"
+                    value={role}
+                    checked={selectedRole === role}
+                    onChange={() => handleRoleChange(role)}
+                    className="peer w-4 h-4 text-[#00337C] focus:ring-[#00337C] checked:bg-[#00337C] cursor-pointer"
+                  />
+                  <label
+                    htmlFor={role}
+                    className="ml-2 text-neutral-700 cursor-pointer hover:text-[#00337C] transition-colors peer-checked:text-[#00337C] peer-checked:font-bold"
+                  >
+                    {role}
+                  </label>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -188,23 +223,43 @@ const RoleFilterSidebar = ({ roles, selectedRole, onRoleChange }) => {
               <h4 className="font-semibold text-neutral-600 mb-2">
                 Departmental Management
               </h4>
-              <div className="flex items-center mb-3">
+              <div className="flex items-center mb-2">
                 <input
                   type="radio"
-                  id="management"
+                  id="all-management-roles" // Changed ID
                   name="role"
-                  value="Departmental Management"
-                  checked={selectedRole === "Departmental Management"}
-                  onChange={() => onRoleChange("Departmental Management")}
+                  value="all-management" // Added specific value
+                  checked={selectedRole === "all-management"}
+                  onChange={() => onRoleChange("all-management")}
                   className="peer w-4 h-4 text-[#00337C] focus:ring-[#00337C] checked:bg-[#00337C] cursor-pointer"
                 />
                 <label
-                  htmlFor="management"
-                  className="ml-2 text-neutral-700 cursor-pointer hover:text-[#00337C] transition-colors peer-checked:text-[#00337C] peer-checked:font-bold"
+                  htmlFor="all-management-roles" // Match the new ID
+                  className="ml-2 text-neutral-700 cursor-pointer hover:text-[#00337C] transition-colors peer-checked:text-[#00337C] peer-checked:font-semibold"
                 >
-                  Dean
+                  All Management Members
                 </label>
               </div>
+
+              {managementRoles.map((role) => (
+                <div key={role} className="flex items-center mb-3">
+                  <input
+                    type="radio"
+                    id={role}
+                    name="role"
+                    value={role}
+                    checked={selectedRole === role}
+                    onChange={() => onRoleChange(role)}
+                    className="peer w-4 h-4 text-[#00337C] focus:ring-[#00337C] checked:bg-[#00337C] cursor-pointer"
+                  />
+                  <label
+                    htmlFor={role}
+                    className="ml-2 text-neutral-700 cursor-pointer hover:text-[#00337C] transition-colors peer-checked:text-[#00337C] peer-checked:font-bold"
+                  >
+                    {role}
+                  </label>
+                </div>
+              ))}
             </div>
 
             {/* Border */}
@@ -218,53 +273,56 @@ const RoleFilterSidebar = ({ roles, selectedRole, onRoleChange }) => {
               <div className="flex items-center mb-2">
                 <input
                   type="radio"
-                  id="all-roles"
+                  id="all-faculty-roles" // Changed ID
                   name="role"
-                  value=""
+                  value="all-faculty" // Added specific value
                   checked={selectedRole === ""}
                   onChange={() => onRoleChange("")}
                   className="peer w-4 h-4 text-[#00337C] focus:ring-[#00337C] checked:bg-[#00337C] cursor-pointer"
                 />
                 <label
-                  htmlFor="all-roles"
+                  htmlFor="all-faculty-roles" // Match the new ID
                   className="ml-2 text-neutral-700 cursor-pointer hover:text-[#00337C] transition-colors peer-checked:text-[#00337C] peer-checked:font-semibold"
                 >
                   All Faculty Members
                 </label>
               </div>
 
-              {roles
-                .filter((role) => role !== "Departmental Management")
-                .map((role) => (
-                  <div key={role} className="flex items-center mb-3">
-                    <input
-                      type="radio"
-                      id={role}
-                      name="role"
-                      value={role}
-                      checked={selectedRole === role}
-                      onChange={() => onRoleChange(role)}
-                      className="peer w-4 h-4 text-[#00337C] focus:ring-[#00337C] checked:bg-[#00337C] cursor-pointer"
-                    />
-                    <label
-                      htmlFor={role}
-                      className="ml-2 text-neutral-700 cursor-pointer hover:text-[#00337C] transition-colors peer-checked:text-[#00337C] peer-checked:font-bold"
-                    >
-                      {role}
-                    </label>
-                  </div>
-                ))}
+              {facultyRoles.map((role) => (
+                <div key={role} className="flex items-center mb-3">
+                  <input
+                    type="radio"
+                    id={role}
+                    name="role"
+                    value={role}
+                    checked={selectedRole === role}
+                    onChange={() => onRoleChange(role)}
+                    className="peer w-4 h-4 text-[#00337C] focus:ring-[#00337C] checked:bg-[#00337C] cursor-pointer"
+                  />
+                  <label
+                    htmlFor={role}
+                    className="ml-2 text-neutral-700 cursor-pointer hover:text-[#00337C] transition-colors peer-checked:text-[#00337C] peer-checked:font-bold"
+                  >
+                    {role}
+                  </label>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       )}
 
-      {/* Mobile Sidebar and Overlay */}
+      {/* Mobile Sidebar */}
       <AnimatePresence>
         {isMobile && isExpanded && (
           <>
             <Overlay />
-            <MobileSidebar />
+            <MobileSidebar
+              managementRoles={managementRoles}
+              facultyRoles={facultyRoles}
+              selectedRole={selectedRole}
+              handleRoleChange={handleRoleChange}
+            />
           </>
         )}
       </AnimatePresence>

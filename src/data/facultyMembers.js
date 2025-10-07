@@ -800,7 +800,7 @@ export const facultyMembers = [
     id: "faculty-003",
     name: "Dr. Md. Azizur Rahman",
     title: "Associate Professor and Head",
-    role: "Associate Professor",
+    role: "Head",
     employeeId: "DIU-MGT-001",
     department: "bba",
     imageUrl:
