@@ -10,7 +10,7 @@ export const departments = [
     description: "",
   },
   {
-    id: "management",
+    id: "mgt",
     name: "Management",
     faculty: "fbe",
     facultyFullName: "Faculty of Business & Entrepreneurship",
@@ -19,7 +19,7 @@ export const departments = [
     description: "",
   },
   {
-    id: "real-estate",
+    id: "bre",
     name: "Real Estate",
     faculty: "fbe",
     facultyFullName: "Faculty of Business & Entrepreneurship",
@@ -28,7 +28,7 @@ export const departments = [
     description: "",
   },
   {
-    id: "tourism",
+    id: "thm",
     name: "Tourism & Hospitality Management",
     faculty: "fbe",
     facultyFullName: "Faculty of Business & Entrepreneurship",
@@ -37,7 +37,7 @@ export const departments = [
     description: "",
   },
   {
-    id: "innovation",
+    id: "de",
     name: "Innovation & Entrepreneurship",
     faculty: "fbe",
     facultyFullName: "Faculty of Business & Entrepreneurship",
@@ -62,7 +62,7 @@ export const departments = [
     description: "",
   },
   {
-    id: "marketing",
+    id: "mkt",
     name: "Marketing",
     faculty: "fbe",
     facultyFullName: "Faculty of Business & Entrepreneurship",
@@ -120,7 +120,7 @@ export const departments = [
     description: "",
   },
   {
-    id: "textile",
+    id: "te",
     name: "Textile Engineering",
     faculty: "fe",
     facultyFullName: "Faculty of Engineering",
@@ -144,7 +144,7 @@ export const departments = [
     description: "",
   },
   {
-    id: "civil",
+    id: "ce",
     name: "Civil Engineering",
     faculty: "fe",
     facultyFullName: "Faculty of Engineering",
@@ -169,7 +169,7 @@ export const departments = [
     description: "",
   },
   {
-    id: "nutrition",
+    id: "nfe",
     name: "Nutrition and Food Engineering",
     faculty: "fhls",
     facultyFullName: "Faculty of Health and Life Sciences",
@@ -177,7 +177,7 @@ export const departments = [
     description: "",
   },
   {
-    id: "public-health",
+    id: "ph",
     name: "Public Health",
     faculty: "fhls",
     facultyFullName: "Faculty of Health and Life Sciences",
@@ -185,7 +185,7 @@ export const departments = [
     description: "",
   },
   {
-    id: "sports",
+    id: "pess",
     name: "Physical Education & Sports Science",
     faculty: "fhls",
     facultyFullName: "Faculty of Health and Life Sciences",
@@ -193,7 +193,7 @@ export const departments = [
     description: "",
   },
   {
-    id: "agriculture",
+    id: "ags",
     name: "Agricultural Science",
     faculty: "fhls",
     facultyFullName: "Faculty of Health and Life Sciences",
@@ -201,7 +201,7 @@ export const departments = [
     description: "",
   },
   {
-    id: "genetics",
+    id: "geb",
     name: "Genetic Engineering and Biotechnology",
     faculty: "fhls",
     facultyFullName: "Faculty of Health and Life Sciences",
@@ -226,7 +226,7 @@ export const departments = [
     description: "",
   },
   {
-    id: "journalism",
+    id: "jmc",
     name: "Journalism, Media and Communication",
     faculty: "fhss",
     facultyFullName: "Faculty of Humanities & Social Sciences",
@@ -234,7 +234,7 @@ export const departments = [
     description: "",
   },
   {
-    id: "development",
+    id: "ds",
     name: "Development Studies",
     faculty: "fhss",
     facultyFullName: "Faculty of Humanities & Social Sciences",

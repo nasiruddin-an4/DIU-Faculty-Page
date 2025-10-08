@@ -121,7 +121,7 @@ const ProfileTabs = ({ faculty }) => {
               key={tab.id}
               className={`relative flex flex-col items-center px-4 py-3 min-w-[120px] md:min-w-[140px] focus:outline-none transition-all duration-300 ease-in-out group ${
                 activeTab === tab.id
-                  ? "bg-gray-100/80 shadow-sm border-b-2 border-primary-500"
+                  ? "bg-gray-100/80 shadow-sm border-b-2 border-diuBlue"
                   : "hover:bg-gray-100/60"
               }`}
               onClick={() => handleTabChange(tab.id)}
@@ -146,7 +146,7 @@ const ProfileTabs = ({ faculty }) => {
               </span> */}
 
               {activeTab === tab.id && (
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-500 animate-pulse"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-diuBlue animate-pulse"></div>
               )}
             </button>
           ))}
@@ -189,7 +189,7 @@ const ProfileTabs = ({ faculty }) => {
                       ?.slice(rowIndex * 2, rowIndex * 2 + 2)
                       ?.map((edu, index) => (
                         <div
-                          className="bg-white rounded-lg p-4 border-l-4 border-primary-500 shadow-sm hover:shadow-md transition-shadow duration-300"
+                          className="bg-white rounded-lg p-4 border-l-4 border-blue-900 shadow-sm hover:shadow-md transition-shadow duration-300"
                           key={index}
                         >
                           <div className="flex items-start justify-between">
@@ -201,7 +201,7 @@ const ProfileTabs = ({ faculty }) => {
                                 {edu.institution}
                               </p>
                             </div>
-                            <span className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-xs font-medium">
+                            <span className="bg-gray-200 text-blueText px-3 py-1 rounded-full text-xs font-medium">
                               {edu.year}
                             </span>
                           </div>
@@ -227,7 +227,7 @@ const ProfileTabs = ({ faculty }) => {
                   {faculty?.expertise?.map((area, index) => (
                     <span
                       key={index}
-                      className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                      className="bg-diuBlue text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-sm transition-all duration-300 transform hover:scale-105"
                     >
                       {area}
                     </span>
@@ -388,7 +388,7 @@ const ProfileTabs = ({ faculty }) => {
                               href={book.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+                              className="inline-flex items-center border border-diuBlue hover:bg-diuBlue text-diuBlue hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                             >
                               <span className="mr-2">🔗</span>
                               View Book
@@ -454,7 +454,7 @@ const ProfileTabs = ({ faculty }) => {
                           href={pub.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+                          className="inline-flex items-center border border-diuBlue hover:bg-diuBlue text-diuBlue hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                         >
                           <span className="mr-2">🔗</span>
                           View Publication
@@ -468,7 +468,7 @@ const ProfileTabs = ({ faculty }) => {
                 <div className="md:col-span-2 flex justify-center mt-4">
                   <button
                     onClick={() => toggleSection("publications")}
-                    className="bg-white hover:bg-gray-50 text-primary-600 font-medium py-2 px-4 rounded-lg border border-primary-200 shadow-sm transition-all duration-300"
+                    className="bg-white hover:bg-gray-50 text-diuBlue font-medium py-2 px-4 rounded-lg border border-diuBlue shadow-sm transition-all duration-300"
                   >
                     {expandedSections["publications"]
                       ? "Show Less"
@@ -518,7 +518,7 @@ const ProfileTabs = ({ faculty }) => {
                 <div className="md:col-span-2 flex justify-center mt-4">
                   <button
                     onClick={() => toggleSection("training")}
-                    className="bg-white hover:bg-gray-50 text-primary-600 font-medium py-2 px-4 rounded-lg border border-primary-200 shadow-sm transition-all duration-300"
+                    className="bg-white hover:bg-gray-50 text-diuBlue font-medium py-2 px-4 rounded-lg border border-diuBlue shadow-sm transition-all duration-300"
                   >
                     {expandedSections["training"]
                       ? "Show Less"

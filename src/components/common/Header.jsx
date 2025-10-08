@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../../assets/DIU.png";
+import { facultyMembers } from "../../data/facultyMembers";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const { deptId } = useParams();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
@@ -24,10 +26,58 @@ const Header = () => {
     closeMenu();
   }, [location]);
 
+  const getContactLink = () => {
+    const pathSegments = location.pathname.split('/').filter(Boolean);
+    
+    // For department pages
+    if (pathSegments[0] === 'department' && pathSegments[1] && !pathSegments[2]) {
+      return `/department/${pathSegments[1]}/contact`;
+    }
+    
+    // For faculty profile pages - get their department and show that department's contact
+    if (pathSegments[0] === 'faculty' && pathSegments[1]) {
+      const facultyMember = facultyMembers.find(f => f.id === pathSegments[1]);
+      if (facultyMember?.department) {
+        return `/department/${facultyMember.department}/contact`;
+      }
+    }
+    
+    // Default contact link
+    return "https://daffodilvarsity.edu.bd/article/contact";
+  };
+
+  // Use Link or anchor tag based on the URL
+  const ContactLink = () => {
+    const contactUrl = getContactLink();
+    const isExternal = contactUrl.startsWith('http');
+
+    return isExternal ? (
+      <a
+        href={contactUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`font-semibold text-sm ${
+          isScrolled ? "text-neutral-700" : "text-neutral-800"
+        } hover:text-primary-600 transition-colors duration-200`}
+      >
+        Contact Us
+      </a>
+    ) : (
+      <Link
+        to={contactUrl}
+        className={`font-semibold text-sm ${
+          isScrolled ? "text-neutral-700" : "text-neutral-800"
+        } hover:text-primary-600 transition-colors duration-200`}
+      >
+        Contact Us
+      </Link>
+    );
+  };
+
   return (
     <header
       className={`fixed w-full z-30 transition-all duration-500 ${
-        isScrolled ? "bg-white shadow-lg py-3" : "bg-white py-5 shadow-sm"
+        isScrolled ? "bg-white shadow-lg py-4" : "bg-white py-6 shadow-sm"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
@@ -54,14 +104,7 @@ const Header = () => {
           >
             Forum
           </a>
-          <a
-            href="#"
-            className={`font-semibold text-sm ${
-              isScrolled ? "text-neutral-700" : "text-neutral-800"
-            } hover:text-primary-600 transition-colors duration-200`}
-          >
-            Contact Us
-          </a>
+          <ContactLink />
           <a
             href="#"
             className="bg-gradient-to-r from-[#034EA2] to-[#011D3C] text-white px-6 py-2 rounded-lg font-medium shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300"
@@ -102,12 +145,7 @@ const Header = () => {
           >
             Forum
           </a>
-          <a
-            href="#"
-            className="font-semibold text-sm text-neutral-800 py-2 hover:text-primary-600 transition-colors duration-200"
-          >
-            Contact Us
-          </a>
+          <ContactLink />
           <a
             href="#"
             className="bg-primary-600 text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-primary-700 transition-colors duration-200 text-center"

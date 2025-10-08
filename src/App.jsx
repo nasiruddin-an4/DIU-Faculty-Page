@@ -14,6 +14,8 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 import ScrollToTop from "./components/common/ScrollToTop";
 
+import DepartmentContactPage from "./pages/DepartmentContactPage";
+
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -26,6 +28,11 @@ function App() {
           <Route path="/" element={<HomePage />} />
 
           <Route path="/department/:deptId" element={<DepartmentPage />} />
+
+          <Route 
+            path="/department/:deptId/contact" 
+            element={<DepartmentContactPage />} 
+          />
 
           <Route path="/faculty/:facultyId" element={<FacultyProfilePage />} />
 
