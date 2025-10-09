@@ -41,7 +41,7 @@ const FacultyProfilePage = () => {
 
   if (loading) {
     return (
-      <div className="container-custom mx-auto py-20 text-center">
+      <div className="container mx-auto py-20 text-center px-4 sm:px-6 lg:px-8 md:gap-12">
         <div className="animate-pulse">
           <div className="h-40 bg-primary-200 rounded-lg mb-8"></div>
 
@@ -67,7 +67,7 @@ const FacultyProfilePage = () => {
 
   if (!faculty.id) {
     return (
-      <div className="container-custom mx-auto py-20 text-center">
+      <div className="container mx-auto py-20 text-center px-4 sm:px-6 lg:px-8 md:gap-12">
         <h2 className="text-2xl font-bold mb-4">Faculty Member Not Found</h2>
 
         <p className="text-neutral-600 mb-6">
@@ -83,7 +83,7 @@ const FacultyProfilePage = () => {
 
   return (
     <div className="pt-24">
-      <div className="max-w-6xl mx-auto px-4 pt-5 lg:px-12 bg-white rounded-xl">
+      <div className="container mx-auto px-4 pt-5 lg:px-12 bg-white rounded-xl sm:px-6 md:gap-12">
         <Link
           to={`/department/${faculty?.departmentData?.id}`}
           className="inline-flex items-center text-neutral-400 mb-6 hover:text-blueText transition-colors"
@@ -95,7 +95,7 @@ const FacultyProfilePage = () => {
 
       <ProfileHeader faculty={faculty} />
 
-      <div className="max-w-6xl mx-auto py-8">
+      <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8 md:gap-12">
         <ProfileTabs faculty={faculty} />
       </div>
     </div>

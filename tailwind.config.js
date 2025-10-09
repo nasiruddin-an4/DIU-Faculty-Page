@@ -90,10 +90,13 @@ export default {
         },
         diuBlue: "#002652",
         diuGreen: "#3FA753",
-        blueText: "#002652",
+        diuText: "#2F2F2F",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
+      },
+      fontSize: {
+        diu: "22px",
       },
       spacing: {
         72: "18rem",

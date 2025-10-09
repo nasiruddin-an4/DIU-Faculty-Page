@@ -1,17 +1,26 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Search } from "lucide-react";
 import Logo from "../../assets/DIU.png";
 import { facultyMembers } from "../../data/facultyMembers";
+import EmployeeSearchSystem from "../home/EmployeeSearchSystem";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
   const location = useLocation();
   const { deptId } = useParams();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSearchTerm("");
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,9 +89,9 @@ const Header = () => {
         isScrolled ? "bg-white shadow-lg py-4" : "bg-white py-6 shadow-sm"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3">
-          <img src={Logo} alt="DIU Logo" className="w-40  object-contain" />
+          <img src={Logo} alt="DIU Logo" className="w-40 object-contain" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -105,6 +114,15 @@ const Header = () => {
             Forum
           </a>
           <ContactLink />
+          {/* Search Icon */}
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className={`p-2 rounded-full hover:bg-gray-100 transition-colors duration-200 ${
+              isScrolled ? "text-neutral-700" : "text-neutral-800"
+            }`}
+          >
+            <Search className="w-5 h-5" />
+          </button>
           <a
             href="#"
             className="bg-gradient-to-r from-[#034EA2] to-[#011D3C] text-white px-6 py-2 rounded-lg font-medium shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300"
@@ -114,13 +132,21 @@ const Header = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-neutral-800 hover:text-primary-600 focus:outline-none transition-colors duration-200"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-        </button>
+        <div className="md:hidden flex items-center space-x-4">
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="text-neutral-800 hover:text-primary-600 focus:outline-none transition-colors duration-200"
+          >
+            <Search className="w-5 h-5" />
+          </button>
+          <button
+            className="text-neutral-800 hover:text-primary-600 focus:outline-none transition-colors duration-200"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -154,6 +180,14 @@ const Header = () => {
           </a>
         </nav>
       </div>
+
+      {/* Search Modal */}
+      <EmployeeSearchSystem
+        isModalOpen={isModalOpen}
+        onClose={handleCloseModal}
+        searchTerm={searchTerm}
+        onSearchChange={setSearchTerm}
+      />
     </header>
   );
 };

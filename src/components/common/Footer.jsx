@@ -31,7 +31,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-diuBlue text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 md:px-0">
+      <div className="container mx-auto px-4 md:px-0">
         <div className="flex flex-col md:flex-row md:justify-between gap-8">
           {/* Subscribe Section */}
           <div className="md:col-span-1">

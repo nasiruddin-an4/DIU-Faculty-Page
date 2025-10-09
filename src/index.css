@@ -22,7 +22,6 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #f8fafc;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -49,10 +48,6 @@ body {
 
   .section-title {
     @apply text-2xl font-bold text-neutral-800 mb-4;
-  }
-
-  .container-custom {
-    @apply px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl;
   }
 
   .custom-btn {

@@ -128,14 +128,14 @@ const ProfileTabs = ({ faculty }) => {
               aria-label={`Switch to ${tab.label} tab`}
             >
               <div className="flex gap-2 py-2">
-                <span className="text-lg md:text-xl text-blueText">
+                <span className="text-lg md:text-xl text-diuBlue">
                   {tab?.icon}
                 </span>
                 <span
                   className={`font-bold text-xs md:text-sm text-start transition-colors ${
                     activeTab === tab.id
-                      ? "text-blueText font-bold"
-                      : "text-gray-600 group-hover:blueText"
+                      ? "text-diuBlue font-bold"
+                      : "text-gray-600 group-hover:text-diuBlue"
                   }`}
                 >
                   {tab?.label}

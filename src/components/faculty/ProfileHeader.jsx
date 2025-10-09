@@ -145,57 +145,38 @@ const ProfileHeader = ({ faculty }) => {
 
                 {/* Social Links */}
                 <div className="flex flex-wrap gap-3 mt-4">
-                  {faculty?.socialLinks?.linkedin && (
-                    <a
-                      href={faculty?.socialLinks?.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-[#0077b5] rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110"
-                    >
-                      <Linkedin className="w-4 h-4 text-white" />
-                    </a>
+                  {faculty?.socialLinks ? (
+                    Object.entries(faculty.socialLinks).map(([platform, url]) => {
+                      if (!url) return null;
+
+                      const icons = {
+                        linkedin: Linkedin,
+                        youtube: Youtube,
+                        website: Globe,
+                        twitter: Twitter,
+                      };
+                      const Icon = icons[platform] || Globe;
+
+                      return (
+                        <a
+                          key={platform}
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group flex items-center justify-center w-9 h-9 border border-diuBlue rounded-lg 
+                     hover:bg-diuBlue/5 transition-all duration-300 hover:scale-105"
+                        >
+                          <Icon className="w-5 h-5 text-diuBlue group-hover:text-diuBlue" />
+                        </a>
+                      );
+                    })
+                  ) : (
+                    <div className="text-center py-2 text-gray-500 bg-gray-50 rounded-lg w-full">
+                      <p className="text-sm font-medium">No social links available</p>
+                    </div>
                   )}
-                  {faculty?.socialLinks?.youtube && (
-                    <a
-                      href={faculty?.socialLinks?.youtube}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-[#ff0000] rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110"
-                    >
-                      <Youtube className="w-4 h-4 text-white" />
-                    </a>
-                  )}
-                  {faculty?.socialLinks?.website && (
-                    <a
-                      href={faculty?.socialLinks?.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110"
-                    >
-                      <Globe className="w-4 h-4 text-white" />
-                    </a>
-                  )}
-                  {faculty?.socialLinks?.twitter && (
-                    <a
-                      href={faculty?.socialLinks?.twitter}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-[#1da1f2] rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110"
-                    >
-                      <Twitter className="w-4 h-4 text-white" />
-                    </a>
-                  )}
-                  {!faculty?.socialLinks?.linkedin &&
-                    !faculty?.socialLinks?.youtube &&
-                    !faculty?.socialLinks?.website &&
-                    !faculty?.socialLinks?.twitter && (
-                      <div className="text-center py-2 text-gray-500 bg-gray-50 rounded-lg w-full">
-                        <p className="text-sm font-medium">
-                          No social links available
-                        </p>
-                      </div>
-                    )}
                 </div>
+
               </div>
             </div>
           </div>

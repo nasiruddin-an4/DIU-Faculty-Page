@@ -1,26 +1,29 @@
 export const faculties = [
   {
     id: "fsit",
-    name: "Faculty of Science & Information Technology",
+    name: "Science & Information Technology",
   },
 
   {
     id: "fbe",
-    name: "Faculty of Business & Entrepreneurship",
+    name: "Business & Entrepreneurship",
+  },
+  {
+    id: "fhss",
+    name: "Humanities & Social Sciences",
   },
 
   {
     id: "fe",
-    name: "Faculty of Engineering",
+    name: "Engineering",
   },
 
   {
     id: "fhls",
-    name: "Faculty of Health and Life Sciences",
+    name: "Health and Life Sciences",
   },
-
   {
-    id: "fhss",
-    name: "Faculty of Humanities & Social Sciences",
+    id: "gs",
+    name: "Graduate Studies",
   },
 ];

@@ -98,7 +98,7 @@ const FacultyCard = ({ faculty }) => {
       <Link to={`/faculty/${faculty?.id}`}>
         <div
           ref={cardRef}
-          className="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden cursor-pointer"
+          className="group bg-white rounded-xl shadow-sm hover:shadow-md border transition-all duration-300 overflow-hidden cursor-pointer"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           role="button"
@@ -113,7 +113,7 @@ const FacultyCard = ({ faculty }) => {
             }
           }}
         >
-          <div className="flex flex-row p-3 gap-4 items-start">
+          <div className="flex flex-row p-3 gap-4 items-start ">
             <div className="w-1/3 flex-shrink-0">
               <div className="h-28 rounded-md overflow-hidden">
                 <img
@@ -125,12 +125,13 @@ const FacultyCard = ({ faculty }) => {
             </div>
             <div className="w-full flex flex-col justify-between min-h-[7rem]">
               <div>
+                <p className="text-md text-neutral-600 font-medium mt-1">
+                  {faculty?.role}
+                </p>
                 <h3 className="font-bold text-lg text-blueText transition-all duration-300 line-clamp-2 leading-[1.4] group-hover:tracking-wide group-hover:mb-2">
                   {faculty?.name}
                 </h3>
-                <p className="text-sm text-neutral-600 font-medium mt-1">
-                  {faculty?.role}
-                </p>
+                
               </div>
               <Link
                 to={`/faculty/${faculty?.id}`}

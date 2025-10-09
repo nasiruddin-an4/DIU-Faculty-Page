@@ -13,14 +13,14 @@ const SearchBar = () => {
 
   return (
     <>
-      <div className="bg-white shadow-md rounded-lg p-4 mb-6">
+      <div className="bg-white shadow-sm rounded-lg p-4 mb-6">
         <div
           className="relative flex-grow cursor-pointer group"
           onClick={() => setIsModalOpen(true)}
         >
           <input
             type="text"
-            placeholder="Search by name, email, phone, designation..."
+            placeholder="Search by name, Email, Phone, Designation..."
             value={searchTerm}
             readOnly
             className="w-full py-3 px-4 pl-12 border border-neutral-300 rounded-md cursor-pointer group-hover:border-blue-400 transition-colors"

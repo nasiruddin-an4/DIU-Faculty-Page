@@ -24,7 +24,7 @@ export const departments = [
     faculty: "fbe",
     facultyFullName: "Faculty of Business & Entrepreneurship",
     imageUrl:
-      "https://images.pexels.com/photos/159108/light-lamp-electricity-power-159108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/164558/pexels-photo-164558.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -50,7 +50,8 @@ export const departments = [
     name: "Accounting",
     faculty: "fbe",
     facultyFullName: "Faculty of Business & Entrepreneurship",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/373934/pexels-photo-373934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -58,7 +59,8 @@ export const departments = [
     name: "Finance & Banking",
     faculty: "fbe",
     facultyFullName: "Faculty of Business & Entrepreneurship",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -66,7 +68,8 @@ export const departments = [
     name: "Marketing",
     faculty: "fbe",
     facultyFullName: "Faculty of Business & Entrepreneurship",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   // Faculty of Science & Information Technology ("fsit")
@@ -75,7 +78,8 @@ export const departments = [
     name: "Computer Science and Engineering",
     faculty: "fsit",
     facultyFullName: "Faculty of Science & Information Technology",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -83,7 +87,8 @@ export const departments = [
     name: "Software Engineering",
     faculty: "fsit",
     facultyFullName: "Faculty of Science & Information Technology",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/1181399/pexels-photo-1181399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -91,7 +96,8 @@ export const departments = [
     name: "Multimedia & Creative Technology (MCT)",
     faculty: "fsit",
     facultyFullName: "Faculty of Science & Information Technology",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -99,7 +105,8 @@ export const departments = [
     name: "Computing and Information System",
     faculty: "fsit",
     facultyFullName: "Faculty of Science & Information Technology",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -107,7 +114,8 @@ export const departments = [
     name: "Information Technology & Management (ITM)",
     faculty: "fsit",
     facultyFullName: "Faculty of Science & Information Technology",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   // Faculty of Engineering ("fe")
@@ -116,7 +124,8 @@ export const departments = [
     name: "Information and Communication Engineering",
     faculty: "fe",
     facultyFullName: "Faculty of Engineering",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/414829/pexels-photo-414829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -124,7 +133,8 @@ export const departments = [
     name: "Textile Engineering",
     faculty: "fe",
     facultyFullName: "Faculty of Engineering",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/159108/light-lamp-electricity-power-159108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -132,7 +142,8 @@ export const departments = [
     name: "Electrical and Electronic Engineering",
     faculty: "fe",
     facultyFullName: "Faculty of Engineering",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/1149171/pexels-photo-1149171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -140,7 +151,8 @@ export const departments = [
     name: "Architecture",
     faculty: "fe",
     facultyFullName: "Faculty of Engineering",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -148,7 +160,8 @@ export const departments = [
     name: "Civil Engineering",
     faculty: "fe",
     facultyFullName: "Faculty of Engineering",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   // Faculty of Health and Life Sciences ("fhls")
@@ -157,7 +170,8 @@ export const departments = [
     name: "Environmental Science and Disaster Management",
     faculty: "fhls",
     facultyFullName: "Faculty of Health and Life Sciences",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/167964/pexels-photo-167964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -165,7 +179,8 @@ export const departments = [
     name: "Pharmacy",
     faculty: "fhls",
     facultyFullName: "Faculty of Health and Life Sciences",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/356041/pexels-photo-356041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -173,7 +188,8 @@ export const departments = [
     name: "Nutrition and Food Engineering",
     faculty: "fhls",
     facultyFullName: "Faculty of Health and Life Sciences",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -181,7 +197,8 @@ export const departments = [
     name: "Public Health",
     faculty: "fhls",
     facultyFullName: "Faculty of Health and Life Sciences",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -189,7 +206,8 @@ export const departments = [
     name: "Physical Education & Sports Science",
     faculty: "fhls",
     facultyFullName: "Faculty of Health and Life Sciences",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/416322/pexels-photo-416322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -197,7 +215,8 @@ export const departments = [
     name: "Agricultural Science",
     faculty: "fhls",
     facultyFullName: "Faculty of Health and Life Sciences",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/159338/pexels-photo-159338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -205,7 +224,8 @@ export const departments = [
     name: "Genetic Engineering and Biotechnology",
     faculty: "fhls",
     facultyFullName: "Faculty of Health and Life Sciences",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   // Faculty of Humanities & Social Sciences ("fhss")
@@ -214,7 +234,8 @@ export const departments = [
     name: "English",
     faculty: "fhss",
     facultyFullName: "Faculty of Humanities & Social Sciences",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/256520/pexels-photo-256520.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -222,7 +243,8 @@ export const departments = [
     name: "Law",
     faculty: "fhss",
     facultyFullName: "Faculty of Humanities & Social Sciences",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -230,7 +252,8 @@ export const departments = [
     name: "Journalism, Media and Communication",
     faculty: "fhss",
     facultyFullName: "Faculty of Humanities & Social Sciences",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
   {
@@ -238,7 +261,8 @@ export const departments = [
     name: "Development Studies",
     faculty: "fhss",
     facultyFullName: "Faculty of Humanities & Social Sciences",
-    imageUrl: "",
+    imageUrl:
+      "https://images.pexels.com/photos/3184336/pexels-photo-3184336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "",
   },
 ];

@@ -32,7 +32,7 @@ const DepartmentContactPage = () => {
   // Loading Skeleton
   if (loading) {
     return (
-      <div className="container-custom mx-auto py-20 text-center">
+      <div className="container mx-auto py-20 text-center">
         <div className="animate-pulse space-y-4">
           <div className="h-8 bg-neutral-200 rounded w-1/3 mx-auto"></div>
           <div className="h-4 bg-neutral-200 rounded w-1/4 mx-auto"></div>
@@ -53,7 +53,7 @@ const DepartmentContactPage = () => {
   // Error State
   if (error) {
     return (
-      <div className="container-custom mx-auto py-20 text-center">
+      <div className="container mx-auto py-20 text-center">
         <h2 className="text-2xl font-bold text-red-600 mb-4">Error</h2>
         <p className="text-neutral-600">{error}</p>
         <Link to={`/department/${deptId}`} className="btn-primary mt-6">
@@ -108,7 +108,7 @@ const DepartmentContactPage = () => {
 
   return (
     <div className="pt-24 min-h-screen bg-gray-50">
-      <div className="container-custom mx-auto px-4">
+      <div className="container mx-auto px-4">
         <Link
           to={`/department/${deptId}`}
           className="pt-10 px-5 inline-flex items-center text-neutral-600 mb-6 hover:text-brand-blue transition-colors"
